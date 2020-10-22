@@ -1,0 +1,111 @@
+$fontName: 'TTFirsNeue';
+
+@font-face {
+  font-family: 'TTFirsNeue-Thin';
+  src: url('#{$fonts-path}/#{$fontName}/TTFirsNeue-Thin/font.woff2') format('woff2'), url('#{$fonts-path}/#{$fontName}/TTFirsNeue-Thin/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TTFirsNeueVarRoman';
+  src: url('#{$fonts-path}/#{$fontName}/TTFirsNeueVarRoman/font.woff2') format('woff2'), url('#{$fonts-path}/#{$fontName}/TTFirsNeueVarRoman/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TTFirsNeue-ExtraLight';
+  src: url('#{$fonts-path}/#{$fontName}/TTFirsNeue-ExtraLight/font.woff2') format('woff2'), url('#{$fonts-path}/#{$fontName}/TTFirsNeue-ExtraLight/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TTFirsNeue-ThinItalic';
+  src: url('#{$fonts-path}/#{$fontName}/TTFirsNeue-ThinItalic/font.woff2') format('woff2'), url('#{$fonts-path}/#{$fontName}/TTFirsNeue-ThinItalic/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TTFirsNeueVarItalic';
+  src: url('#{$fonts-path}/#{$fontName}/TTFirsNeueVarItalic/font.woff2') format('woff2'), url('#{$fonts-path}/#{$fontName}/TTFirsNeueVarItalic/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TTFirsNeue-ExtraBoldItalic';
+  src: url('#{$fonts-path}/#{$fontName}/TTFirsNeue-ExtraBoldItalic/font.woff2') format('woff2'), url('#{$fonts-path}/#{$fontName}/TTFirsNeue-ExtraBoldItalic/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TTFirsNeue-ExtraBold';
+  src: url('#{$fonts-path}/#{$fontName}/TTFirsNeue-ExtraBold/font.woff2') format('woff2'), url('#{$fonts-path}/#{$fontName}/TTFirsNeue-ExtraBold/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TTFirsNeue-Black';
+  src: url('#{$fonts-path}/#{$fontName}/TTFirsNeue-Black/font.woff2') format('woff2'), url('#{$fonts-path}/#{$fontName}/TTFirsNeue-Black/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TTFirsNeue-BoldItalic';
+  src: url('#{$fonts-path}/#{$fontName}/TTFirsNeue-BoldItalic/font.woff2') format('woff2'), url('#{$fonts-path}/#{$fontName}/TTFirsNeue-BoldItalic/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TTFirsNeue-BlackItalic';
+  src: url('#{$fonts-path}/#{$fontName}/TTFirsNeue-BlackItalic/font.woff2') format('woff2'), url('#{$fonts-path}/#{$fontName}/TTFirsNeue-BlackItalic/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TTFirsNeue-BoldOutline';
+  src: url('#{$fonts-path}/#{$fontName}/TTFirsNeue-BoldOutline/font.woff2') format('woff2'), url('#{$fonts-path}/#{$fontName}/TTFirsNeue-BoldOutline/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TTFirsNeue-BoldOutlineItalic';
+  src: url('#{$fonts-path}/#{$fontName}/TTFirsNeue-BoldOutlineItalic/font.woff2') format('woff2'), url('#{$fonts-path}/#{$fontName}/TTFirsNeue-BoldOutlineItalic/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TTFirsNeue-DemiBoldItalic';
+  src: url('#{$fonts-path}/#{$fontName}/TTFirsNeue-DemiBoldItalic/font.woff2') format('woff2'), url('#{$fonts-path}/#{$fontName}/TTFirsNeue-DemiBoldItalic/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TTFirsNeue-DemiBold';
+  src: url('#{$fonts-path}/#{$fontName}/TTFirsNeue-DemiBold/font.woff2') format('woff2'), url('#{$fonts-path}/#{$fontName}/TTFirsNeue-DemiBold/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TTFirsNeue-Bold';
+  src: url('#{$fonts-path}/#{$fontName}/TTFirsNeue-Bold/font.woff2') format('woff2'), url('#{$fonts-path}/#{$fontName}/TTFirsNeue-Bold/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TTFirsNeue-MediumItalic';
+  src: url('#{$fonts-path}/#{$fontName}/TTFirsNeue-MediumItalic/font.woff2') format('woff2'), url('#{$fonts-path}/#{$fontName}/TTFirsNeue-MediumItalic/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TTFirsNeue-Regular';
+  src: url('#{$fonts-path}/#{$fontName}/TTFirsNeue-Regular/font.woff2') format('woff2'), url('#{$fonts-path}/#{$fontName}/TTFirsNeue-Regular/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TTFirsNeue-Italic';
+  src: url('#{$fonts-path}/#{$fontName}/TTFirsNeue-Italic/font.woff2') format('woff2'), url('#{$fonts-path}/#{$fontName}/TTFirsNeue-Italic/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TTFirsNeue-LightItalic';
+  src: url('#{$fonts-path}/#{$fontName}/TTFirsNeue-LightItalic/font.woff2') format('woff2'), url('#{$fonts-path}/#{$fontName}/TTFirsNeue-LightItalic/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TTFirsNeue-ExtraLightItalic';
+  src: url('#{$fonts-path}/#{$fontName}/TTFirsNeue-ExtraLightItalic/font.woff2') format('woff2'), url('#{$fonts-path}/#{$fontName}/TTFirsNeue-ExtraLightItalic/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TTFirsNeue-Light';
+  src: url('#{$fonts-path}/#{$fontName}/TTFirsNeue-Light/font.woff2') format('woff2'), url('#{$fonts-path}/#{$fontName}/TTFirsNeue-Light/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TTFirsNeue-Medium';
+  src: url('#{$fonts-path}/#{$fontName}/TTFirsNeue-Medium/font.woff2') format('woff2'), url('#{$fonts-path}/#{$fontName}/TTFirsNeue-Medium/font.woff') format('woff');
+}

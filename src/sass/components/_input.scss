@@ -1,0 +1,72 @@
+.form-field{
+  font-family: $main-font;
+  font-size:14px;
+  position:relative;
+  display:block;
+  color:$pure-black;
+  padding:16px 0 10px 0;
+
+  &::after{
+    content:"\00A0";
+    display:block;
+    color: red;
+    font-size:12px;
+    padding-top:5px;
+  }
+
+  .form-field-label{
+    position:absolute;
+    display:block;
+    top: 26px;
+    left: 0;
+    transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -webkit-transition:0.2s ease all;
+    pointer-events:none;
+    cursor:text;
+  }
+
+  input {
+    padding:10px 0;
+    display:block;
+    width:100%;
+    border:none;
+    font-size:14px;
+    color:$pure-black;
+    border-bottom:1px solid #DDDDDD;
+    outline:none;
+
+    &:invalid{
+      outline:none;
+      box-shadow: none;
+    }
+    &:valid, &:focus{
+      & ~ .form-field-label{
+        top: 5px;
+        font-size:12px;
+      }
+    }
+
+    &:focus{
+      outline:none;
+      color:$pure-black;
+      padding-bottom: 10px;
+      border-bottom-width:1px;
+      border-bottom-color:$pure-black;
+
+      & ~ .material-form-field-label{
+        color:$pure-black;
+      }
+    }
+  }
+
+  &.form-field-invalid{
+    color: red;
+    &::after{
+      content:attr(data-validationError);
+    }
+    input:focus ~ .form-field-label{
+      color: red;
+    }
+  }
+}

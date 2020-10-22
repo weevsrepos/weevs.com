@@ -1,0 +1,65 @@
+$sm-padding: 8px 24px;
+$md-padding: 12px 24px;
+$lg-padding: 16px 24px;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  background-color:unset;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  font-size: 16px;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  svg {
+    margin-left: 15px;
+  }
+
+  &.primary {
+    background-color: #000;
+    color:$snow-white;
+
+    svg {
+      fill: $snow-white;
+    }
+
+    &:disabled {
+      background-color: $stone-gray;
+    }
+  }
+
+  &.secondary {
+    border: 1px solid #DDDDDD;
+    color: $pure-black;
+    &:active {
+      border-color:$pure-black;
+    }
+
+    svg {
+      fill: $pure-black;
+    }
+
+    &:disabled {
+      color:$stone-gray;
+      background-color: $light-gray;
+    }
+  }
+
+  &.sm {
+    padding: $sm-padding;
+    font-size: 14px;
+  }
+
+  &.md {
+    padding: $md-padding;
+  }
+
+  &.lg {
+    padding: $lg-padding;
+  }
+}
