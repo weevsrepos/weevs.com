@@ -5,10 +5,20 @@
 /** Helpers **/
 @import "helpers/fonts";
 @import "helpers/display";
+@import "helpers/typography";
+@import "helpers/spaces";
 
 
 /** Components **/
 @import "components/button";
 @import "components/input";
+
+/** Partials **/
+@import "_partials/header";
+@import "_partials/footer";
+
+/** Pages **/
+@import "pages/home";
+
 
 @import "main";

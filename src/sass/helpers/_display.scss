@@ -4,8 +4,36 @@
   &.justify-content-between {
     justify-content: space-between;
   }
+
+  &.justify-content-center {
+    justify-content: center;
+  }
+
+  &.justify-content-around {
+    justify-content: space-around;
+  }
+
+  &.justify-content-end {
+    justify-content: flex-end;
+  }
+
+  &.flex-column {
+    flex-direction: column;
+  }
+
+  &.align-center {
+    align-items: center;
+  }
+
+  &.flex-1 {
+    flex: 1;
+  }
 }
 
 .d-block {
   display: block;
+}
+
+.container {
+  padding: 0 80px;
 }

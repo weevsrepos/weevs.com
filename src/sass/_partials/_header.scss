@@ -1,0 +1,25 @@
+#header {
+  background: $light-beige;
+  padding-bottom: 80px;
+  padding-top: 50px;
+  .header-left {
+
+  }
+
+  .header-right {
+    #menu {
+      display: flex;
+      align-items: center;
+      > li {
+        margin-left: 40px;
+        &:last-child {
+          margin-left: 55px;
+        }
+        a {
+          @extend .body-s--regular;
+          color: $pure-black;
+        }
+      }
+    }
+  }
+}

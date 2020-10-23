@@ -1,5 +1,7 @@
 <template>
-  <router-view/>
+  <component :is="this.$route.meta.layout || 'default'">
+    <router-view />
+  </component>
 </template>
 
 <style lang="scss">

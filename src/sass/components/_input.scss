@@ -1,72 +1,133 @@
-.form-field{
-  font-family: $main-font;
-  font-size:14px;
-  position:relative;
-  display:block;
-  color:$pure-black;
-  padding:16px 0 10px 0;
+$form-label: #858585;
+$form-label-focus: $pure-black;
+$form-line: #858585;
+$form-line-focus: $pure-black;
+$form-input-text: #858585;
+$form-input-text-focus: $pure-black;
+$form-field-invalid-foreground: $invalid;
 
-  &::after{
-    content:"\00A0";
-    display:block;
-    color: red;
-    font-size:12px;
-    padding-top:5px;
+$dropdown-hoverBackground: $light-gray;
+$dropdown-selectedBackground: $snow-white;
+$labelOffset: 25px;
+$textInputPaddingTopBottom: 16px;
+
+.dropdown {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background: #FFFFFF;
+  color: #000000;
+  z-index: 1000;
+
+  transition: 0.2s ease-in height, step-end box-shadow 0.2s;
+  -moz-transition: 0.2s ease-in height, step-end box-shadow 0.2s;
+  -webkit-transition: 0.2s ease-in height, step-end box-shadow 0.2s;
+
+  &.dropdown-open {
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
   }
 
-  .form-field-label{
-    position:absolute;
-    display:block;
-    top: 26px;
+  li {
+    padding: 10px;
+    cursor: default;
+    user-select: none;
+
+    &:hover {
+      background-color: $dropdown-hoverBackground;
+    }
+
+    &.dropdown-selected {
+      background-color: $dropdown-selectedBackground;
+    }
+  }
+}
+
+
+.form-field {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  position: relative;
+  display: block;
+  color: $form-label;
+  padding: $labelOffset 0 10px 0;
+
+  &::after {
+    content: "\00A0";
+    display: block;
+    color: $form-field-invalid-foreground;
+    font-size: 12px;
+    padding-top: 5px;
+  }
+
+  .form-field-label {
+    position: absolute;
+    display: block;
+    top: $labelOffset + $textInputPaddingTopBottom;
     left: 0;
-    transition:0.2s ease all;
-    -moz-transition:0.2s ease all;
-    -webkit-transition:0.2s ease all;
-    pointer-events:none;
-    cursor:text;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    pointer-events: none;
+    cursor: text;
   }
 
   input {
-    padding:10px 0;
-    display:block;
-    width:100%;
-    border:none;
-    font-size:14px;
-    color:$pure-black;
-    border-bottom:1px solid #DDDDDD;
-    outline:none;
+    padding: $textInputPaddingTopBottom 0 $textInputPaddingTopBottom 0;
+    display: block;
+    width: 100%;
+    border: none;
+    font-size: 14px;
+    color: $form-input-text;
+    border-bottom: 1px solid $form-line;
+    outline: none;
 
-    &:invalid{
-      outline:none;
+    &:invalid {
+      outline: none;
       box-shadow: none;
     }
-    &:valid, &:focus{
-      & ~ .form-field-label{
-        top: 5px;
-        font-size:12px;
+
+    &:valid, &:focus {
+      & ~ .form-field-label {
+        top: $labelOffset - ($textInputPaddingTopBottom - 7);
+        font-size: 12px;
       }
     }
 
-    &:focus{
-      outline:none;
-      color:$pure-black;
-      padding-bottom: 10px;
-      border-bottom-width:1px;
-      border-bottom-color:$pure-black;
+    &:focus {
+      outline: none;
+      color: $form-input-text-focus;
+      padding-bottom: $textInputPaddingTopBottom - 2;
+      border-bottom-width: 1px;
+      border-bottom-color: $form-line-focus;
 
-      & ~ .material-form-field-label{
-        color:$pure-black;
+      & ~ .form-field-label {
+        color: $form-label-focus;
+      }
+
+      & ~ .dropdown {
+        height: 228px;
+        box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+        transition: 0.2s ease-out height, step-start box-shadow 0.2s;
+        -moz-transition: 0.2s ease-out height, step-start box-shadow 0.2s;
+        -webkit-transition: 0.2s ease-out height, step-start box-shadow 0.2s;
       }
     }
   }
 
-  &.form-field-invalid{
-    color: red;
-    &::after{
-      content:attr(data-validationError);
+  &.form-field-invalid {
+    color: $form-field-invalid-foreground;
+
+    &::after {
+      content: attr(data-validationError);
     }
-    input:focus ~ .form-field-label{
-      color: red;
+
+    input:focus ~ .form-field-label {
+      color: $form-field-invalid-foreground;
     }
   }
 }

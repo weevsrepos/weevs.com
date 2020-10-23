@@ -1,20 +1,19 @@
 <template>
-  <Button text="Primary" icon="arrow-right"/>
-  <Button text="Disabled Primary" disabled icon="arrow-right" />
-  <Button text="Primary Large" size="lg" icon="arrow-right"/>
-  <Button text="Disabled Primary Large" disabled size="lg" icon="arrow-right"/>
-  <Button text="Disabled Secondary Large" size="lg" type="secondary" icon="arrow-right"/>
-  <Button text="Disabled Secondary Large" disabled type="secondary" icon="arrow-right"/>
+  <section id="welcome-section">
+    <section class="container">
+      <h1 class="heading-xl--light">
+        We help ASEAN companies to find world <br> class tech talent no matter where in the <br> World they are.
+      </h1>
 
-  <Input type="text" label="Password" id="password"/>
+      <Button size="lg" icon="arrow-down" text="Get to know us better" class="mt-55"/>
+    </section>
+  </section>
 </template>
 
 <script>
 import Button from "@/components/Button";
-import Icon from "@/components/Icon";
-import Input from "@/components/Input";
 export default {
   name: 'Home',
-  components: {Input, Icon, Button}
+  components: { Button }
 }
 </script>

@@ -1,0 +1,52 @@
+$heading-sizes: 96px, 56px, 48px, 32px, 28px, 24px;
+$body-sizes: 20px, 16px, 15px;
+$caption-sizes: 14px, 12px;
+$overline-sizes: 12px;
+
+$heading-sizes-names: 'xxl', 'xl', 'l', 'm', 's', 'xs';
+$body-sizes-names: 'l', 'm', 's';
+$caption-sizes-names: 'm', 's';
+$overline-sizes-names: 's';
+
+$fonts-each-size: 'TTFirsNeue-Light', 'TTFirsNeue-Regular', 'TTFirsNeue-Medium';
+$fonts-each-name: 'light', 'regular', 'medium';
+$font-weights: 300, 400, 500;
+
+
+@for $j from 1 through length($fonts-each-size) {
+  @for $i from 1 through length($heading-sizes) {
+    .heading-#{nth($heading-sizes-names, $i)}--#{nth($fonts-each-name, $j)} {
+      font-family: nth($fonts-each-size, $j), sans-serif;
+      font-size: nth($heading-sizes, $i);
+      font-weight: nth($font-weights, $j);;
+    }
+  }
+}
+
+@for $j from 1 through length($fonts-each-size) {
+  @for $i from 1 through length($body-sizes) {
+    .body-#{nth($body-sizes-names, $i)}--#{nth($fonts-each-name, $j)} {
+      font-family: nth($fonts-each-size, $j), sans-serif;
+      font-size: nth($body-sizes, $i);
+    }
+  }
+}
+
+@for $j from 1 through length($fonts-each-size) {
+  @for $i from 1 through length($caption-sizes) {
+    .caption-#{nth($caption-sizes-names, $i)}--#{nth($fonts-each-name, $j)} {
+      font-family: nth($fonts-each-size, $j), sans-serif;
+      font-size: nth($caption-sizes, $i);
+    }
+  }
+}
+
+
+@for $j from 1 through length($fonts-each-size) {
+  @for $i from 1 through length($overline-sizes) {
+    .overline-#{nth($overline-sizes-names, $i)}--#{nth($fonts-each-name, $j)} {
+      font-family: nth($fonts-each-size, $j), sans-serif;
+      font-size: nth($overline-sizes, $i);
+    }
+  }
+}
