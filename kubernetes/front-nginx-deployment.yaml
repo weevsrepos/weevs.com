@@ -1,0 +1,68 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: weevs
+    env: staging
+    tier: front
+  name: dev-weevs
+  namespace: staging
+spec:
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: weevs
+      env: staging
+      tier: front
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: weevs
+        env: staging
+        tier: front
+    spec:
+      containers:
+      - image:  gcr.io/idyllic-adviser-234022/weevs:9f606942a3b8505415f7f43ec0a18317f1cedbba
+        imagePullPolicy: Always
+        name: dev-weevs
+        ports:
+        - containerPort: 80
+        livenessProbe:
+          httpGet:
+            path: /index.html
+            port: 80
+          initialDelaySeconds: 45
+          timeoutSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /index.html
+            port: 80
+          initialDelaySeconds: 5
+          timeoutSeconds: 1  
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        # volumeMounts:
+        #   - mountPath: /etc/nginx/conf.d/
+        #     name: prod-nginx-conf
+        #     readOnly: true  
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      # volumes:
+      #   - configMap:
+      #       defaultMode: 420
+      #       items:
+      #       - key: default.conf
+      #         path: default.conf
+      #       name: nginx-conf
+      #     name: prod-nginx-conf        
