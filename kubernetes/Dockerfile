@@ -3,7 +3,7 @@ FROM node:10 as build-deps
 WORKDIR /usr/src/app
 COPY package.json yarn.lock ./
 RUN yarn
-RUN yarn serve
+#RUN yarn serve
 COPY . ./
 RUN yarn build
 
