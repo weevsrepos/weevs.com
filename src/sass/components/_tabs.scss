@@ -1,0 +1,49 @@
+.tabs {
+  .tabs--headline {
+    display: flex;
+    > div {
+      position: relative;
+      margin-right: 32px;
+      cursor: pointer;
+      h2 {
+        color: $stone-gray;
+        transition: 0.3s linear;
+      }
+
+      &.active h2, &:hover h2 {
+        color: $pure-black;
+      }
+
+      &:hover:after, &.active:after {
+        width: 100%;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        width: 0;
+        left: 0;
+        height: 1px;
+        background: $pure-black;
+        transition: 0.2s ease;
+      }
+    }
+  }
+
+  .tab-contents {
+    overflow: hidden;
+    margin-top: 70px;
+
+    .tab-content {
+      transition: 0.4s ease;
+
+      > section {
+        float: left;
+        &.active {
+          display: block;
+        }
+      }
+    }
+  }
+}

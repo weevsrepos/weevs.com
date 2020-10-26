@@ -18,7 +18,7 @@ $font-weights: 300, 400, 500;
     .heading-#{nth($heading-sizes-names, $i)}--#{nth($fonts-each-name, $j)} {
       font-family: nth($fonts-each-size, $j), sans-serif;
       font-size: nth($heading-sizes, $i);
-      font-weight: nth($font-weights, $j);;
+      font-weight: nth($font-weights, $j);
     }
   }
 }
@@ -28,6 +28,7 @@ $font-weights: 300, 400, 500;
     .body-#{nth($body-sizes-names, $i)}--#{nth($fonts-each-name, $j)} {
       font-family: nth($fonts-each-size, $j), sans-serif;
       font-size: nth($body-sizes, $i);
+      font-weight: nth($font-weights, $j);
     }
   }
 }
@@ -37,6 +38,7 @@ $font-weights: 300, 400, 500;
     .caption-#{nth($caption-sizes-names, $i)}--#{nth($fonts-each-name, $j)} {
       font-family: nth($fonts-each-size, $j), sans-serif;
       font-size: nth($caption-sizes, $i);
+      font-weight: nth($font-weights, $j);
     }
   }
 }
@@ -49,4 +51,21 @@ $font-weights: 300, 400, 500;
       font-size: nth($overline-sizes, $i);
     }
   }
+}
+
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.line-height-64 {
+  line-height: 64px;
+}
+
+.line-height-32 {
+  line-height: 32px;
+}
+
+.text-stone-gray {
+  color: $stone-gray;
 }

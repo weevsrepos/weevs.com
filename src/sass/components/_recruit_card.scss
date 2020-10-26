@@ -1,0 +1,12 @@
+.recruit-card {
+  padding: 32px;
+  background: $pure-black;
+  .title {
+    color: $snow-white;
+  }
+
+  .description {
+    color: #c2c2c2;
+    line-height: 24px;
+  }
+}

@@ -5,3 +5,58 @@
     line-height: 82px;
   }
 }
+
+#recruit-section {
+  padding-top: 136px;
+  padding-bottom: 136px;
+
+  .cards {
+    margin-top: 120px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+    .recruit-card {
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+#featured-client {
+  background: $pure-black;
+  color: $snow-white;
+  .top--featured {
+    padding-top: 120px;
+    padding-bottom: 100px;
+  }
+  .bottom--featured {
+    background: $light-beige;
+    width: 80%;
+    padding: 88px 80px;
+    color:$pure-black;
+    .items {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-column-gap: 40px;
+      div {
+        padding-bottom: 56px;
+        padding-right: 80px;
+        border-bottom: 1px solid $pure-black;
+      }
+    }
+  }
+}
+
+#insights {
+  padding-top: 136px;
+  padding-bottom: 136px;
+
+  .insight-items {
+    margin-top: 120px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 32px;
+  }
+}
