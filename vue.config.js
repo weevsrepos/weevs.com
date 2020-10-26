@@ -14,7 +14,7 @@ module.exports = {
         plugins: [
             new SVGSpritemapPlugin('./src/assets/icons/*.svg', {
                 output: {
-                    filename: '../public/img/icons/icon-sprite.svg',
+                    filename: './public/img/icons/icon-sprite.svg',
                     svg4everybody: true,
                     svgo: {
                         removeTitle: true,
