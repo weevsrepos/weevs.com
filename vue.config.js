@@ -12,7 +12,7 @@ module.exports = {
             }
         },
         plugins: [
-            new SVGSpritemapPlugin(path.resolve(__dirname, 'src/assets/icons/*.svg'), {
+            new SVGSpritemapPlugin('./src/assets/icons/*.svg', {
                 output: {
                     filename: '../public/img/icons/icon-sprite.svg',
                     svg4everybody: true,
