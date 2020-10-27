@@ -16,7 +16,7 @@
     grid-template-columns: auto auto auto auto;
     grid-column-gap: 25px;
     grid-row-gap: 25px;
-    .recruit-card {
+    .service-card {
       &:last-child {
         margin-right: 0;
       }
@@ -49,14 +49,64 @@
   }
 }
 
-#insights {
+#articles {
   padding-top: 136px;
   padding-bottom: 136px;
 
-  .insight-items {
+  .article-cards {
     margin-top: 120px;
     display: grid;
     grid-template-columns: auto auto auto;
     grid-column-gap: 32px;
+  }
+}
+
+#testimonials {
+  position: relative;
+  padding: 88px 120px 127px 110px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    width: 50%;
+    background: $light-beige;
+  }
+
+  .quote {
+    position: absolute;
+    top: 60px;
+    left: 80px;
+    font-size: 144px;
+    color: $pure-black;
+  }
+
+  .dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 165px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      width: 12px;
+      height: 12px;
+      border-radius: 100px;
+      border: 1px solid $pure-black;
+      transition: 0.3s ease;
+      cursor: pointer;
+      margin-right: 24px;
+      &:last-child {
+        margin-right: 0;
+      }
+      &.active, &:hover {
+        background: $pure-black;
+      }
+    }
   }
 }

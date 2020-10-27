@@ -35,7 +35,7 @@
             </div>
 
             <div class="d-flex justify-content-between cards">
-              <RecruitCard v-for="(card, key) in tabsContents.plan.cards"
+              <ServiceCard v-for="(card, key) in tabsContents.plan.cards"
                            :icon="card.icon"
                            :title="card.title"
                            :description="card.description"
@@ -66,7 +66,7 @@
             </div>
 
             <div class="cards">
-              <RecruitCard v-for="(card, key) in tabsContents.build.cards"
+              <ServiceCard v-for="(card, key) in tabsContents.build.cards"
                            :icon="card.icon"
                            :title="card.title"
                            :description="card.description"
@@ -96,7 +96,7 @@
             </div>
 
             <div class="cards">
-              <RecruitCard v-for="(card, key) in tabsContents.run.cards"
+              <ServiceCard v-for="(card, key) in tabsContents.run.cards"
                            :icon="card.icon"
                            :title="card.title"
                            :description="card.description"
@@ -150,7 +150,7 @@
     </section>
   </section>
 
-  <section id="insights">
+  <section id="articles">
     <section class="container">
       <p class="overline-s--medium text-uppercase mb-32 text-stone-gray">insights</p>
 
@@ -169,9 +169,32 @@
       </div>
 
 
-      <section class="insight-items">
-        <InsightCard v-for="insightCard in insightCards" :item="insightCard" />
+      <section class="article-cards">
+        <ArticleCard v-for="article in articles" :item="article" />
       </section>
+    </section>
+  </section>
+
+  <section id="testimonials">
+    <section class="container">
+      <span class="quote">“</span>
+      <swiper
+          :slides-per-view="1"
+          :space-between="0"
+          @swiper="setControlledSwiper"
+          @slideChange="onSlideChange"
+      >
+        <swiper-slide v-for="testimonial in testimonials">
+          <Testimonials :item="testimonial"/>
+        </swiper-slide>
+
+        <div class="swiper-pagination" slot="pagination"></div>
+      </swiper>
+      <div class="dots">
+          <span v-for="(value, index) in testimonials"
+                @click="moveTo(index)"
+                :class="{'active' : testimonialsCarouselIndex === index}"></span>
+      </div>
     </section>
   </section>
 </template>
@@ -179,14 +202,20 @@
 <script>
 import Button from "@/components/Button";
 import Tabs from "@/components/Tabs";
-import RecruitCard from "@/components/pages/home/RecruitCard";
+import ServiceCard from "@/components/cards/ServiceCard";
 import Badge from "@/components/Badge";
-import InsightCard from "@/components/pages/home/InsightCard";
+import ArticleCard from "@/components/cards/ArticleCard";
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import Testimonials from "@/components/cards/Testimonials";
+// Import Swiper styles
+import 'swiper/swiper.scss';
+
 export default {
   name: 'Home',
-  components: {InsightCard, Badge, RecruitCard, Tabs, Button },
+  components: {Testimonials, ServiceCard, ArticleCard, Badge, Tabs, Button, Swiper, SwiperSlide },
   data() {
     return {
+      testimonialsCarouselIndex: 0,
       tabs: [
         { id: 'plan', title: 'Plan' },
         { id: 'build', title: 'Build' },
@@ -259,7 +288,7 @@ export default {
               description: 'Everyone realizes why a new common language would be desirable one could'
             },
             {
-              icon: 'solution-arch',
+              icon: 'devops',
               title: 'DevOps Engineers',
               description: 'To achieve this, it would be necessary to have uniform grammar, pronunciation and more'
             },
@@ -276,7 +305,7 @@ export default {
           ]
         }
       },
-      insightCards: [
+      articles: [
         {
           img: '/img/insight-item.svg',
           title: 'Fertile data: why building quality into your process is important',
@@ -307,7 +336,43 @@ export default {
             name: 'Pedro Sttau',
           }
         }
-      ]
+      ],
+      testimonials: [
+        {
+          text: 'To build great technology you need to make sure that it is neither the starting  point or your end goal. Great products are built when teams care about solving problems that they connect with and feel are worth solving. Technology is nothing but an outcome of doing this right.',
+          author: {
+            image: 'img/avatar_big.svg',
+            name: 'Pedro Sttau',
+          }
+        },
+        {
+          text: 'To build great technology you need to make sure that it is neither the starting  point or your end goal. Great products are built when teams care about solving problems that they connect with and feel are worth solving. Technology is nothing but an outcome of doing this right.',
+          author: {
+            image: 'img/avatar_big.svg',
+            name: 'Pedro Sttau',
+          }
+        },
+        {
+          text: 'To build great technology you need to make sure that it is neither the starting  point or your end goal. Great products are built when teams care about solving problems that they connect with and feel are worth solving. Technology is nothing but an outcome of doing this right.',
+          author: {
+            image: 'img/avatar_big.svg',
+            name: 'Pedro Sttau',
+          }
+        }
+      ],
+      controlledSwiper: null,
+    }
+  },
+  methods: {
+    setControlledSwiper(swiper) {
+      this.controlledSwiper = swiper;
+    },
+    onSlideChange(a) {
+      this.testimonialsCarouselIndex = a.activeIndex;
+    },
+    moveTo(id) {
+      this.testimonialsCarouselIndex = id;
+      this.controlledSwiper.slideTo(id);
     }
   }
 }

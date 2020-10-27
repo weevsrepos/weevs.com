@@ -15,10 +15,7 @@
             </router-link>
           </li>
           <li>
-            <router-link to="#" class="d-flex align-center">
-              What we do
-              <Icon href="chevron-down" class="ml-14"/>
-            </router-link>
+            <Dropdown label="What we do" :options="menuItems" labelClass="body-s--regular"/>
           </li>
           <li>
             <router-link to="#">
@@ -40,8 +37,24 @@
 <script>
 import Icon from "@/components/Icon";
 import Button from "@/components/Button";
+import Dropdown from "@/components/Dropdown";
 export default {
-  components: {Button, Icon}
+  components: {Dropdown, Button, Icon},
+  data() {
+    return {
+      menuItems: [
+        {
+          label: 'Plan',
+        },
+        {
+          label: 'Build',
+        },
+        {
+          label: 'Run'
+        }
+      ]
+    }
+  }
 }
 </script>
 

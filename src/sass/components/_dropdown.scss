@@ -1,0 +1,57 @@
+.dropdown-menu {
+  position: relative;
+  cursor: pointer;
+  .label--box svg {
+    transition: 0.2s ease;
+  }
+
+  &.opened .label--box {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  .dropdown-menu-items {
+    position: absolute;
+    top: calc(100% + 10px);
+    width: calc(100% + 50px);
+    left: -50px;
+    background: $light-gray;
+    padding: 8px 0;
+    opacity: 0;
+    display: none;
+    transition: opacity 0.3s ease;
+    &.opened {
+      opacity: 1;
+      display: block;
+    }
+
+    li {
+      position: relative;
+      padding: 8px 16px;
+      color: $pure-black;
+      transition: 0.3s ease;
+
+      @extend .caption-m--regular;
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background: transparent;
+        transition: 0.3s ease;
+      }
+
+      &:hover:after {
+        background: $pure-black;
+      }
+
+      &:hover {
+        background: $snow-white;
+      }
+    }
+  }
+}

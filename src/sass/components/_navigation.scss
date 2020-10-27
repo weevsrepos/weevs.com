@@ -1,0 +1,11 @@
+.navigation {
+  color: $stone-gray;
+  @extend .overline-s--regular;
+  .dot {
+    margin: 0 11px;
+    &:after {
+      content: "•";
+      display: block;
+    }
+  }
+}
