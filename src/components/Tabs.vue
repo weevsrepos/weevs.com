@@ -6,7 +6,7 @@
            :class="`${ tab.id === selected ? 'active' : ''}`"
            @click="changeTab(key, tab.id)"
       >
-        <h2 class="heading-m--regular">{{ tab.title }}</h2>
+        <h2 class="heading-mobile-xs--regular heading-m--regular">{{ tab.title }}</h2>
       </div>
     </section>
 
@@ -51,7 +51,8 @@ export default {
   },
   methods: {
     initTabSizes() {
-      this.windowWidth = window.innerWidth - 160;
+      let paddings = window.innerWidth < 1024 ? 32: 160;
+      this.windowWidth = window.innerWidth - paddings;
       this.fullWidth = this.tabs.length * window.innerWidth;
       setTimeout(() => {
         this.height = document.getElementById(this.selected).offsetHeight;

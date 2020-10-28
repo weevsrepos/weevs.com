@@ -50,3 +50,32 @@
     clear: both;
   }
 }
+
+
+@include mobile {
+  .d-block-mobile {
+    display: block !important;
+  }
+
+  .d-flex-mobile {
+    display: flex !important;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .flex-mobile-column {
+    flex-direction: column !important;
+  }
+
+  .d-mobile-none {
+    display: none !important;
+  }
+}
+
+@include desktop {
+  .d-desktop-none {
+    display: none !important;
+  }
+}

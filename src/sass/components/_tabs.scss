@@ -28,6 +28,10 @@
         background: $pure-black;
         transition: 0.2s ease;
       }
+
+      @include mobile {
+        margin-right: 16px;
+      }
     }
   }
 
@@ -44,6 +48,10 @@
           display: block;
         }
       }
+    }
+
+    @include mobile {
+      margin-top: 32px;
     }
   }
 }

@@ -50,4 +50,58 @@
     padding-top: #{$i}px;
     padding-bottom: #{$i}px;
   }
+
+  @include mobile {
+    .mr-mobile-#{$i} {
+      margin-right:#{$i}px !important;
+    }
+    .ml-mobile-#{$i} {
+      margin-left:#{$i}px !important;
+    }
+    .mt-mobile-#{$i} {
+      margin-top:#{$i}px !important;
+    }
+    .mb-mobile-#{$i} {
+      margin-bottom:#{$i}px !important;
+    }
+    .m-mobile-#{$i} {
+      margin: #{$i} !important;
+    }
+
+    .mx-mobile-#{$i} {
+      margin-left: #{$i}px !important;
+      margin-right: #{$i}px !important;
+    }
+
+    .my-mobile-#{$i} {
+      margin-top: #{$i}px !important;
+      margin-bottom: #{$i}px !important;
+    }
+
+    .pr-mobile-#{$i} {
+      padding-right:#{$i}px !important;
+    }
+    .pl-mobile-#{$i} {
+      padding-left:#{$i}px !important;
+    }
+    .pt-mobile-#{$i} {
+      padding-top:#{$i}px !important;
+    }
+    .pb-mobile-#{$i} {
+      padding-bottom:#{$i}px !important;
+    }
+    .p-mobile-#{$i} {
+      padding: #{$i} !important;
+    }
+
+    .px-mobile-#{$i} {
+      padding-left: #{$i}px !important;
+      padding-right: #{$i}px !important;
+    }
+
+    .py-mobile-#{$i} {
+      padding-top: #{$i}px !important;
+      padding-bottom: #{$i}px !important;
+    }
+  }
 }

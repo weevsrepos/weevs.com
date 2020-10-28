@@ -16,8 +16,59 @@
           margin-left: 55px;
         }
         a {
-          @extend .body-s--regular;
           color: $pure-black;
+        }
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+
+  @include mobile {
+    padding-bottom: 29.5px;
+    padding-top: 29.5px;
+    &.opened-mobile {
+      background: $snow-white;
+
+      .header-right {
+        #menu {
+          display: flex;
+          flex-direction: column;
+          position: fixed;
+          top: 80px;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: $snow-white;
+          z-index: 700;
+          align-items: flex-start;
+          padding: 0 16px;
+
+          > li {
+            margin-left: 0;
+            margin-top: 8px;
+            padding: 16px 0;
+            &:first-child {
+              margin-top: 0;
+            }
+
+            &.dropdown-item {
+              width: 100%;
+              .label--box {
+                justify-content: space-between;
+              }
+
+              .dropdown-menu-items {
+                width: 100%;
+                left: 0;
+                position: relative;
+                margin-top: 16px;
+              }
+            }
+          }
         }
       }
     }

@@ -1,29 +1,29 @@
 <template>
   <section id="welcome-section">
     <section class="container">
-      <h1 class="heading-xl--light">
-        We help ASEAN companies to find world <br> class tech talent no matter where in the <br> World they are.
+      <h1 class="heading-mobile-s--light heading-xl--light">
+        We help ASEAN companies to find world  class tech talent no matter where in the  World they are.
       </h1>
 
-      <Button size="lg" icon="arrow-down" text="Get to know us better" class="mt-55"/>
+      <Button size="lg" mobile="md" icon="arrow-down" text="Get to know us better" class="mt-55 mt-mobile-40"/>
     </section>
   </section>
 
   <section id="recruit-section">
     <section class="container">
-      <p class="overline-s--medium text-uppercase mb-32">We recruit people who</p>
+      <p class="overline-s--medium text-uppercase mb-32 mb-mobile-8">We recruit people who</p>
       <Tabs :tabs="tabs">
         <template v-slot:tab-plan>
           <section>
-            <div class="d-flex justify-content-between">
-              <h2 class="flex-1 heading-l--regular mr-32 width-50 line-height-64">
-                We don't hire humans that we <br>
-                would not like to spend time <br>
+            <div class="d-flex justify-content-between flex-mobile-column">
+              <h2 class="flex-1 heading-mobile-xs--regular heading-l--regular mr-32 width-50 line-height-64 line-height-mobile-36">
+                We don't hire humans that we
+                would not like to spend time
                 with ourselves.
               </h2>
 
-              <div class="flex-1 width-50">
-                <h4 class="body-l--regular mb-32 line-height-32">We are aware that technical aspects are only the tip of the iceberg. Our people are not only highly
+              <div class="flex-1 width-50 mt-mobile-16">
+                <h4 class="body-mobile-m--regular body-l--regular mb-32 mr-mobile-16 line-height-32 line-height-mobile-24">We are aware that technical aspects are only the tip of the iceberg. Our people are not only highly
                   qualified but we also are on the same wavelength. Development process is a long run, so you will need a
                   great team.</h4>
 
@@ -34,7 +34,7 @@
               </div>
             </div>
 
-            <div class="d-flex justify-content-between cards">
+            <div class="d-flex justify-content-between cards flex-mobile-column mt-mobile-32 d-mobile-none">
               <ServiceCard v-for="(card, key) in tabsContents.plan.cards"
                            :icon="card.icon"
                            :title="card.title"
@@ -48,13 +48,13 @@
 
         <template v-slot:tab-build>
           <section>
-            <div class="d-flex justify-content-between">
-              <h2 class="flex-1 heading-l--regular mr-32 width-50 line-height-64">
-                Technology spreads like <br> wildfire, but we can master it
+            <div class="d-flex justify-content-between flex-mobile-column">
+              <h2 class="flex-1 heading-mobile-xs--regular heading-l--regular mr-32 width-50 line-height-64 line-height-mobile-36">
+                Technology spreads like wildfire, but we can master it
               </h2>
 
-              <div class="flex-1 width-50">
-                <h4 class="body-l--regular mb-32 line-height-32">Newest engineering approaches are our priority so we
+              <div class="flex-1 width-50 mt-mobile-16">
+                <h4 class="body-mobile-m--regular body-l--regular mb-32 mr-mobile-16 line-height-32 line-height-mobile-24">Newest engineering approaches are our priority so we
                   keep it up to date. Our specialists apply advanced solutions such as AI, Machine Learning and so on.
                   It will bring real value to your organization.</h4>
 
@@ -65,7 +65,7 @@
               </div>
             </div>
 
-            <div class="cards">
+            <div class="d-flex justify-content-between cards flex-mobile-column mt-mobile-32 d-mobile-none">
               <ServiceCard v-for="(card, key) in tabsContents.build.cards"
                            :icon="card.icon"
                            :title="card.title"
@@ -78,13 +78,13 @@
 
         <template v-slot:tab-run>
           <section>
-            <div class="d-flex justify-content-between">
-              <h2 class="flex-1 heading-l--regular mr-32 width-50 line-height-64">
-                There is no place for <br> consulting in execution. We <br> are in the business of doing, <br> not talking.
+            <div class="d-flex justify-content-between flex-mobile-column">
+              <h2 class="flex-1 heading-mobile-xs--regular heading-l--regular mr-32 width-50 line-height-64 line-height-mobile-36">
+                There is no place for consulting in execution. We  are in the business of doing,  not talking.
               </h2>
 
-              <div class="flex-1 width-50">
-                <h4 class="body-l--regular mb-32 line-height-32">Only right execution makes a well prepared strategy
+              <div class="flex-1 width-50 mt-mobile-16">
+                <h4 class="body-mobile-m--regular body-l--regular mb-32 mr-mobile-16 line-height-32 line-height-mobile-24">Only right execution makes a well prepared strategy
                   effective. Development is a long term process combined from individual technologies. We are not here
                   to take the placement commission, we care about successful implementation as much as you do.</h4>
 
@@ -95,7 +95,7 @@
               </div>
             </div>
 
-            <div class="cards">
+            <div class="d-flex justify-content-between cards flex-mobile-column mt-mobile-32 d-mobile-none">
               <ServiceCard v-for="(card, key) in tabsContents.run.cards"
                            :icon="card.icon"
                            :title="card.title"
@@ -112,20 +112,20 @@
   <section id="featured-client">
     <section class="container">
       <section class="top--featured">
-        <p class="overline-s--medium text-uppercase mb-32">Featured client</p>
+        <p class="overline-s--medium text-uppercase mb-32 mb-mobile-16">Featured client</p>
 
-        <div class="d-flex justify-content-between">
-          <h2 class="flex-1 heading-l--medium mr-32 width-50 line-height-64">
-            Empowering Huawei’s internal <br> solutions with technology
+        <div class="d-flex justify-content-between flex-mobile-column">
+          <h2 class="flex-1 heading-mobile-s--regular heading-l--medium mr-32 width-50 line-height-64 line-height-mobile-42">
+            Empowering Huawei’s internal solutions with technology
           </h2>
 
-          <div class="flex-1 width-50">
-            <h4 class="body-l--regular mb-32 line-height-32">Our cooperation resulted in complete rearrangement of
+          <div class="flex-1 width-50 mt-mobile-16">
+            <h4 class="body-mobile-m--regular body-l--regular mb-32 line-height-32 line-height-mobile-24">Our cooperation resulted in complete rearrangement of
               technological infrastructure in the IT department and efficiency increased by almost 15%. 30 of our
               specialists have been permanently contracted, keeping a new long-term improvement plan well executed.</h4>
 
             <div class="d-flex">
-              <Button text="Read case study" icon="arrow-right" type="secondary" size="lg"/>
+              <Button text="Read case study" icon="arrow-right" type="secondary" size="lg" mobile="md"/>
             </div>
           </div>
         </div>
@@ -152,18 +152,18 @@
 
   <section id="articles">
     <section class="container">
-      <p class="overline-s--medium text-uppercase mb-32 text-stone-gray">insights</p>
+      <p class="overline-s--medium text-uppercase mb-32 text-stone-gray mb-mobile-8">insights</p>
 
-      <div class="d-flex justify-content-between">
-        <h2 class="flex-1 heading-l--regular mr-32 width-50 line-height-64">
+      <div class="d-flex justify-content-between flex-mobile-column">
+        <h2 class="flex-1 heading-mobile-s--regular heading-l--regular mr-32 width-50 line-height-64 line-height-mobile-42">
           Leverage our knowledge
         </h2>
 
-        <div class="flex-1 width-50">
-          <h4 class="body-l--regular mb-32 line-height-32">Dive deeper into our past projects and new learnings. We are openly sharing knowledge.</h4>
+        <div class="flex-1 width-50 mt-mobile-16">
+          <h4 class="body-mobile-m--regular body-l--regular mb-32 line-height-32 line-height-mobile-24">Dive deeper into our past projects and new learnings. We are openly sharing knowledge.</h4>
 
           <div class="d-flex">
-            <Button text="Read all insights" icon="arrow-right" size="lg"/>
+            <Button text="Read all insights" icon="arrow-right" size="lg" mobile="md"/>
           </div>
         </div>
       </div>

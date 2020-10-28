@@ -12,7 +12,7 @@
 
     <Badge :text="item.badge" class="mt-24 mb-16"/>
 
-    <h2 class="heading-s--medium mb-24 pr-30">
+    <h2 class="body-mobile-l--medium heading-s--medium mb-24 pr-30 line-height-mobile-32">
       {{ item.title }}
     </h2>
 

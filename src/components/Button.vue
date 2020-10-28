@@ -1,5 +1,5 @@
 <template>
-  <button :class="`button ${type} ${size}`" :disabled="disabled">
+  <button :class="`button ${type} ${size} mobile-${mobile}`" :disabled="disabled">
     <template v-if="text && !icon">
       {{ text }}
     </template>
@@ -42,6 +42,9 @@ export default {
     },
     iconSize: {
       type: [String, Number]
+    },
+    mobile: {
+      type: String
     }
   }
 }

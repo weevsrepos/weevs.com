@@ -63,4 +63,19 @@ $lg-padding: 16px 24px;
   &.lg {
     padding: $lg-padding;
   }
+
+  @include mobile {
+    &.mobile-sm {
+      padding: $sm-padding !important;
+      font-size: 14px !important;
+    }
+
+    &.mobile-md {
+      padding: $md-padding !important;
+    }
+
+    &.mobile-lg {
+      padding: $lg-padding !important;
+    }
+  }
 }

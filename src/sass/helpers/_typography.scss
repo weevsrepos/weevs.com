@@ -20,6 +20,14 @@ $font-weights: 300, 400, 500;
       font-size: nth($heading-sizes, $i);
       font-weight: nth($font-weights, $j);
     }
+
+    @include mobile {
+      .heading-mobile-#{nth($heading-sizes-names, $i)}--#{nth($fonts-each-name, $j)} {
+        font-family: nth($fonts-each-size, $j), sans-serif !important;
+        font-size: nth($heading-sizes, $i) !important;
+        font-weight: nth($font-weights, $j) !important;
+      }
+    }
   }
 }
 
@@ -29,6 +37,14 @@ $font-weights: 300, 400, 500;
       font-family: nth($fonts-each-size, $j), sans-serif;
       font-size: nth($body-sizes, $i);
       font-weight: nth($font-weights, $j);
+    }
+
+    @include mobile {
+      .body-mobile-#{nth($body-sizes-names, $i)}--#{nth($fonts-each-name, $j)} {
+        font-family: nth($fonts-each-size, $j), sans-serif !important;
+        font-size: nth($body-sizes, $i) !important;
+        font-weight: nth($font-weights, $j) !important;
+      }
     }
   }
 }
@@ -40,6 +56,15 @@ $font-weights: 300, 400, 500;
       font-size: nth($caption-sizes, $i);
       font-weight: nth($font-weights, $j);
     }
+
+
+    @include mobile {
+      .caption-mobile-#{nth($caption-sizes-names, $i)}--#{nth($fonts-each-name, $j)} {
+        font-family: nth($fonts-each-size, $j), sans-serif !important;
+        font-size: nth($caption-sizes, $i) !important;
+        font-weight: nth($font-weights, $j) !important;
+      }
+    }
   }
 }
 
@@ -49,6 +74,15 @@ $font-weights: 300, 400, 500;
     .overline-#{nth($overline-sizes-names, $i)}--#{nth($fonts-each-name, $j)} {
       font-family: nth($fonts-each-size, $j), sans-serif;
       font-size: nth($overline-sizes, $i);
+      font-weight: nth($font-weights, $j);
+    }
+
+    @include mobile {
+      .overline-mobile-#{nth($overline-sizes-names, $i)}--#{nth($fonts-each-name, $j)} {
+        font-family: nth($fonts-each-size, $j), sans-serif !important;
+        font-size: nth($overline-sizes, $i) !important;
+        font-weight: nth($font-weights, $j) !important;
+      }
     }
   }
 }
@@ -64,6 +98,20 @@ $font-weights: 300, 400, 500;
 
 .line-height-32 {
   line-height: 32px;
+}
+
+@include mobile {
+  .line-height-mobile-36 {
+    line-height: 36px;
+  }
+
+  .line-height-mobile-24 {
+    line-height: 24px;
+  }
+
+  .line-height-mobile-42 {
+    line-height: 42px !important;
+  }
 }
 
 .text-stone-gray {

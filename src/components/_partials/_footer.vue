@@ -1,24 +1,24 @@
 <template>
   <footer id="footer">
     <section class="top-footer d-flex justify-content-center align-center flex-column">
-      <h2 class="heading-xl--light">
-        Fill in your gap with best specialists <br> in the industry
+      <h2 class="heading-mobile-s--light heading-xl--light line-height-mobile-42">
+        Fill in your gap with best specialists in the industry
       </h2>
-      <Button text="Get in touch" icon="arrow-right" type="secondary" class="mt-48"/>
+      <Button text="Get in touch" icon="arrow-right" type="secondary" class="mt-48 mt-mobile-40"/>
     </section>
     <section class="bottom-footer">
       <section class="container">
-        <section id="menu-footer" class="d-flex justify-content-between">
+        <section id="menu-footer" class="d-flex justify-content-between flex-mobile-column">
           <div>
             <div>
               <router-link to="#">
                 <Icon href="weevs" fill="#fff" width="102" height="16"/>
               </router-link>
             </div>
-            <div class="mt-44">
-              <h4 class="heading-xs--light">We become your team <br> or help you build one</h4>
+            <div class="mt-44 mt-mobile-24">
+              <h4 class="body-mobile-l--light heading-xs--light line-height-mobile-24">We become your team <br> or help you build one</h4>
             </div>
-            <div class="mt-44 d-flex align-center">
+            <div class="mt-44 mt-mobile-35 d-flex align-center">
               <router-link to="#">
                 <Icon href="linkedin" fill="#fff" size="20"/>
               </router-link>
@@ -35,21 +35,21 @@
           </div>
 
 
-          <section class="d-flex right--footer">
+          <section class="d-flex right--footer mt-mobile-42">
             <div class="list-items">
-              <h3 class="heading-xs--medium">What we do</h3>
-              <ul class="mt-24">
+              <h3 class="body-mobile-l--medium heading-xs--medium">What we do</h3>
+              <ul class="mt-24 mt-mobile-16">
                 <li>
                   <router-link to="" class="body-m--regular">
                     Plan
                   </router-link>
                 </li>
-                <li class="mt-24">
+                <li class="mt-24 mt-mobile-16">
                   <router-link to="" class="body-m--regular">
                     Build
                   </router-link>
                 </li>
-                <li class="mt-24">
+                <li class="mt-24 mt-mobile-16">
                   <router-link to="" class="body-m--regular">
                     Run
                   </router-link>
@@ -58,24 +58,24 @@
             </div>
 
             <div class="list-items">
-              <h3 class="heading-xs--medium">Insights</h3>
-              <ul class="mt-24">
+              <h3 class="body-mobile-l--medium heading-xs--medium">Insights</h3>
+              <ul class="mt-24 mt-mobile-16">
                 <li>
                   <router-link to="" class="body-m--regular">
                     Case studies
                   </router-link>
                 </li>
-                <li class="mt-24">
+                <li class="mt-24 mt-mobile-16">
                   <router-link to="" class="body-m--regular">
                     Publications
                   </router-link>
                 </li>
-                <li class="mt-24">
+                <li class="mt-24 mt-mobile-16">
                   <router-link to="" class="body-m--regular">
                     Shows
                   </router-link>
                 </li>
-                <li class="mt-24">
+                <li class="mt-24 mt-mobile-16">
                   <router-link to="" class="body-m--regular">
                     Blog
                     <Icon href="external-link" size="12" class="ml-10"/>
@@ -85,14 +85,14 @@
             </div>
 
             <div class="list-items">
-              <h3 class="heading-xs--medium">Company</h3>
-              <ul class="mt-24">
+              <h3 class="body-mobile-l--medium heading-xs--medium">Company</h3>
+              <ul class="mt-24 mt-mobile-16">
                 <li>
                   <router-link to="" class="body-m--regular">
                     We are different
                   </router-link>
                 </li>
-                <li class="mt-24">
+                <li class="mt-24 mt-mobile-16">
                   <router-link to="" class="body-m--regular">
                     Careers
                   </router-link>
@@ -101,8 +101,8 @@
             </div>
 
             <div class="list-items">
-              <h3 class="heading-xs--medium">Contact</h3>
-              <ul class="mt-24">
+              <h3 class="body-mobile-l--medium heading-xs--medium">Contact</h3>
+              <ul class="mt-24 mt-mobile-16">
                 <li>
                   <router-link to="" class="body-m--regular">
                     Get in touch

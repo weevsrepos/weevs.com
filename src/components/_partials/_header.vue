@@ -1,5 +1,5 @@
 <template>
-  <header id="header">
+  <header id="header" :class="{'opened-mobile' : openMobileMenu}">
     <section class="container d-flex justify-content-between align-center">
       <div class="header-left">
         <router-link to="#">
@@ -8,22 +8,26 @@
       </div>
 
       <div class="header-right">
+        <button class="button d-flex-mobile d-desktop-none" @click="openMenu()">
+          <Icon href="menu" width="18" height="16" v-if="!openMobileMenu"/>
+          <Icon href="close" width="18" height="16" v-else/>
+        </button>
         <ul id="menu">
           <li>
-            <router-link to="#">
+            <router-link to="#" class="body-s--regular body-mobile-l--regular">
               We are different
             </router-link>
           </li>
-          <li>
-            <Dropdown label="What we do" :options="menuItems" labelClass="body-s--regular"/>
+          <li class="dropdown-item">
+            <Dropdown label="What we do" :options="menuItems" labelClass="body-s--regular body-mobile-l--regular"/>
           </li>
           <li>
-            <router-link to="#">
+            <router-link to="#" class="body-s--regular body-mobile-l--regular">
               Industry insights
             </router-link>
           </li>
           <li>
-            <Button size="md">
+            <Button size="md" class="body-s--regular body-mobile-l--regular">
               Get in touch
               <Icon href="arrow-right"/>
             </Button>
@@ -52,7 +56,18 @@ export default {
         {
           label: 'Run'
         }
-      ]
+      ],
+      openMobileMenu: false
+    }
+  },
+  methods: {
+    openMenu() {
+      this.openMobileMenu = !this.openMobileMenu;
+      if(this.openMobileMenu) {
+        document.body.classList.add("overlay-mobile-open");
+      } else {
+        document.body.classList.remove("overlay-mobile-open");
+      }
     }
   }
 }

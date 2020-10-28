@@ -1,8 +1,19 @@
 #welcome-section {
   background: $light-beige;
   padding-bottom: 150px;
+
   h1 {
     line-height: 82px;
+    width: 75%;
+    @include mobile {
+      width: 100%;
+      line-height: 42px;
+    }
+  }
+
+  @include mobile {
+    padding-top: 16px;
+    padding-bottom: 64px;
   }
 }
 
@@ -22,6 +33,11 @@
       }
     }
   }
+
+  @include mobile {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
 }
 
 #featured-client {
@@ -30,6 +46,11 @@
   .top--featured {
     padding-top: 120px;
     padding-bottom: 100px;
+
+    @include mobile {
+      padding-top: 64px;
+      padding-bottom: 64px;
+    }
   }
   .bottom--featured {
     background: $light-beige;
@@ -40,11 +61,25 @@
       display: grid;
       grid-template-columns: auto auto auto;
       grid-column-gap: 40px;
+      @include mobile {
+        grid-column-gap: 32px;
+      }
       div {
         padding-bottom: 56px;
         padding-right: 80px;
         border-bottom: 1px solid $pure-black;
+
+        @include mobile {
+          padding-bottom: 32px;
+          padding-right: 0;
+        }
       }
+    }
+
+    @include mobile {
+      width: 100%;
+      overflow: hidden;
+      padding: 40px 16px;
     }
   }
 }
@@ -58,6 +93,22 @@
     display: grid;
     grid-template-columns: auto auto auto;
     grid-column-gap: 32px;
+
+    @include mobile {
+      grid-template-columns: auto;
+      margin-top: 40px;
+    }
+
+    .article-card {
+      @include mobile {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  @include mobile {
+    padding-top: 64px;
+    padding-bottom: 64px;
   }
 }
 
@@ -74,6 +125,11 @@
     display: block;
     width: 50%;
     background: $light-beige;
+
+    @include mobile {
+      width: 70%;
+    }
+
   }
 
   .quote {
@@ -82,6 +138,11 @@
     left: 80px;
     font-size: 144px;
     color: $pure-black;
+
+    @include mobile {
+      top: 0;
+      left: 16px;
+    }
   }
 
   .dots {
@@ -108,5 +169,13 @@
         background: $pure-black;
       }
     }
+
+    @include mobile {
+      bottom: 64px;
+    }
+  }
+
+  @include mobile {
+    padding: 88px 0 110px;
   }
 }

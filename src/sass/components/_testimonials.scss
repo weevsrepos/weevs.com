@@ -1,5 +1,8 @@
 .testimonial-block {
   .author-block {
     margin-top: 85px;
+    @include mobile {
+      margin-top: 32px;
+    }
   }
 }
