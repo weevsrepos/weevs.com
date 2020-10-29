@@ -58,7 +58,7 @@
               </h2>
 
               <div class="flex-1 width-50 mt-mobile-16">
-                <h4 class="body-mobile-m--regular body-l--regular mb-32 mr-mobile-16 line-height-32 line-height-mobile-24">Newest engineering approaches are our priority so we
+                <h4 class="body-mobile-m--regular body-l--regular mb-32 mb-mobile-0 mr-mobile-16 line-height-32 line-height-mobile-24">Newest engineering approaches are our priority so we
                   keep it up to date. Our specialists apply advanced solutions such as AI, Machine Learning and so on.
                   It will bring real value to your organization.</h4>
 
@@ -92,7 +92,7 @@
               </h2>
 
               <div class="flex-1 width-50 mt-mobile-16">
-                <h4 class="body-mobile-m--regular body-l--regular mb-32 mr-mobile-16 line-height-32 line-height-mobile-24">Only right execution makes a well prepared strategy
+                <h4 class="body-mobile-m--regular body-l--regular mb-32 mb-mobile-0 mr-mobile-16 line-height-32 line-height-mobile-24">Only right execution makes a well prepared strategy
                   effective. Development is a long term process combined from individual technologies. We are not here
                   to take the placement commission, we care about successful implementation as much as you do.</h4>
 

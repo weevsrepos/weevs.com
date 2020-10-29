@@ -36,19 +36,24 @@
   }
 
   .tab-contents {
-    //overflow: hidden;
+    overflow: hidden;
     margin-top: 70px;
+
+    @include mobile {
+      margin-right: -16px;
+      margin-left: -16px;
+    }
 
     .tab-content {
       transition: 0.4s ease;
 
       > section {
         float: left;
-        opacity: 0;
-        transition: 0.2s ease;
+        @include mobile {
+          padding-left: 16px;
+        }
         &.active {
           display: block;
-          opacity: 1;
         }
       }
     }

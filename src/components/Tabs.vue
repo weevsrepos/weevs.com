@@ -51,11 +51,13 @@ export default {
   },
   methods: {
     initTabSizes() {
-      let paddings = window.innerWidth < 1024 ? 32: 160;
+      let paddings = window.innerWidth < 1024 ? 0: 160;
       this.windowWidth = window.innerWidth - paddings;
       this.fullWidth = this.tabs.length * window.innerWidth;
       setTimeout(() => {
         this.height = document.getElementById(this.selected).offsetHeight;
+        let index = this.tabs.findIndex((i) =>  i.id === this.selected);
+        this.changeTab(index, this.selected);
       }, 100)
     },
     changeTab(index, id) {
