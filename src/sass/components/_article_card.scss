@@ -45,6 +45,10 @@
     &:hover a .arrow {
       opacity: 1;
     }
+
+    &:hover img {
+      filter: grayscale(100%);
+    }
   }
 
   .created-date {

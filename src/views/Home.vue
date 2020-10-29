@@ -23,18 +23,18 @@
               </h2>
 
               <div class="flex-1 width-50 mt-mobile-16">
-                <h4 class="body-mobile-m--regular body-l--regular mb-32 mr-mobile-16 line-height-32 line-height-mobile-24">We are aware that technical aspects are only the tip of the iceberg. Our people are not only highly
+                <h4 class="body-mobile-m--regular body-l--regular mb-mobile-0 mb-32 mr-mobile-16 line-height-32 line-height-mobile-24">We are aware that technical aspects are only the tip of the iceberg. Our people are not only highly
                   qualified but we also are on the same wavelength. Development process is a long run, so you will need a
                   great team.</h4>
 
-                <div class="d-flex">
+                <div class="d-flex d-mobile-none">
                   <Button text="Read more details" icon="arrow-right" type="secondary" size="lg"/>
                   <Button text="Get in touch" icon="arrow-right" class="ml-16" size="lg"/>
                 </div>
               </div>
             </div>
 
-            <div class="d-flex justify-content-between cards flex-mobile-column mt-mobile-32 d-mobile-none">
+            <div class="cards mt-mobile-32 pb-mobile-20">
               <ServiceCard v-for="(card, key) in tabsContents.plan.cards"
                            :icon="card.icon"
                            :title="card.title"
@@ -42,6 +42,10 @@
                            :key="key"
                            class="flex-1 d-flex flex-column"
               />
+            </div>
+
+            <div class="d-flex d-desktop-none mt-mobile-20">
+              <Button text="Read more details" icon="arrow-right" size="lg" mobile="md" />
             </div>
           </section>
         </template>
@@ -58,20 +62,24 @@
                   keep it up to date. Our specialists apply advanced solutions such as AI, Machine Learning and so on.
                   It will bring real value to your organization.</h4>
 
-                <div class="d-flex">
+                <div class="d-flex d-mobile-none">
                   <Button text="Read more details" icon="arrow-right" type="secondary" size="lg"/>
                   <Button text="Get in touch" icon="arrow-right" class="ml-16" size="lg"/>
                 </div>
               </div>
             </div>
 
-            <div class="d-flex justify-content-between cards flex-mobile-column mt-mobile-32 d-mobile-none">
+            <div class="cards mt-mobile-32 pb-mobile-20">
               <ServiceCard v-for="(card, key) in tabsContents.build.cards"
                            :icon="card.icon"
                            :title="card.title"
                            :description="card.description"
                            :key="key"
               />
+            </div>
+
+            <div class="d-flex d-desktop-none mt-mobile-20">
+              <Button text="Read more details" icon="arrow-right" size="lg" mobile="md" />
             </div>
           </section>
         </template>
@@ -88,20 +96,24 @@
                   effective. Development is a long term process combined from individual technologies. We are not here
                   to take the placement commission, we care about successful implementation as much as you do.</h4>
 
-                <div class="d-flex">
+                <div class="d-flex d-mobile-none">
                   <Button text="Read more details" icon="arrow-right" type="secondary" size="lg"/>
                   <Button text="Get in touch" icon="arrow-right" class="ml-16" size="lg"/>
                 </div>
               </div>
             </div>
 
-            <div class="d-flex justify-content-between cards flex-mobile-column mt-mobile-32 d-mobile-none">
+            <div class="cards mt-mobile-32 pb-mobile-20">
               <ServiceCard v-for="(card, key) in tabsContents.run.cards"
                            :icon="card.icon"
                            :title="card.title"
                            :description="card.description"
                            :key="key"
               />
+            </div>
+
+            <div class="d-flex d-desktop-none mt-mobile-20">
+              <Button text="Read more details" icon="arrow-right" size="lg" mobile="md" />
             </div>
           </section>
         </template>
@@ -160,9 +172,9 @@
         </h2>
 
         <div class="flex-1 width-50 mt-mobile-16">
-          <h4 class="body-mobile-m--regular body-l--regular mb-32 line-height-32 line-height-mobile-24">Dive deeper into our past projects and new learnings. We are openly sharing knowledge.</h4>
+          <h4 class="body-mobile-m--regular mb-mobile-0 body-l--regular mb-32 line-height-32 line-height-mobile-24">Dive deeper into our past projects and new learnings. We are openly sharing knowledge.</h4>
 
-          <div class="d-flex">
+          <div class="d-flex d-mobile-none">
             <Button text="Read all insights" icon="arrow-right" size="lg" mobile="md"/>
           </div>
         </div>
@@ -172,6 +184,10 @@
       <section class="article-cards">
         <ArticleCard v-for="article in articles" :item="article" />
       </section>
+
+      <div class="d-flex d-desktop-none mt-20">
+        <Button text="Read all insights" icon="arrow-right" size="lg" mobile="md"/>
+      </div>
     </section>
   </section>
 

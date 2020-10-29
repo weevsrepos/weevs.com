@@ -1,4 +1,4 @@
-@for $i from 5 through 60 {
+@for $i from 0 through 60 {
   .mr-#{$i} {
     margin-right:#{$i}px;
   }
