@@ -2,7 +2,7 @@
   color: $stone-gray;
   @extend .overline-s--regular;
   .dot {
-    margin: 0 11px;
+    margin: 0 8px;
     &:after {
       content: "•";
       display: block;

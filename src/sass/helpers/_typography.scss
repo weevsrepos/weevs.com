@@ -100,6 +100,10 @@ $font-weights: 300, 400, 500;
   line-height: 32px;
 }
 
+.line-height-42 {
+  line-height: 42px;
+}
+
 @include mobile {
   .line-height-mobile-36 {
     line-height: 36px;
@@ -107,6 +111,10 @@ $font-weights: 300, 400, 500;
 
   .line-height-mobile-24 {
     line-height: 24px;
+  }
+
+  .line-height-mobile-32 {
+    line-height: 32px !important;
   }
 
   .line-height-mobile-42 {
@@ -120,4 +128,8 @@ $font-weights: 300, 400, 500;
 
 .text-black {
   color: $pure-black;
+}
+
+.letter-spacing-08em {
+  letter-spacing: 0.08em;
 }

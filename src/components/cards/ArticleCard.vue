@@ -12,7 +12,7 @@
 
     <Badge :text="item.badge" class="mt-24 mb-16"/>
 
-    <h2 class="body-mobile-l--medium heading-s--medium mb-24 pr-30 line-height-mobile-32">
+    <h2 class="body-mobile-l--medium heading-s--medium mb-24 line-height-mobile-32 line-height-42 ">
       {{ item.title }}
     </h2>
 
@@ -20,7 +20,7 @@
       <ul class="d-flex align-center navigation">
         <li>
           <ul class="d-flex align-center">
-            <li><img :src="item.author.image" :alt="item.author.name"/></li>
+            <li class="w-24 h-24"><img :src="item.author.image" :alt="item.author.name"/></li>
             <li class="caption-m--regular ml-8 text-black">{{ item.author.name }}</li>
           </ul>
         </li>

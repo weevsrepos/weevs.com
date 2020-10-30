@@ -5,13 +5,13 @@
         We help ASEAN companies to find world  class tech talent no matter where in the  World they are.
       </h1>
 
-      <Button size="lg" mobile="md" icon="arrow-down" text="Get to know us better" class="mt-55 mt-mobile-40"/>
+      <Button size="lg" mobile="md" icon="arrow-down" text="Get to know us better" class="mt-55 mt-mobile-40" icon-class="down"/>
     </section>
   </section>
 
   <section id="recruit-section">
     <section class="container">
-      <p class="overline-s--medium text-uppercase mb-32 mb-mobile-8">We recruit people who</p>
+      <p class="overline-s--medium text-uppercase mb-32 mb-mobile-8 letter-spacing-08em">We recruit people who</p>
       <Tabs :tabs="tabs">
         <template v-slot:tab-plan>
           <section>
@@ -124,11 +124,11 @@
   <section id="featured-client">
     <section class="container">
       <section class="top--featured">
-        <p class="overline-s--medium text-uppercase mb-32 mb-mobile-16">Featured client</p>
+        <p class="overline-s--medium text-uppercase mb-32 mb-mobile-16 letter-spacing-08em">Featured client</p>
 
         <div class="d-flex justify-content-between flex-mobile-column">
-          <h2 class="flex-1 heading-mobile-s--regular heading-l--medium mr-32 width-50 line-height-64 line-height-mobile-42">
-            Empowering Huawei’s internal solutions with technology
+          <h2 class="flex-1 heading-mobile-s--regular heading-l--regular mr-32 width-50 line-height-64 line-height-mobile-42">
+            Empowering <span class="heading-mobile-s--medium heading-l--medium">Huawei’s</span> internal solutions with technology
           </h2>
 
           <div class="flex-1 width-50 mt-mobile-16">
@@ -144,27 +144,29 @@
       </section>
     </section>
 
-    <section class="bottom--featured">
-      <section class="items">
-        <div>
-          <h3 class="heading-xxl--regular">15%</h3>
-          <p class="body-l--regular mt-10">Efficiency Growth</p>
-        </div>
-        <div>
-          <h3 class="heading-xxl--regular">$14m</h3>
-          <p class="body-l--regular mt-10">Increased Conversion</p>
-        </div>
-        <div>
-          <h3 class="heading-xxl--regular">30</h3>
-          <p class="body-l--regular mt-10">Specialist Involved</p>
-        </div>
+    <section class="container">
+      <section class="bottom--featured">
+        <section class="items">
+          <div>
+            <h3 class="heading-xxl--regular">15%</h3>
+            <p class="body-l--regular mt-10">Efficiency Growth</p>
+          </div>
+          <div>
+            <h3 class="heading-xxl--regular">$14m</h3>
+            <p class="body-l--regular mt-10">Increased Conversion</p>
+          </div>
+          <div>
+            <h3 class="heading-xxl--regular">30</h3>
+            <p class="body-l--regular mt-10">Specialist Involved</p>
+          </div>
+        </section>
       </section>
     </section>
   </section>
 
   <section id="articles">
     <section class="container">
-      <p class="overline-s--medium text-uppercase mb-32 text-stone-gray mb-mobile-8">insights</p>
+      <p class="overline-s--medium text-uppercase mb-32 text-stone-gray mb-mobile-8 letter-spacing-08em">insights</p>
 
       <div class="d-flex justify-content-between flex-mobile-column">
         <h2 class="flex-1 heading-mobile-s--regular heading-l--regular mr-32 width-50 line-height-64 line-height-mobile-42">
@@ -192,7 +194,7 @@
   </section>
 
   <section id="testimonials">
-    <section class="container">
+    <section class="container position-relative">
       <span class="quote">“</span>
       <swiper
           :slides-per-view="1"
@@ -355,21 +357,21 @@ export default {
       ],
       testimonials: [
         {
-          text: 'To build great technology you need to make sure that it is neither the starting  point or your end goal. Great products are built when teams care about solving problems that they connect with and feel are worth solving. Technology is nothing but an outcome of doing this right.',
+          text: 'To build <span class="heading-mobile-xs--regular heading-l--regular">great technology</span> you need to make sure that it is neither the starting  point or your end goal. <span class="heading-mobile-xs--regular heading-l--regular">Great products are built when teams care about solving problems </span> that they connect with and feel are worth solving. Technology is nothing but an <span class="heading-mobile-xs--regular heading-l--regular">outcome of doing this right.</span>',
           author: {
             image: 'img/avatar_big.svg',
             name: 'Pedro Sttau',
           }
         },
         {
-          text: 'To build great technology you need to make sure that it is neither the starting  point or your end goal. Great products are built when teams care about solving problems that they connect with and feel are worth solving. Technology is nothing but an outcome of doing this right.',
+          text: 'To build <span class="heading-mobile-xs--regular heading-l--regular">great technology</span> you need to make sure that it is neither the starting  point or your end goal. <span class="heading-mobile-xs--regular heading-l--regular">Great products are built when teams care about solving problems </span> that they connect with and feel are worth solving. Technology is nothing but an <span class="heading-mobile-xs--regular heading-l--regular">outcome of doing this right.</span>',
           author: {
             image: 'img/avatar_big.svg',
             name: 'Pedro Sttau',
           }
         },
         {
-          text: 'To build great technology you need to make sure that it is neither the starting  point or your end goal. Great products are built when teams care about solving problems that they connect with and feel are worth solving. Technology is nothing but an outcome of doing this right.',
+          text: 'To build <span class="heading-mobile-xs--regular heading-l--regular">great technology</span> you need to make sure that it is neither the starting  point or your end goal. <span class="heading-mobile-xs--regular heading-l--regular">Great products are built when teams care about solving problems </span> that they connect with and feel are worth solving. Technology is nothing but an <span class="heading-mobile-xs--regular heading-l--regular">outcome of doing this right.</span>',
           author: {
             image: 'img/avatar_big.svg',
             name: 'Pedro Sttau',

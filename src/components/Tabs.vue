@@ -1,5 +1,5 @@
 <template>
-  <section class="tabs">
+  <section class="tabs" :id="id">
     <section class="tabs--headline">
       <div v-for="(tab, key) in tabs"
            :key="key"
@@ -42,7 +42,8 @@ export default {
       windowWidth: 0,
       height: 0,
       fullWidth: 0,
-      transform: 0
+      transform: 0,
+      id: `tabs-${Math.floor(Math.random() * 1000)}`
     }
   },
   mounted() {
@@ -51,8 +52,9 @@ export default {
   },
   methods: {
     initTabSizes() {
-      let paddings = window.innerWidth < 1024 ? 0: 160;
-      this.windowWidth = window.innerWidth - paddings;
+      let innerWidth = document.querySelector(`#${this.id}`).offsetWidth
+      let paddings = window.innerWidth < 1024 ? -16: 0;
+      this.windowWidth = innerWidth - paddings;
       this.fullWidth = this.tabs.length * window.innerWidth;
       setTimeout(() => {
         this.height = document.getElementById(this.selected).offsetHeight;

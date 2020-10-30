@@ -18,6 +18,17 @@ $lg-padding: 16px 24px;
 
   svg {
     margin-left: 15px;
+    transition: 0.2s ease;
+  }
+
+  &:hover {
+    svg:not(.no--effect) {
+      transform: translateX(5px);
+
+      &.down {
+        transform: translateY(5px);
+      }
+    }
   }
 
   &.primary {

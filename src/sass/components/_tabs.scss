@@ -62,4 +62,8 @@
       margin-top: 32px;
     }
   }
+
+  @include mobile {
+    margin-right: -16px;
+  }
 }

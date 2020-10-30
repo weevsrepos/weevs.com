@@ -2,7 +2,7 @@
   <footer id="footer">
     <section class="top-footer d-flex justify-content-center align-center flex-column">
       <h2 class="heading-mobile-s--light heading-xl--light line-height-mobile-42">
-        Fill in your gap with best specialists in the industry
+        Fill in your gap with best specialists <br> in the industry
       </h2>
       <Button text="Get in touch" icon="arrow-right" type="secondary" class="mt-48 mt-mobile-40"/>
     </section>
@@ -22,13 +22,13 @@
               <router-link to="#">
                 <Icon href="linkedin" fill="#fff" size="20"/>
               </router-link>
-              <router-link to="#" class="ml-37">
+              <router-link to="#" class="ml-37 ml-mobile-27">
                 <Icon href="facebook" fill="#fff" size="20"/>
               </router-link>
-              <router-link to="#" class="ml-37">
+              <router-link to="#" class="ml-37 ml-mobile-27">
                 <Icon href="twitter" fill="#fff" size="20"/>
               </router-link>
-              <router-link to="#" class="ml-37">
+              <router-link to="#" class="ml-37 ml-mobile-27">
                 <Icon href="instagram" fill="#fff" size="20"/>
               </router-link>
             </div>
@@ -116,25 +116,27 @@
       </section>
     </section>
 
-    <section class="copyright-section d-flex justify-content-between container">
-      <p class="caption-m--regular copyright d-flex flex-1">&copy; {{ year }} Weevs.</p>
-      <p class="caption-m--regular d-flex align-center flex-1 justify-content-center">
-        Made with
-        <Icon href="heart" size="13" fill="#fff" class="mx-7"/>
-        from <span class="caption-m--medium">&nbsp;Singapore</span>
-      </p>
-      <ul class="d-flex flex-1 justify-content-end">
-        <li>
-          <router-link to="#">
-            Terms & Conditions
-          </router-link>
-        </li>
-        <li class="ml-32">
-          <router-link to="#">
-            Privacy Policy
-          </router-link>
-        </li>
-      </ul>
+    <section class="copyright-section">
+      <section class="container d-flex justify-content-between align-center">
+        <p class="caption-m--regular copyright d-flex flex-1">&copy; {{ year }} Weevs.</p>
+        <p class="caption-m--regular d-flex align-center flex-1 justify-content-center">
+          Made with
+          <Icon href="heart" size="13" fill="#fff" class="mx-7"/>
+          from <span class="caption-m--medium">&nbsp;Singapore</span>
+        </p>
+        <ul class="d-flex flex-1 justify-content-end">
+          <li>
+            <router-link to="#" class="copyright caption-m--regular">
+              Terms & Conditions
+            </router-link>
+          </li>
+          <li class="ml-32">
+            <router-link to="#" class="copyright  caption-m--regular">
+              Privacy Policy
+            </router-link>
+          </li>
+        </ul>
+      </section>
     </section>
   </footer>
 </template>

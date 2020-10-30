@@ -7,7 +7,7 @@
       <slot></slot>
       <template v-if="icon">
         {{ text }}
-        <Icon :href="icon" :size="iconSize" :fill="iconFill" />
+        <Icon :href="icon" :size="iconSize" :fill="iconFill" :class="`${iconClass} ${hideHoverEffect ? 'no--effect' : ''}`"/>
       </template>
     </template>
   </button>
@@ -37,15 +37,23 @@ export default {
     icon: {
       type: String
     },
+    iconClass: {
+      type: String
+    },
     iconFill: {
       type: String
     },
     iconSize: {
-      type: [String, Number]
+      type: [String, Number],
+      default: 11
     },
     mobile: {
       type: String
-    }
+    },
+    hideHoverEffect: {
+      type: Boolean,
+      default: false
+    },
   }
 }
 </script>

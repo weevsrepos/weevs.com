@@ -79,3 +79,12 @@
     display: none !important;
   }
 }
+
+
+@include fullHDdesktop {
+  .container {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}

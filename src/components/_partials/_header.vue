@@ -3,14 +3,14 @@
     <section class="container d-flex justify-content-between align-center">
       <div class="header-left">
         <router-link to="#">
-          <Icon href="weevs" fill="#000" width="102" height="16"/>
+          <Icon href="weevs" fill="#000" width="102" height="16" class="logo"/>
         </router-link>
       </div>
 
       <div class="header-right">
         <button class="button d-flex-mobile d-desktop-none" @click="openMenu()">
-          <Icon href="menu" width="18" height="16" v-if="!openMobileMenu"/>
-          <Icon href="close" width="18" height="16" v-else/>
+          <Icon href="menu" width="18" height="16" v-if="!openMobileMenu" class="no--effect"/>
+          <Icon href="close" width="18" height="16" v-else class="no--effect"/>
         </button>
         <ul id="menu">
           <li>
@@ -27,10 +27,7 @@
             </router-link>
           </li>
           <li>
-            <Button size="md" class="body-s--regular body-mobile-l--regular">
-              Get in touch
-              <Icon href="arrow-right"/>
-            </Button>
+            <Button size="md" class="body-s--regular body-mobile-l--regular" icon="arrow-right" text="Get in touch"/>
           </li>
         </ul>
       </div>

@@ -87,9 +87,11 @@
     @include mobile {
       padding-top: 32px;
       padding-bottom: 32px;
-      flex-wrap: wrap;
+      > section {
+        flex-wrap: wrap;
+      }
       ul,p {
-        flex: unset;
+        flex: unset !important;
       }
       ul {
         width: 100%;
