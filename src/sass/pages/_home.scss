@@ -128,6 +128,12 @@
       margin-right: -16px;
     }
   }
+
+  .container-stats {
+    @include desktop {
+      padding: 0;
+    }
+  }
 }
 
 #articles {

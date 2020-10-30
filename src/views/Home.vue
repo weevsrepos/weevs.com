@@ -144,7 +144,7 @@
       </section>
     </section>
 
-    <section class="container">
+    <section class="container container-stats">
       <section class="bottom--featured">
         <section class="items">
           <div>
