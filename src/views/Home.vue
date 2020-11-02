@@ -11,7 +11,7 @@
 
   <section id="recruit-section">
     <section class="container">
-      <p class="overline-s--medium text-uppercase mb-32 mb-mobile-8 letter-spacing-08em">We recruit people who</p>
+      <p class="overline-s--medium text-uppercase mb-32 mb-mobile-16 letter-spacing-08em">We recruit people who</p>
       <Tabs :tabs="tabs">
         <template v-slot:tab-plan>
           <section>
@@ -166,7 +166,7 @@
 
   <section id="articles">
     <section class="container">
-      <p class="overline-s--medium text-uppercase mb-32 text-stone-gray mb-mobile-8 letter-spacing-08em">insights</p>
+      <p class="overline-s--medium text-uppercase mb-32 text-stone-gray mb-mobile-16 letter-spacing-08em">insights</p>
 
       <div class="d-flex justify-content-between flex-mobile-column">
         <h2 class="flex-1 heading-mobile-s--regular heading-l--regular mr-32 width-50 line-height-64 line-height-mobile-42">
