@@ -21,6 +21,15 @@ $lg-padding: 16px 24px;
     transition: 0.2s ease;
   }
 
+  &.dynamic-icon-size {
+    @include mobile {
+      svg {
+        width: 11px;
+        height: 11px;
+      }
+    }
+  }
+
   &:hover {
     svg:not(.no--effect) {
       transform: translateX(5px);

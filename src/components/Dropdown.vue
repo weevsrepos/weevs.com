@@ -6,7 +6,7 @@
     </div>
 
     <ul class="dropdown-menu-items" :class="{'opened' : opened}">
-      <li v-for="option in options">
+      <li v-for="option in options" :class="`${itemClass}`">
         {{ option.label }}
       </li>
     </ul>
@@ -25,6 +25,10 @@ export default {
       required: true
     },
     labelClass: {
+      type: String,
+      default: ''
+    },
+    itemClass: {
       type: String,
       default: ''
     },

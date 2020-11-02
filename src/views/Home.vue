@@ -325,7 +325,7 @@ export default {
       },
       articles: [
         {
-          img: '/img/insight-item.svg',
+          img: '/img/insight-item.png',
           title: 'Fertile data: why building quality into your process is important',
           badge: 'Publications',
           created_at: 'June 20, 2020',
@@ -335,7 +335,7 @@ export default {
           }
         },
         {
-          img: '/img/insight-item.svg',
+          img: '/img/insight-item.png',
           title: 'Operating models: A design for digital success',
           badge: 'Case study',
           created_at: 'June 20, 2020',
@@ -345,7 +345,7 @@ export default {
           }
         },
         {
-          img: '/img/insight-item.svg',
+          img: '/img/insight-item.png',
           title: 'Pushing the boundaries of customer experience',
           badge: 'shows',
           created_at: 'June 20, 2020',

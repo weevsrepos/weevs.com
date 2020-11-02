@@ -29,6 +29,22 @@
     }
 
     #menu-footer {
+
+      .social-icons {
+
+        svg {
+          fill: $snow-white;
+          transition: 0.3s ease;
+
+          &:hover {
+            fill: #858585;
+          }
+
+          &:active {
+            fill: $snow-white;
+          }
+        }
+      }
       .right--footer {
         flex: 1;
         margin-left: 100px;

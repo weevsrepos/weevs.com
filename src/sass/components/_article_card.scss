@@ -10,20 +10,6 @@
       position: relative;
       display: block;
       line-height: 0;
-      &:after {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        background: linear-gradient(0deg, rgba(244, 236, 226, 0.8), rgba(244, 236, 226, 0.8)), #000000;
-        opacity: 0;
-        background-blend-mode: normal, color;
-        z-index: 2;
-        transition: 0.3s ease;
-      }
-
       &:before {
         content: "";
         position: absolute;
@@ -31,7 +17,7 @@
         top: 0;
         bottom: 0;
         right: 0;
-        background: #C4C4C4;
+        background: $light-beige;
         z-index: 1;
         transition: 0.3s ease;
         opacity: 0;
@@ -56,12 +42,8 @@
       }
     }
 
-    &:hover a:after {
-      opacity: 0.8;
-    }
-
     &:hover a:before {
-      opacity: 0.3;
+      opacity: 0.8;
     }
 
     &:hover a .arrow {
@@ -74,8 +56,6 @@
     &:hover img {
       -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
       filter: grayscale(100%);
-      background: linear-gradient(0deg, rgba(244, 236, 226, 0.8), rgba(244, 236, 226, 0.8)), #000000;
-      background-blend-mode: normal, color;
     }
   }
 

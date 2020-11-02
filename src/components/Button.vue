@@ -1,5 +1,5 @@
 <template>
-  <button :class="`button ${type} ${size} mobile-${mobile}`" :disabled="disabled">
+  <button :class="`button ${type} ${size} mobile-${mobile} ${dynamicIconSize ? 'dynamic-icon-size' : ''}`" :disabled="disabled">
     <template v-if="text && !icon">
       {{ text }}
     </template>
@@ -45,15 +45,20 @@ export default {
     },
     iconSize: {
       type: [String, Number],
-      default: 11
+      default: 16
     },
     mobile: {
-      type: String
+      type: String,
+      default: ''
     },
     hideHoverEffect: {
       type: Boolean,
       default: false
     },
+    dynamicIconSize: {
+      type: Boolean,
+      default: true
+    }
   }
 }
 </script>

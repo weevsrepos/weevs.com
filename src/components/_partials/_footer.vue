@@ -18,18 +18,18 @@
             <div class="mt-44 mt-mobile-24">
               <h4 class="body-mobile-l--light heading-xs--light line-height-mobile-24">We become your team <br> or help you build one</h4>
             </div>
-            <div class="mt-44 mt-mobile-35 d-flex align-center">
+            <div class="mt-44 mt-mobile-35 d-flex align-center social-icons">
               <router-link to="#">
-                <Icon href="linkedin" fill="#fff" size="20"/>
+                <Icon href="linkedin" size="20"/>
               </router-link>
               <router-link to="#" class="ml-37 ml-mobile-27">
-                <Icon href="facebook" fill="#fff" size="20"/>
+                <Icon href="facebook" size="20"/>
               </router-link>
               <router-link to="#" class="ml-37 ml-mobile-27">
-                <Icon href="twitter" fill="#fff" size="20"/>
+                <Icon href="twitter" size="20"/>
               </router-link>
               <router-link to="#" class="ml-37 ml-mobile-27">
-                <Icon href="instagram" fill="#fff" size="20"/>
+                <Icon href="instagram" size="20"/>
               </router-link>
             </div>
           </div>

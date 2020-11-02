@@ -19,7 +19,7 @@
             </router-link>
           </li>
           <li class="dropdown-item">
-            <Dropdown label="What we do" :options="menuItems" labelClass="body-s--regular body-mobile-l--regular"/>
+            <Dropdown label="What we do" :options="menuItems" label-class="body-s--regular body-mobile-l--regular" item-class="body-mobile-m--regular"/>
           </li>
           <li>
             <router-link to="#" class="body-s--regular body-mobile-l--regular">
