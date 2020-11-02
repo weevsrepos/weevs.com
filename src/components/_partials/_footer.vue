@@ -78,7 +78,7 @@
                 <li class="mt-24 mt-mobile-16">
                   <router-link to="" class="body-m--regular">
                     Blog
-                    <Icon href="external-link" size="12" class="ml-10"/>
+                    <Icon href="external-link" size="12" class="ml-8"/>
                   </router-link>
                 </li>
               </ul>
