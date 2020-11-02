@@ -330,7 +330,7 @@ export default {
           badge: 'Publications',
           created_at: 'June 20, 2020',
           author: {
-            image: 'img/avatar.svg',
+            image: 'img/avatar.png',
             name: 'Leo Philips',
           }
         },
@@ -340,7 +340,7 @@ export default {
           badge: 'Case study',
           created_at: 'June 20, 2020',
           author: {
-            image: 'img/avatar.svg',
+            image: 'img/avatar.png',
             name: 'Emery Darwart',
           }
         },
@@ -350,7 +350,7 @@ export default {
           badge: 'shows',
           created_at: 'June 20, 2020',
           author: {
-            image: 'img/avatar.svg',
+            image: 'img/avatar.png',
             name: 'Pedro Sttau',
           }
         }
@@ -359,21 +359,21 @@ export default {
         {
           text: 'To build <span class="heading-mobile-xs--regular heading-l--regular">great technology</span> you need to make sure that it is neither the starting  point or your end goal. <span class="heading-mobile-xs--regular heading-l--regular">Great products are built when teams care about solving problems </span> that they connect with and feel are worth solving. Technology is nothing but an <span class="heading-mobile-xs--regular heading-l--regular">outcome of doing this right.</span>',
           author: {
-            image: 'img/avatar_big.svg',
+            image: 'img/avatar_big.png',
             name: 'Pedro Sttau',
           }
         },
         {
           text: 'To build <span class="heading-mobile-xs--regular heading-l--regular">great technology</span> you need to make sure that it is neither the starting  point or your end goal. <span class="heading-mobile-xs--regular heading-l--regular">Great products are built when teams care about solving problems </span> that they connect with and feel are worth solving. Technology is nothing but an <span class="heading-mobile-xs--regular heading-l--regular">outcome of doing this right.</span>',
           author: {
-            image: 'img/avatar_big.svg',
+            image: 'img/avatar_big.png',
             name: 'Pedro Sttau',
           }
         },
         {
           text: 'To build <span class="heading-mobile-xs--regular heading-l--regular">great technology</span> you need to make sure that it is neither the starting  point or your end goal. <span class="heading-mobile-xs--regular heading-l--regular">Great products are built when teams care about solving problems </span> that they connect with and feel are worth solving. Technology is nothing but an <span class="heading-mobile-xs--regular heading-l--regular">outcome of doing this right.</span>',
           author: {
-            image: 'img/avatar_big.svg',
+            image: 'img/avatar_big.png',
             name: 'Pedro Sttau',
           }
         }
