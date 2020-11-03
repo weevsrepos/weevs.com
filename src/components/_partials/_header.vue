@@ -27,7 +27,7 @@
             </router-link>
           </li>
           <li>
-            <Button size="md" class="body-s--regular body-mobile-l--regular" icon="arrow-right" text="Get in touch"/>
+            <Button size="md" class="body-s--regular body-mobile-m--regular" icon="arrow-right" text="Get in touch"/>
           </li>
         </ul>
       </div>

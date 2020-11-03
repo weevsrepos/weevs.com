@@ -127,7 +127,7 @@
         <ul class="d-flex flex-1 justify-content-end">
           <li>
             <router-link to="#" class="copyright caption-m--regular">
-              Terms & Conditions
+              Terms <span class="disable-font-feature">&</span> Conditions
             </router-link>
           </li>
           <li class="ml-32">
