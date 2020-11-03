@@ -1,8 +1,8 @@
 <template>
-  <header id="header" :class="{'opened-mobile' : openMobileMenu}">
+  <header id="header" :class="{'opened-mobile' : openMobileMenu, 'bg-beige' : color === 'beige'}">
     <section class="container d-flex justify-content-between align-center">
       <div class="header-left">
-        <router-link to="#">
+        <router-link :to="{ name: 'Home' }">
           <Icon href="weevs" fill="#000" width="102" height="16" class="logo"/>
         </router-link>
       </div>
@@ -14,7 +14,7 @@
         </button>
         <ul id="menu">
           <li>
-            <router-link to="#" class="body-s--regular body-mobile-l--regular">
+            <router-link :to="{ name: 'WeAreDifferent' }" class="body-s--regular body-mobile-l--regular">
               We are different
             </router-link>
           </li>
@@ -41,6 +41,7 @@ import Button from "@/components/Button";
 import Dropdown from "@/components/Dropdown";
 export default {
   components: {Dropdown, Button, Icon},
+  props: ['color'],
   data() {
     return {
       menuItems: [

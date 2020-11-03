@@ -1,5 +1,5 @@
 <template>
-  <component :is="this.$route.meta.layout || 'default'">
+  <component :is="this.$route.meta.layout || 'default'" :color="this.$route.meta.color || null">
     <router-view />
   </component>
 </template>

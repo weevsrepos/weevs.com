@@ -50,6 +50,9 @@ export default {
     window.addEventListener('resize', this.initTabSizes);
     this.initTabSizes();
   },
+  beforeUnmount() {
+    window.removeEventListener('resize', this.initTabSizes);
+  },
   methods: {
     initTabSizes() {
       let innerWidth = document.querySelector(`#${this.id}`).offsetWidth

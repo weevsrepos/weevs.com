@@ -1,5 +1,5 @@
 <template>
-  <Header />
+  <Header :color="color" />
   <slot></slot>
   <Footer />
 </template>
@@ -11,7 +11,8 @@ import Footer from "@/components/_partials/_footer";
 export default {
   components: {
     Header, Footer
-  }
+  },
+  props: ['color']
 }
 </script>
 

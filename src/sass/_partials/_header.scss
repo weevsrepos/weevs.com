@@ -1,7 +1,11 @@
 #header {
-  background: $light-beige;
+  background: $snow-white;
   padding-bottom: 80px;
   padding-top: 50px;
+
+  &.bg-beige {
+    background: $light-beige;
+  }
 
   .header-left {
 
