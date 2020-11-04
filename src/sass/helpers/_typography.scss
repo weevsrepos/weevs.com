@@ -106,11 +106,11 @@ $font-weights: 300, 400, 500;
 
 @include mobile {
   .line-height-mobile-36 {
-    line-height: 36px;
+    line-height: 36px !important;
   }
 
   .line-height-mobile-24 {
-    line-height: 24px;
+    line-height: 24px !important;
   }
 
   .line-height-mobile-32 {
