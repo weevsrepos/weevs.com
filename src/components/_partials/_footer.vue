@@ -4,7 +4,7 @@
       <h2 class="heading-mobile-s--light heading-xl--light line-height-mobile-42">
         Fill in your gap with best specialists <br> in the industry
       </h2>
-      <Button text="Get in touch" icon="arrow-right" type="secondary" class="mt-48 mt-mobile-40"/>
+      <Button text="Get in touch" icon="arrow-right" type="secondary" class="mt-48 mt-mobile-40 b-none"/>
     </section>
     <section class="bottom-footer">
       <section class="container">
@@ -126,12 +126,12 @@
         </p>
         <ul class="d-flex flex-1 justify-content-end">
           <li>
-            <router-link to="#" class="copyright caption-m--regular">
+            <router-link :to="{ name: 'Terms' }" class="copyright caption-m--regular">
               Terms <span class="disable-font-feature">&</span> Conditions
             </router-link>
           </li>
           <li class="ml-32">
-            <router-link to="#" class="copyright  caption-m--regular">
+            <router-link :to="{ name: 'Privacy' }" class="copyright  caption-m--regular">
               Privacy Policy
             </router-link>
           </li>

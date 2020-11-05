@@ -137,7 +137,7 @@
               specialists have been permanently contracted, keeping a new long-term improvement plan well executed.</h4>
 
             <div class="d-flex">
-              <Button text="Read case study" icon="arrow-right" type="secondary" size="lg" mobile="md"/>
+              <Button text="Read case study" icon="arrow-right" type="secondary" size="lg" mobile="md" class="b-none"/>
             </div>
           </div>
         </div>

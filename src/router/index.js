@@ -14,6 +14,18 @@ const routes = [
     name: 'WeAreDifferent',
     component: () => import('../views/WeAreDifferent.vue'),
     meta: { layout: Default }
+  },
+  {
+    path: '/terms-conditions',
+    name: 'Terms',
+    component: () => import('../views/Terms.vue'),
+    meta: { layout: Default }
+  },
+  {
+    path: '/privacy-policy',
+    name: 'Privacy',
+    component: () => import('../views/Privacy.vue'),
+    meta: { layout: Default }
   }
 ]
 

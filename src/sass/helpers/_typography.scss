@@ -133,3 +133,7 @@ $font-weights: 300, 400, 500;
 .letter-spacing-08em {
   letter-spacing: 0.08em;
 }
+
+.disable-font-feature {
+  font-feature-settings: "smcp" 1;
+}

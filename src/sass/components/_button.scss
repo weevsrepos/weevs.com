@@ -57,12 +57,18 @@ $lg-padding: 16px 24px;
     background: #fff;
     border: 1px solid #DDDDDD;
     color: $pure-black;
-    &:not(.b-none):active {
-      border-color:$pure-black;
-    }
+    transition: 0.3s ease;
 
     svg {
       fill: $pure-black;
+    }
+
+    &:not(.b-none):hover {
+      border: 1px solid #B7B7B8;
+    }
+
+    &:not(.b-none):active {
+      border-color:$pure-black;
     }
 
     &:disabled {
