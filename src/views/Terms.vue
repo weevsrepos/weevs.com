@@ -3,21 +3,21 @@
     <section class="container content-items">
       <div class="sidebar">
         <router-link :to="{ name: 'Terms'}">
-          <h2 class="heading-xs--regular mb-40 active">Terms <span class="disable-font-feature">&</span> Conditions</h2>
+          <h2 class="heading-mobile-xs--light heading-xs--regular mb-40 mb-mobile-16 active">Terms <span class="disable-font-feature">&</span> Conditions</h2>
         </router-link>
         <router-link :to="{ name: 'Privacy'}">
-          <h2 class="heading-xs--regular">Privacy Policy</h2>
+          <h2 class="heading-mobile-xs--light heading-xs--regular">Privacy Policy</h2>
         </router-link>
       </div>
 
       <div class="content">
         <section class="headline">
-          <h1 class="heading-l--regular">Terms <span class="disable-font-feature">&</span> Conditions</h1>
-          <h6 class="overline-s--medium updated-at mt-16 letter-spacing-08em">Updated: 25 July 2020</h6>
+          <h1 class="heading-l--regular d-mobile-none">Terms <span class="disable-font-feature">&</span> Conditions</h1>
+          <h6 class="overline-s--medium updated-at mt-16 mt-mobile-32 letter-spacing-08em">Updated: 25 July 2020</h6>
         </section>
 
         <section class="article">
-          <h2>Definitions</h2>
+          <h2 class="mt-mobile-8">Definitions</h2>
 
           <p>
             <b>"Affiliate"</b> means any entity under the control of Customer where "control" means ownership of or the
@@ -70,7 +70,7 @@
           </p>
 
           <h6>3.3. Customer Obligations</h6>
-          <p class="mb-16">
+          <p class="mb-16 mb-mobile-8">
             <b>a)</b> In General. Customer is solely responsible for the accuracy, content and legality of all Customer
             Data. Customer represents and warrants to Intercom that Customer has all necessary rights, consents and
             permissions to collect, share and use all Customer Data as contemplated in this Agreement (including
@@ -82,7 +82,7 @@
             the Services by any Person as if it was submitted by Customer.
           </p>
 
-          <p class="mb-16">
+          <p class="mb-16 mb-mobile-8">
             <b>b)</b> No Sensitive Personal Information. Customer specifically agrees not to use the Services to
             collect, store, process or transmit any Sensitive Personal Information. Customer acknowledges that Intercom
             is not a Business Associate or subcontractor (as those terms are defined in HIPAA) or a payment card
@@ -90,7 +90,7 @@
             under this Agreement for Sensitive Personal Information, notwithstanding anything to the contrary herein.
           </p>
 
-          <p class="mb-16">
+          <p class="mb-16 mb-mobile-8">
             <b>c)</b> Compliance with Laws. Customer agrees to comply with all applicable Laws in its use of the
             Services. Without limiting the generality of the foregoing, Customer will not engage in any unsolicited
             advertising, marketing, or other activities using the Services, including without limitation any activities

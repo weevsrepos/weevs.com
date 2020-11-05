@@ -1,8 +1,18 @@
 #privacy-terms {
   padding-top: 50px;
   padding-bottom: 136px;
+
+  @include mobile {
+    padding-top: 0;
+    padding-bottom: 64px;
+  }
+
   .content-items {
     display: flex;
+
+    @include mobile {
+      flex-direction: column;
+    }
 
     .sidebar {
       width: 300px;
@@ -55,6 +65,16 @@
           @extend .heading-s--regular;
           margin-bottom: 32px;
           margin-top: 64px;
+          font-feature-settings: 'calt' off;
+
+          @include mobile {
+            margin-bottom: 16px;
+            margin-top: 32px;
+
+            font-size: 24px;
+            font-family: 'TTFirsNeue-Regular', sans-serif;
+            font-weight: 400;
+          }
         }
 
         p {
@@ -74,6 +94,11 @@
           @extend .body-m--medium;
           margin-bottom: 16px;
           margin-top: 32px;
+
+          @include mobile {
+            margin-bottom: 8px;
+            margin-top: 16px;
+          }
         }
       }
     }
