@@ -8,6 +8,12 @@
       color: $snow-white;
       text-align: center;
       line-height: 82px;
+
+      @media screen and (max-width: 515px){
+        br {
+          display: none;
+        }
+      }
     }
 
     @include mobile {

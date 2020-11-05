@@ -57,7 +57,7 @@ $lg-padding: 16px 24px;
     background: #fff;
     border: 1px solid #DDDDDD;
     color: $pure-black;
-    &:active {
+    &:not(.b-none):active {
       border-color:$pure-black;
     }
 
