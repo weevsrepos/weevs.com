@@ -288,6 +288,7 @@
 }
 
 #our-core {
+  overflow: hidden;
   .items {
     display: flex;
     padding: 0;
@@ -306,9 +307,20 @@
     }
 
     .right-side {
+      position: relative;
       padding: 136px 80px 136px 122px;
       background: $light-gray;
       width: 40%;
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 100%;
+        width: 1000%;
+        background: #F5F5F6;
+        height: 100%;
+        top: 0;
+      }
 
       @include mobile {
         padding: 64px 16px;
