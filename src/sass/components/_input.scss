@@ -75,7 +75,7 @@ $textInputPaddingTopBottom: 16px;
     cursor: text;
   }
 
-  input {
+  input,textarea {
     padding: $textInputPaddingTopBottom 0 $textInputPaddingTopBottom 0;
     display: block;
     width: 100%;
@@ -125,11 +125,11 @@ $textInputPaddingTopBottom: 16px;
       content: attr(data-validationError);
     }
 
-    input:focus ~ .form-field-label {
+    input:focus ~ .form-field-label, textarea:focus ~ .form-field-label {
       color: $form-field-invalid-foreground;
     }
 
-    input {
+    input,textarea {
       border-color:$form-field-invalid-foreground;
       border-width: 2px;
     }

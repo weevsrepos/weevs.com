@@ -61,6 +61,20 @@
                        v-model="formData.job_title"
                 />
               </div>
+
+              <div class="d-flex mt-5">
+                <Input label="What can we do for you?"
+                       type="textarea"
+                       name="message"
+                       class="flex-1"
+                       id="message"
+                       v-model="formData.message"
+                />
+              </div>
+
+              <div class="d-flex justify-content-end mt-40">
+                <Button text="Send message" size="lg" />
+              </div>
             </section>
           </Form>
         </section>
@@ -95,6 +109,7 @@ import Input from "@/components/Input";
 import Dropdown from "@/components/Dropdown";
 import { Field, Form, configure } from 'vee-validate';
 import * as Yup from "yup";
+import Button from "@/components/Button";
 
 configure({
   validateOnChange: true,
@@ -102,7 +117,7 @@ configure({
 });
 
 export default {
-  components: {Dropdown, Input, Field, Form},
+  components: {Button, Dropdown, Input, Field, Form},
   data() {
     return {
       countries: [
@@ -113,7 +128,8 @@ export default {
         phone: null,
         email: null,
         company: null,
-        job_title: null
+        job_title: null,
+        message: null
       },
       schema: {
         full_name: Yup.string().required().label('Full Name'),
@@ -121,6 +137,7 @@ export default {
         email: Yup.string().email().required().label('E-mail'),
         company: Yup.string().required().label('Company'),
         job_title: Yup.string().required().label("Job title"),
+        message: Yup.string().required().label("Message"),
       }
     }
   }

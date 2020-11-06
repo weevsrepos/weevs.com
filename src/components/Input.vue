@@ -3,13 +3,15 @@
        :class="{ 'form-field-invalid': !!errorMessage, success: meta.valid }"
        :data-validationerror="errorMessage"
   >
-    <input :type="type"
-           required
-           :name="name"
-           :id="id"
-           :value="inputValue"
-           @input="handleChange"
-           @blur="handleBlur"
+    <component :is="type === 'textarea' ? type : 'input'"
+               :type="type"
+               required
+               :name="name"
+               rows="5"
+               :id="id"
+               :value="inputValue"
+               @input="handleChange"
+               @blur="handleBlur"
     />
     <label class="form-field-label" :for="id">{{ label}}</label>
     <div class="d-flex align-center mt-8 caption-s--light" v-if="errorMessage">
