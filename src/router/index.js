@@ -26,6 +26,12 @@ const routes = [
     name: 'Privacy',
     component: () => import('../views/Privacy.vue'),
     meta: { layout: Default }
+  },
+  {
+    path: '/hire-us',
+    name: 'HireUs',
+    component: () => import('../views/HireUs.vue'),
+    meta: { layout: Default }
   }
 ]
 

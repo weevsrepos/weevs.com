@@ -1,14 +1,14 @@
 $form-label: #858585;
 $form-label-focus: $pure-black;
-$form-line: #858585;
+$form-line: #DDDDDD;
 $form-line-focus: $pure-black;
-$form-input-text: #858585;
+$form-input-text: $pure-black;
 $form-input-text-focus: $pure-black;
 $form-field-invalid-foreground: $invalid;
 
 $dropdown-hoverBackground: $light-gray;
 $dropdown-selectedBackground: $snow-white;
-$labelOffset: 25px;
+$labelOffset: 15px;
 $textInputPaddingTopBottom: 16px;
 
 .dropdown {
@@ -49,15 +49,15 @@ $textInputPaddingTopBottom: 16px;
 
 
 .form-field {
-  font-size: 14px;
   position: relative;
   display: block;
   color: $form-label;
   padding: $labelOffset 0 10px 0;
+  @extend .caption-m--regular;
 
   &::after {
     content: "\00A0";
-    display: block;
+    display: none;
     color: $form-field-invalid-foreground;
     font-size: 12px;
     padding-top: 5px;
@@ -92,7 +92,7 @@ $textInputPaddingTopBottom: 16px;
 
     &:valid, &:focus {
       & ~ .form-field-label {
-        top: $labelOffset - ($textInputPaddingTopBottom - 7);
+        top: $labelOffset - ($textInputPaddingTopBottom - 8);
         font-size: 12px;
       }
     }
@@ -100,7 +100,7 @@ $textInputPaddingTopBottom: 16px;
     &:focus {
       outline: none;
       color: $form-input-text-focus;
-      padding-bottom: $textInputPaddingTopBottom - 2;
+      padding-bottom: $textInputPaddingTopBottom;
       border-bottom-width: 1px;
       border-bottom-color: $form-line-focus;
 
@@ -127,6 +127,11 @@ $textInputPaddingTopBottom: 16px;
 
     input:focus ~ .form-field-label {
       color: $form-field-invalid-foreground;
+    }
+
+    input {
+      border-color:$form-field-invalid-foreground;
+      border-width: 2px;
     }
   }
 }
