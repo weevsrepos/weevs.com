@@ -32,6 +32,12 @@ const routes = [
     name: 'HireUs',
     component: () => import('../views/HireUs.vue'),
     meta: { layout: Default }
+  },
+  {
+    path: '/join-us',
+    name: 'JoinUs',
+    component: () => import('../views/JoinUs.vue'),
+    meta: { layout: Default }
   }
 ]
 

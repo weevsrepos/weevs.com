@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "country-list-js": "^3.1.7",
     "path": "^0.12.7",
     "register-service-worker": "^1.7.1",
     "svg-sprite": "^1.5.0",

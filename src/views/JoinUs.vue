@@ -10,10 +10,10 @@
         <section class="left--side">
           <div class="headline d-flex">
             <router-link :to="{ name: 'HireUs'}">
-              <h2 class="heading-xs--regular mr-48 active">Hire us</h2>
+              <h2 class="heading-xs--regular mr-48">Hire us</h2>
             </router-link>
             <router-link :to="{ name: 'JoinUs'}">
-              <h2 class="heading-xs--regular">Join us</h2>
+              <h2 class="heading-xs--regular active">Join us</h2>
             </router-link>
           </div>
 
@@ -28,54 +28,47 @@
                        required
                 />
 
+                <Input label="Email"
+                       type="email"
+                       name="email"
+                       class="flex-1" id="email"
+                       v-model="formData.email"
+                       required
+                />
+              </div>
+
+              <div class="d-flex mt-5">
                 <Select label="Country"
                         :options="countries"
-                        class="flex-1"
+                        class="flex-1 mr-24"
                         required
                         name="country"
                         v-model="formData.country"
                 />
+
+                <Select label="Are of expertise"
+                        :options="expertises"
+                        :grouped="true"
+                        class="flex-1"
+                        required
+                        name="expertise"
+                        v-model="formData.expertise"
+                />
               </div>
 
               <div class="d-flex mt-5">
-                <Input label="Email"
-                       type="email"
-                       name="email"
-                       class="flex-1 mr-24"
-                       id="email"
-                       v-model="formData.email"
-                       required
-                />
-                <Input label="Phone"
+                <Input label="Linkedin"
                        type="text"
-                       name="phone"
+                       name="linkedin"
                        class="flex-1"
-                       id="phone"
-                       v-model="formData.phone"
-                />
-              </div>
-
-              <div class="d-flex mt-5">
-                <Input label="Company"
-                       type="text"
-                       name="company"
-                       class="flex-1 mr-24"
-                       id="company"
-                       v-model="formData.company"
-                       required
-                />
-                <Input label="Job title"
-                       type="text"
-                       name="job_title"
-                       class="flex-1"
-                       id="job_title"
-                       v-model="formData.job_title"
+                       id="linkedin"
+                       v-model="formData.linkedin"
                        required
                 />
               </div>
 
               <div class="d-flex mt-5">
-                <Input label="What can we do for you?"
+                <Input label="Tell us what drives you"
                        :textarea="true"
                        name="message"
                        class="flex-1"
@@ -142,23 +135,32 @@ export default {
   components: {Select, Button, Checkbox, Dropdown, Input, Field, Form},
   data() {
     return {
+      expertises: {
+        plan: [
+          {label: 'Tech Strategic Steering', value: 'Tech Strategic Steering'},
+          {label: 'Agile and Scrum', value: 'Agile and Scrum'},
+          {label: 'Product Management', value: 'Product Management'},
+          {label: 'Delivery Management', value: 'Delivery Management'},
+        ],
+        build: [
+          {label: 'Software Engineering', value: 'Software Engineering'},
+        ]
+      },
       formData: {
         full_name : null,
-        phone: null,
         email: null,
-        company: null,
-        job_title: null,
         message: null,
-        country: null
+        country: null,
+        expertise: null,
+        linkedin: null
       },
       schema: {
         full_name: Yup.string().required().label('Full Name'),
-        phone: Yup.string().label("Phone"),
         email: Yup.string().email().required().label('E-mail'),
-        company: Yup.string().required().label('Company'),
-        job_title: Yup.string().required().label("Job title"),
         message: Yup.string().required().label("Message"),
         country: Yup.string().required().label("Country"),
+        expertise: Yup.string().required().label("Area of expertise"),
+        linkedin: Yup.string().required().label("Linkedin"),
       }
     }
   },

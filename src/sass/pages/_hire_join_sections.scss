@@ -82,4 +82,14 @@
       }
     }
   }
+
+  .text--privacy {
+    color: #858585;
+    cursor: pointer;
+    @extend .caption-s--regular;
+    a {
+      color: $pure-black;
+      text-decoration: underline;
+    }
+  }
 }
