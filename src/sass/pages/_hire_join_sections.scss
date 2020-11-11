@@ -1,19 +1,56 @@
 #hire-join-sections {
   overflow: hidden;
   padding-top: 10px;
+  @include mobile {
+    padding-top: 16px;
+  }
+
+  #confettiAnimation {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 1px;
+    margin: auto;
+    display: block;
+  }
+  .check--box {
+    width: 72px;
+    height: 72px;
+    text-align: center;
+    background: $pure-black;
+  }
+
   h1 {
     line-height: 82px;
     margin-bottom: 88px;
+    @include mobile {
+      margin-bottom: 40px;
+    }
   }
 
   .items {
     display: flex;
+    @include mobile {
+      flex-direction: column;
+    }
     .left--side {
-      width: 70%;
+      width: 60%;
       padding-right: 155px;
       padding-bottom: 120px;
+
+      @include mobile {
+        width: 100%;
+        padding: 0;
+
+        .tabs {
+          margin-right: 0;
+        }
+      }
       .headline {
         margin-bottom: 55px;
+        @include mobile {
+          margin-bottom: 32px;
+        }
         h2 {
           display: inline-block;
           position: relative;
@@ -52,9 +89,20 @@
 
     .right--side {
       position: relative;
-      width: 30%;
+      width: 40%;
       background: #FAF6F1;
       padding: 100px 0 100px 122px;
+
+      @include tablet {
+        padding-left: 50px;
+      }
+
+      @include mobile {
+        width: 100%;
+        padding: 48px 16px;
+        margin-left: -15px;
+        margin-top: 64px;
+      }
 
       &:after {
         content: "";

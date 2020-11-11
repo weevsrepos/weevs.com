@@ -1,16 +1,16 @@
 <template>
-  <section class="tabs" :id="id">
+  <section class="tabs" :id="id" >
     <section class="tabs--headline">
       <div v-for="(tab, key) in tabs"
            :key="key"
            :class="`${ tab.id === selected ? 'active' : ''}`"
            @click="changeTab(key, tab.id)"
       >
-        <h2 class="heading-mobile-xs--regular heading-m--regular">{{ tab.title }}</h2>
+        <h2 :class="`${tabClass ? tabClass: 'heading-mobile-xs--regular heading-m--regular'}`">{{ tab.title }}</h2>
       </div>
     </section>
 
-    <section class="tab-contents" :style="{ height: `${height}px` }">
+    <section class="tab-contents" :style="{ height: dynamicHeight ? `${height}px` : 'unset' }">
       <section class="tab-content clearfix" :style="{ width : `${fullWidth}px`, transform: `translateX(-${transform}px)`}">
         <section :id="tab.id" v-for="(tab, key) in tabs"
                  :key="key"
@@ -31,9 +31,17 @@ export default {
       type: Array,
       required: true
     },
+    tabClass: {
+      type: String,
+      default: ''
+    },
     selectedTab: {
       type: [String, Number],
       default: null
+    },
+    dynamicHeight: {
+      type: Boolean,
+      default: true
     }
   },
   data() {
@@ -55,15 +63,17 @@ export default {
   },
   methods: {
     initTabSizes() {
-      let innerWidth = document.querySelector(`#${this.id}`).offsetWidth
-      let paddings = window.innerWidth < 1024 ? -16: 0;
-      this.windowWidth = innerWidth - paddings;
-      this.fullWidth = this.tabs.length * window.innerWidth;
-      setTimeout(() => {
-        this.height = document.getElementById(this.selected).offsetHeight;
-        let index = this.tabs.findIndex((i) =>  i.id === this.selected);
-        this.changeTab(index, this.selected);
-      }, 100)
+      this.$nextTick(() => {
+        let innerWidth = document.querySelector(`#${this.id}`).offsetWidth
+        let paddings = window.innerWidth < 1024 ? -16: 0;
+        this.windowWidth = innerWidth - paddings;
+        this.fullWidth = this.tabs.length * window.innerWidth;
+        setTimeout(() => {
+          this.height = document.getElementById(this.selected).offsetHeight;
+          let index = this.tabs.findIndex((i) =>  i.id === this.selected);
+          this.changeTab(index, this.selected);
+        }, 100)
+      })
     },
     changeTab(index, id) {
       this.selected = id;

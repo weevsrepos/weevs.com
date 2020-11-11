@@ -28,15 +28,9 @@ const routes = [
     meta: { layout: Default }
   },
   {
-    path: '/hire-us',
-    name: 'HireUs',
-    component: () => import('../views/HireUs.vue'),
-    meta: { layout: Default }
-  },
-  {
-    path: '/join-us',
-    name: 'JoinUs',
-    component: () => import('../views/JoinUs.vue'),
+    path: '/contact-us',
+    name: 'Contact',
+    component: () => import('../views/Contact.vue'),
     meta: { layout: Default }
   }
 ]

@@ -11,6 +11,7 @@
                 :value="inputValue"
                 @input="handleChange"
                 @blur="handleBlur"
+                :data-value="inputValue"
       />
     </template>
     <template v-else>
@@ -21,6 +22,7 @@
              :value="inputValue"
              @input="handleChange"
              @blur="handleBlur"
+             :data-value="inputValue"
       />
     </template>
     <label class="form-field-label" :for="id">

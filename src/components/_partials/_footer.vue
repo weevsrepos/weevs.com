@@ -93,7 +93,7 @@
                   </router-link>
                 </li>
                 <li class="mt-24 mt-mobile-16">
-                  <router-link :to="{ name: 'HireUs' }" class="body-m--regular">
+                  <router-link :to="{ name: 'Contact' }" class="body-m--regular">
                     Careers
                   </router-link>
                 </li>
@@ -104,7 +104,7 @@
               <h3 class="body-mobile-l--medium heading-xs--medium">Contact</h3>
               <ul class="mt-24 mt-mobile-16">
                 <li>
-                  <router-link to="" class="body-m--regular">
+                  <router-link :to=" { name: 'Contact' } " class="body-m--regular">
                     Get in touch
                   </router-link>
                 </li>

@@ -15,7 +15,7 @@ $textInputPaddingTopBottom: 16px;
   position: absolute;
   left: 0;
   width: 100%;
-  height: 0;
+  max-height: 0;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -24,14 +24,19 @@ $textInputPaddingTopBottom: 16px;
   color: #000000;
   z-index: 1000;
   box-shadow: none !important;
-  overflow-y: scroll;
+  overflow-y: auto;
 
-  transition: 0.2s ease-in height, step-end box-shadow 0.2s;
-  -moz-transition: 0.2s ease-in height, step-end box-shadow 0.2s;
-  -webkit-transition: 0.2s ease-in height, step-end box-shadow 0.2s;
+  transition: 0.3s ease-in height, 0.3s ease-out max-height;
+  -moz-transition: 0.3s ease-in height, 0.3s ease-out max-height;
+  -webkit-transition: 0.3s ease-in height, 0.3s ease-out max-height;
 
   &.dropdown-open {
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  @include mobile {
+    position: relative;
+    left: 0;
   }
 
   li {
@@ -103,6 +108,10 @@ $textInputPaddingTopBottom: 16px;
     }
   }
 
+  textarea {
+    resize: vertical;
+  }
+
   input,textarea {
     padding: $textInputPaddingTopBottom 0 $textInputPaddingTopBottom 0;
     display: block;
@@ -118,7 +127,7 @@ $textInputPaddingTopBottom: 16px;
       box-shadow: none;
     }
 
-    &:valid, &:focus {
+    &:valid, &:focus, &:not([data-value=""]) {
       & ~ .form-field-label {
         top: $labelOffset - ($textInputPaddingTopBottom - 8);
         font-size: 12px;
@@ -136,16 +145,15 @@ $textInputPaddingTopBottom: 16px;
         color: $form-label-focus;
       }
 
-      & ~ .angle-down {
-        transform: rotate(180deg);
+      &.dropdown-input {
+        background: url("/img/chevron-up.svg") no-repeat right center;
       }
 
       & ~ .dropdown {
-        height: 228px;
-        box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
-        transition: 0.2s ease-out height, step-start box-shadow 0.2s;
-        -moz-transition: 0.2s ease-out height, step-start box-shadow 0.2s;
-        -webkit-transition: 0.2s ease-out height, step-start box-shadow 0.2s;
+        max-height: 228px;
+        transition: 0.3s ease-out height, 0.3s ease-out max-height;
+        -moz-transition: 0.3s ease-out height, 0.3s ease-out max-height;
+        -webkit-transition: 0.3s ease-out height, 0.3s ease-out max-height;
       }
     }
   }
@@ -170,11 +178,8 @@ $textInputPaddingTopBottom: 16px;
 
 .custom-select {
   position: relative;
-  .angle-down {
-    position: absolute;
-    right: 0;
-    top: calc(50% - 6px);
-    transition: 0.3s ease;
+  input.dropdown-input {
+    background: url("/img/chevron-down.svg") no-repeat right center;
   }
   .form-field-label {
     width: 100%;
