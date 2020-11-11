@@ -9,7 +9,7 @@
       <section class="items">
         <section class="left--side">
           <template v-if="thankyou">
-            <div class="mt-30 position-relative">
+            <div class="mt-30 mt-mobile-8 position-relative">
               <span id="confettiAnimation"></span>
               <section class="d-flex justify-content-center">
                 <div class="check--box align-center d-flex justify-content-center">
@@ -17,16 +17,17 @@
                 </div>
               </section>
 
-              <h2 class="heading-m--medium mt-40 mb-8 text-center">Thank you</h2>
+              <h2 class="heading-s--medium heading-m--medium mt-40 mb-8 text-center">Thank you</h2>
               <h5 class="body-m--regular text-center">Your message is with us. We will get back to you as soon as
                 possible.</h5>
 
-              <div class="mt-64 d-flex justify-content-center">
+              <div class="mt-64 d-flex justify-content-center flex-mobile-column">
                 <Button @click="thankyou = false" text="Send another message" type="secondary" size="lg"
-                        class="flex-shrink-0 d-flex justify-content-center self-align-start self-mobile-align-stretch mr-16"/>
-                <router-link :to="{ name: 'Home' }">
+                        class="flex-shrink-0 d-flex justify-content-center self-align-start self-mobile-align-stretch mr-16 mr-mobile-0 mb-mobile-16"/>
+
+                <router-link :to="{ name: 'Home' }" class="flex-shrink-0 d-flex self-align-start self-mobile-align-stretch">
                   <Button text="Go back to homepage" size="lg"
-                          class="flex-shrink-0 d-flex justify-content-center self-align-start self-mobile-align-stretch"/>
+                          class="flex-shrink-0 d-flex justify-content-center self-align-start self-mobile-align-stretch flex-1"/>
                 </router-link>
               </div>
             </div>
