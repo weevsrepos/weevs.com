@@ -37,7 +37,7 @@
               made of specialists with actual proven
               experience and track record on the ground that help our customers hire people like them.</p>
 
-            <Button text="Get to know us" icon="arrow-down" size="lg" class="mt-32 mt-mobile-40" icon-class="down"
+            <Button text="Get to know us" icon="arrow-right" size="lg" class="mt-32 mt-mobile-40" 
                     mobile="md"/>
           </div>
         </section>

@@ -4,7 +4,7 @@
       <h2 class="heading-mobile-s--light heading-xl--light line-height-mobile-42">
         Fill in your gap with best specialists <br> in the industry
       </h2>
-      <Button text="Get in touch" icon="arrow-right" type="secondary" class="mt-48 mt-mobile-40 b-none"/>
+      <Button text="Get in touch" icon="arrow-right" type="secondary" class="mt-48 mt-mobile-40 b-none" size="lg"/>
     </section>
     <section class="bottom-footer">
       <section class="container">
