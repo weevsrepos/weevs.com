@@ -105,7 +105,7 @@ export default {
           startVelocity: 23,
           elementCount: 200,
           dragFriction: "0.10",
-          duration: 3000,
+          duration: 10000,
           stagger: 1,
           width: "10px",
           height: "10px",
