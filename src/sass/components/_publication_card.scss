@@ -1,0 +1,30 @@
+.publication--card {
+  display: flex;
+  .image--box {
+    position: relative;
+    flex: 1;
+    width: 50%;
+    margin-right: 24px;
+
+    img {
+      width: 214px;
+      height: 214px;
+      object-fit: cover;
+    }
+
+    .badge--abs {
+      position: absolute;
+      left: 24px;
+      top: 24px;
+    }
+  }
+
+  .info--box {
+    flex: 1;
+    width: 50%;
+
+    .created--date {
+      color: #858585;
+    }
+  }
+}

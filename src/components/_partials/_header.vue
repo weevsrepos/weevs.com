@@ -1,5 +1,5 @@
 <template>
-  <header id="header" :class="{'opened-mobile' : openMobileMenu, 'bg-beige' : color === 'beige'}">
+  <header id="header" :class="{'opened-mobile' : openMobileMenu, 'bg-beige' : color === 'beige', 'bg-light-gray' : color === 'light-gray'}">
     <section class="container d-flex justify-content-between align-center">
       <div class="header-left">
         <router-link :to="{ name: 'Home' }">
@@ -22,7 +22,7 @@
             <Dropdown label="What we do" :options="menuItems" label-class="body-s--regular body-mobile-l--regular" item-class="body-mobile-m--regular"/>
           </li>
           <li>
-            <router-link to="#" class="body-s--regular body-mobile-l--regular">
+            <router-link :to="{ name: 'Insights' }" class="body-s--regular body-mobile-l--regular">
               Industry insights
             </router-link>
           </li>
