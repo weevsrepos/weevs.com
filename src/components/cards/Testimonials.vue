@@ -1,6 +1,6 @@
 <template>
   <div class="testimonial-block">
-    <h2 class="heading-mobile-xs--light heading-l--light line-height-mobile-36" v-html="item.text"></h2>
+    <h2 :class="`${titleClass ? titleClass : 'heading-mobile-xs--light heading-l--light line-height-mobile-36'}`" v-html="item.text"></h2>
 
     <div class="author-block d-flex align-center">
       <div class="image">
@@ -25,6 +25,9 @@ export default {
     item: {
       type: Object,
       required: true
+    },
+    titleClass: {
+      type: String
     }
   }
 }

@@ -25,8 +25,21 @@ button {
 
 a {
   text-decoration: none;
+  &.no-css {
+    color: inherit;
+  }
 }
 
 ul {
   list-style: none;
+}
+
+.c-pointer {
+  cursor: pointer;
+}
+
+.hover-underline {
+  &:hover {
+    text-decoration: underline;
+  }
 }

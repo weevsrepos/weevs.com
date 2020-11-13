@@ -41,22 +41,6 @@
         }
       }
     }
-
-    &:hover a:before {
-      opacity: 0.8;
-    }
-
-    &:hover a .arrow {
-      opacity: 1;
-      svg {
-        transform: translateX(0);
-      }
-    }
-
-    &:hover img {
-      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-      filter: grayscale(100%);
-    }
   }
 
   .w-24 {
@@ -69,5 +53,26 @@
 
   .created-date {
     color: #858585;
+  }
+
+
+  &:hover .image--section a:before {
+    opacity: 0.8;
+  }
+
+  &:hover .image--section  a .arrow {
+    opacity: 1;
+    svg {
+      transform: translateX(0);
+    }
+  }
+
+  &:hover .image--section img {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+  }
+
+  &:hover h2 {
+    text-decoration: underline;
   }
 }

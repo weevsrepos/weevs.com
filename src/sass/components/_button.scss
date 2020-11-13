@@ -61,6 +61,10 @@ $lg-padding: 16px 24px;
     color: $pure-black;
     transition: 0.3s ease;
 
+    &.transparent {
+      background: transparent;
+    }
+
     svg {
       fill: $pure-black;
     }

@@ -38,6 +38,12 @@ const routes = [
     name: 'Insights',
     component: () => import('../views/Insights.vue'),
     meta: { layout: Default, color: 'light-gray' }
+  },
+  {
+    path: '/publication',
+    name: 'Publication',
+    component: () => import('../views/Publication.vue'),
+    meta: { layout: Default }
   }
 ]
 

@@ -103,6 +103,9 @@ $font-weights: 300, 400, 500;
 .line-height-42 {
   line-height: 42px;
 }
+.line-height-48 {
+  line-height: 48px;
+}
 
 @include mobile {
   .line-height-mobile-36 {

@@ -1,0 +1,213 @@
+.container--publication {
+  position: relative;
+  width: 1194px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (max-width: 1224px){
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .small--container {
+    width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+}
+
+#welcome--publication {
+  img.bg-img {
+    width: 100%;
+    height: 512px;
+    object-fit: cover;
+
+    @include mobile {
+      height: 346px;
+    }
+  }
+}
+
+.publication--article {
+  .social-icons {
+    position: absolute;
+    left: 0;
+    @include mobile {
+      position: relative;
+    }
+
+    h6 {
+      color: #858585;
+      margin-bottom: 27px;
+      @include mobile {
+        margin-bottom: 12px;
+      }
+    }
+
+    .icons {
+      @include mobile {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 36px;
+      }
+      li {
+        margin-bottom: 32px;
+        &:last-child {
+          margin-bottom: 30px;
+        }
+
+        @include mobile {
+          margin-bottom: 0 !important;
+        }
+
+        &:nth-child(2) a {
+          svg {
+            @include mobile {
+              width: 26px;
+              height: 26px;
+            }
+          }
+        }
+        a {
+          svg {
+            fill: #858585;
+            transition: 0.3s ease;
+            @include mobile {
+              width: 24px;
+              height: 24px;
+              fill: $pure-black;
+            }
+          }
+
+          &:hover svg {
+            fill: #000;
+          }
+        }
+      }
+    }
+  }
+  .content {
+    @extend .body-l--regular;
+    line-height: 40px;
+
+    @include mobile {
+      font-size: 16px;
+      font-family: 'TTFirsNeue-Regular', sans-serif;
+      font-weight: 400;
+      line-height: 32px;
+    }
+
+    p {
+      margin-bottom: 64px;
+      @include mobile {
+        margin-bottom: 32px;
+      }
+    }
+
+    a {
+      color: $info;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    h2 {
+      @extend .heading-m--regular;
+      margin-bottom: 32px;
+      line-height: 48px;
+
+      @include mobile {
+        font-size: 24px;
+        font-family: 'TTFirsNeue-Regular', sans-serif;
+        font-weight: 400;
+        line-height: 32px;
+        margin-bottom: 22px;
+      }
+    }
+  }
+}
+
+.mb-136 {
+  margin-bottom: 136px;
+}
+
+#testimonials.publications {
+  padding-bottom: 80px;
+  padding-top: 80px;
+  h2{
+    width: 68%;
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  .quote {
+    @include mobile {
+      top: 0;
+    }
+  }
+
+  .testimonial-block {
+    @media (min-width: 1224px) {
+      width: 100%;
+    }
+
+    @media (min-width: 1025px) {
+      padding-left: 80px;
+    }
+  }
+  .author-block{
+    margin-top: 64px;
+    @include mobile {
+      margin-top: 32px;
+    }
+  }
+}
+
+.tooltip-box {
+  position: relative;
+  &:hover {
+    .tooltip-text {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .tooltip-text {
+    position: absolute;
+    left: calc(100% + 20px);
+    top: calc(50% - 5px);
+    transform: translateY(-50%);
+    background: $pure-black;
+    color: #fff;
+    padding: 8px 12px;
+    @extend .caption-m--medium;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+
+    @include mobile {
+      display: none;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: -5px;
+      top: calc(50% - 5px);
+      width: 0;
+      height: 0;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+
+      border-right:5px solid $pure-black;
+    }
+  }
+}

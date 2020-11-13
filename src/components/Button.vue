@@ -1,5 +1,9 @@
 <template>
-  <button :class="`button ${type} ${size} mobile-${mobile} ${dynamicIconSize ? 'dynamic-icon-size' : ''}`" :disabled="disabled">
+  <component :is="to ? 'router-link' : 'button'"
+             :class="`button ${type} ${size} mobile-${mobile} ${dynamicIconSize ? 'dynamic-icon-size' : ''}`"
+             :disabled="disabled"
+             :to="to"
+  >
     <template v-if="text && !icon">
       {{ text }}
     </template>
@@ -10,7 +14,7 @@
         <Icon :href="icon" :size="iconSize" :fill="iconFill" :class="`${iconClass || ''} ${hideHoverEffect ? 'no--effect' : ''}`"/>
       </template>
     </template>
-  </button>
+  </component>
 </template>
 
 <script>
@@ -18,6 +22,9 @@ import Icon from "@/components/Icon";
 export default {
   components: {Icon},
   props: {
+    to: {
+      type: Object,
+    },
     type: {
       type: String,
       default: 'primary'

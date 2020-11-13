@@ -59,6 +59,10 @@
   flex-shrink: 0;
 }
 
+.w-100 {
+  width: 100%;
+}
+
 @include mobile {
   .d-block-mobile {
     display: block !important;

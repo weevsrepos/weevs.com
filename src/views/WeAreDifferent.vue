@@ -1,6 +1,6 @@
 <template>
   <section id="we-are-different-welcome-section">
-    <section class="container pb-80 mb-mobile-64">
+    <section class="container pb-80 pb-mobile-64">
       <h1 class="heading-mobile-s--light heading-xl--light heading-mobile-s--light">
         Not just recruiting specialists,
         we are matching them!

@@ -2,9 +2,9 @@
   <header id="header" :class="{'opened-mobile' : openMobileMenu, 'bg-beige' : color === 'beige', 'bg-light-gray' : color === 'light-gray'}">
     <section class="container d-flex justify-content-between align-center">
       <div class="header-left">
-        <router-link :to="{ name: 'Home' }">
+        <a @click="changeRoute({ name: 'Home' })" class="c-pointer">
           <Icon href="weevs" fill="#000" width="102" height="16" class="logo"/>
-        </router-link>
+        </a>
       </div>
 
       <div class="header-right">
@@ -14,22 +14,22 @@
         </button>
         <ul id="menu">
           <li>
-            <router-link :to="{ name: 'WeAreDifferent' }" class="body-s--regular body-mobile-l--regular">
+            <a @click="changeRoute({ name: 'WeAreDifferent' })" class="body-s--regular body-mobile-l--regular c-pointer">
               We are different
-            </router-link>
+            </a>
           </li>
           <li class="dropdown-item">
             <Dropdown label="What we do" :options="menuItems" label-class="body-s--regular body-mobile-l--regular" item-class="body-mobile-m--regular"/>
           </li>
           <li>
-            <router-link :to="{ name: 'Insights' }" class="body-s--regular body-mobile-l--regular">
+            <a @click="changeRoute({ name: 'Insights' })" class="body-s--regular body-mobile-l--regular c-pointer">
               Industry insights
-            </router-link>
+            </a>
           </li>
           <li>
-            <router-link :to="{ name: 'Contact' }">
+            <a @click="changeRoute({ name: 'Contact' })" class="c-pointer">
               <Button size="md" class="body-s--regular body-mobile-m--regular" icon="arrow-right" text="Get in touch"/>
-            </router-link>
+            </a>
           </li>
         </ul>
       </div>
@@ -68,6 +68,11 @@ export default {
       } else {
         document.body.classList.remove("overlay-mobile-open");
       }
+    },
+    changeRoute(route) {
+      this.openMobileMenu = false;
+      document.body.classList.remove("overlay-mobile-open");
+      this.$router.push(route);
     }
   }
 }

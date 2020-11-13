@@ -4,7 +4,11 @@
       <section class="items">
         <div class="mt-mobile-16">
           <Badge text="publications"/>
-          <h1 class="heading-mobile-xs--light heading-l--light line-height-64 mt-mobile-16 mt-31 line-height-mobile-36">Best Tasting Plant-Based Complete Nutrition on the Market</h1>
+          <router-link :to="{ name: 'Publication' }" class="no-css hover-underline">
+            <h1 class="heading-mobile-xs--light heading-l--light line-height-64 mt-mobile-16 mt-31 line-height-mobile-36">
+              Best Tasting Plant-Based Complete Nutrition on the Market
+            </h1>
+          </router-link>
 
           <ul class="d-flex align-center navigation mt-24 mt-mobile-16">
             <li>
@@ -19,12 +23,20 @@
             </li>
           </ul>
 
-          <Button text="Read more" icon="arrow-right" class="mt-40 mt-mobile-32" size="lg" mobile="md"/>
+          <Button :to="{ name: 'Publication'}" text="Read more" icon="arrow-right" class="mt-40 mt-mobile-32" size="lg" mobile="md"/>
         </div>
         <div>
-          <div class="img-abs">
-            <img src="/img/insight-bg.png">
-          </div>
+          <section class="image--section">
+            <router-link :to="{name: 'Publication'}">
+              <div class="img-abs">
+                <img src="/img/insight-bg.png" class="main-image"/>
+
+                <div class="arrow">
+                  <Icon href="arrow-right" size="42" fill="#000"/>
+                </div>
+              </div>
+            </router-link>
+          </section>
         </div>
       </section>
     </section>
@@ -157,7 +169,7 @@
         </section>
 
         <section class="d-flex justify-content-center mt-mobile-20 mt-80">
-          <Button text="Check more shows" icon="arrow-right" size="lg" type="secondary"/>
+          <Button text="Check more shows" icon="arrow-right" size="lg" type="secondary" class="transparent"/>
         </section>
       </section>
     </section>
