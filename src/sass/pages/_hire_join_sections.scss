@@ -5,6 +5,13 @@
     padding-top: 16px;
   }
 
+  .tabs--contact {
+    @include mobile {
+      .tabs--headline > div {
+        margin-right: 32px;
+      }
+    }
+  }
   #confettiAnimation {
     position: absolute;
     left: 0;

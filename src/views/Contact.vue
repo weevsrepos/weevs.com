@@ -34,15 +34,17 @@
           </template>
 
           <template v-else>
-            <Tabs :tabs="tabs" :dynamic-height="false" tab-class="heading-xs--regular">
-              <template v-slot:tab-hire>
-                <HireUs @success="successCallback"/>
-              </template>
+            <section class="tabs--contact">
+              <Tabs :tabs="tabs" :dynamic-height="false" tab-class="heading-xs--regular">
+                <template v-slot:tab-hire>
+                  <HireUs @success="successCallback"/>
+                </template>
 
-              <template v-slot:tab-join>
-                <JoinUs @success="successCallback"/>
-              </template>
-            </Tabs>
+                <template v-slot:tab-join>
+                  <JoinUs @success="successCallback"/>
+                </template>
+              </Tabs>
+            </section>
           </template>
         </section>
 
