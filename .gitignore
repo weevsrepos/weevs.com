@@ -24,3 +24,9 @@ pnpm-debug.log*
 
 
 /public/img/icons/icon-sprite.svg
+
+
+# API files
+
+/api/vendor
+/api/credentials.json

@@ -1,0 +1,14 @@
+{
+    "name": "weevws/gsheet",
+    "description": "saving user filled data to gsuite",
+    "authors": [
+        {
+            "name": "Hovhannes Nazaryan",
+            "email": "hovnaz@tenflares.com"
+        }
+    ],
+    "require": {
+        "google/apiclient": "^2.0",
+        "rakit/validation": "^1.4"
+    }
+}
