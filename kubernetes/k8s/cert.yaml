@@ -1,0 +1,8 @@
+apiVersion: networking.gke.io/v1beta2
+kind: ManagedCertificate
+metadata:
+  name: spoir
+  namespace: staging
+spec:
+  domains:
+  - staging.weevs.com
