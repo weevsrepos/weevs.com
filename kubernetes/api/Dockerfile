@@ -52,7 +52,7 @@ COPY --chown=nobody . /var/www/html/
 COPY --chown=nginx --from=composer /app/ /var/www/html/api/
 
 # Expose the port nginx is reachable on
-EXPOSE 80
+EXPOSE 8080
 
 # Let supervisord start nginx & php-fpm
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
