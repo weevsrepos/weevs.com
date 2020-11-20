@@ -1,5 +1,8 @@
 <?php
 
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: *");
+
 use Rakit\Validation\Validator;
 ini_set('display_errors', 1);
 
@@ -29,7 +32,7 @@ if ($validation->fails()) {
     // handling errors
     $errors = $validation->errors();
 
-    header('Content-type: application/json');
+    header('Content-type: application/json', true, 422);
     echo json_encode($errors->firstOfAll());
 } else {
 

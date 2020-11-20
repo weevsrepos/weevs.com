@@ -1,5 +1,8 @@
 <?php
 
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: *");
+
 use Rakit\Validation\Validator;
 ini_set('display_errors', 1);
 
@@ -18,7 +21,7 @@ $validation = $validator->make($params, [
     'country'    => 'required|max:100',
     'linkedin'   => 'required|max:200|url',
     'message'    => 'required',
-    'area_of_expertise'    => 'required|max:100',
+    'expertise'    => 'required|max:100',
 ]);
 
 // then validate
@@ -28,7 +31,7 @@ if ($validation->fails()) {
     // handling errors
     $errors = $validation->errors();
 
-    header('Content-type: application/json');
+    header('Content-type: application/json', true, 422);
     echo json_encode($errors->firstOfAll());
 } else {
 
@@ -40,7 +43,7 @@ if ($validation->fails()) {
             $params["country"],
             $params["linkedin"],
             $params["message"],
-            $params["area_of_expertise"],
+            $params["expertise"],
         ]
     ]);
     echo "Success!";

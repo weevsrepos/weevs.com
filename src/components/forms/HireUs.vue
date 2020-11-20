@@ -115,8 +115,20 @@ export default {
     }
   },
   methods: {
-    handleSubmit() {
-      this.$emit("success");
+    handleSubmit(values) {
+      let form = new FormData();
+      form.append('full_name', values.full_name);
+      form.append('phone', values.phone);
+      form.append('email', values.email);
+      form.append('company', values.company);
+      form.append('job_title', values.job_title);
+      form.append('message', values.message);
+      form.append('country', values.country);
+      this.axios.post("/gsheet-hire-us.php", form).then((res) => {
+        this.$emit("success");
+      }).catch((err) => {
+        alert("Please fill all fields");
+      })
     }
   },
   computed: {
