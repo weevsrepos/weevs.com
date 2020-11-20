@@ -2,12 +2,22 @@ steps:
   # - name: 'gcr.io/$PROJECT_ID/slackbot'
   #   args: [ '--build', '$BUILD_ID','--webhook', 'https://hooks.slack.com/services/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' ]
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/$PROJECT_ID/$REPO_NAME/weevs:$SHORT_SHA', '-f', 'kubernetes/Dockerfile', '.']
-    timeout: 10m0s  
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/$REPO_NAME/weevs:$SHORT_SHA', '-f', 'kubernetes/front/Dockerfile', '.']
+    timeout: 10m0s
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/$PROJECT_ID/$REPO_NAME/weevs:$SHORT_SHA']      
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/$REPO_NAME/weevs-api:$SHORT_SHA', '-f', 'kubernetes/api/Dockerfile', '.']
+    timeout: 10m0s        
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/$REPO_NAME/weevs:$SHORT_SHA']   
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/$REPO_NAME/weevs-api:$SHORT_SHA']          
   - name: 'gcr.io/cloud-builders/kubectl'
     args: ['-n', 'staging','set', 'image', 'deployment/dev-weevs', 'dev-weevs=gcr.io/$PROJECT_ID/$REPO_NAME/weevs:$SHORT_SHA']
     env:
     - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
     - 'CLOUDSDK_CONTAINER_CLUSTER=gmpdn1'
+  - name: 'gcr.io/cloud-builders/kubectl'
+    args: ['-n', 'staging','set', 'image', 'deployment/dev-weevs-api', 'dev-weevs-api=gcr.io/$PROJECT_ID/$REPO_NAME/weevs-api:$SHORT_SHA']
+    env:
+    - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
+    - 'CLOUDSDK_CONTAINER_CLUSTER=gmpdn1'    
