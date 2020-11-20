@@ -30,3 +30,6 @@ pnpm-debug.log*
 
 /api/vendor
 /api/credentials.json
+
+
+.env

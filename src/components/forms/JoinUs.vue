@@ -128,8 +128,19 @@ export default {
     }
   },
   methods: {
-    handleSubmit() {
-      this.$emit("success");
+    handleSubmit(values) {
+      let form = new FormData();
+      form.append('full_name', values.full_name);
+      form.append('email', values.email);
+      form.append('message', values.message);
+      form.append('country', values.country);
+      form.append('expertise', values.expertise);
+      form.append('linkedin', values.linkedin);
+      this.axios.post("/gsheet-join-us.php", form).then((res) => {
+        this.$emit("success");
+      }).catch((err) => {
+        alert("Please fill all fields");
+      })
     }
   },
   computed: {
