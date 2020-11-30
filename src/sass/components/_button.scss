@@ -12,6 +12,11 @@ $lg-padding: 16px 24px;
   cursor: pointer;
   line-height: 24px;
 
+  .loading-hide--text {
+    display: flex;
+    align-items: center;
+  }
+  
   &.show--loader {
     background: url("/img/loader.svg") no-repeat;
     background-size: 30px;
