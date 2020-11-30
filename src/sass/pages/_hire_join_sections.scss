@@ -9,6 +9,10 @@
     .tab-contents {
       margin-left:-15px;
       padding-left:15px;
+      @include mobile {
+        margin-left: -16px;
+        padding-left: 0;
+      }
     }
 
     @include mobile {
