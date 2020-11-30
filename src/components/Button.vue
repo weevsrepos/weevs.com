@@ -1,24 +1,28 @@
 <template>
   <component :is="to ? 'router-link' : 'button'"
-             :class="`button ${type} ${size} mobile-${mobile} ${dynamicIconSize ? 'dynamic-icon-size' : ''}`"
+             :class="`button ${type} ${size} mobile-${mobile} ${dynamicIconSize ? 'dynamic-icon-size' : ''} ${loading ? 'show--loader' : ''}`"
              :disabled="disabled"
              :to="to"
   >
-    <template v-if="text && !icon">
-      {{ text }}
-    </template>
-    <template v-else>
-      <slot></slot>
-      <template v-if="icon">
+    <span class="loading-hide--text">
+       <template v-if="text && !icon">
         {{ text }}
-        <Icon :href="icon" :size="iconSize" :fill="iconFill" :class="`${iconClass || ''} ${hideHoverEffect ? 'no--effect' : ''}`"/>
       </template>
-    </template>
+      <template v-else>
+        <slot></slot>
+        <template v-if="icon">
+          {{ text }}
+          <Icon :href="icon" :size="iconSize" :fill="iconFill"
+                :class="`${iconClass || ''} ${hideHoverEffect ? 'no--effect' : ''}`"/>
+        </template>
+      </template>
+    </span>
   </component>
 </template>
 
 <script>
 import Icon from "@/components/Icon";
+
 export default {
   components: {Icon},
   props: {
@@ -65,6 +69,10 @@ export default {
     dynamicIconSize: {
       type: Boolean,
       default: true
+    },
+    loading: {
+      type: Boolean,
+      default: false
     }
   }
 }

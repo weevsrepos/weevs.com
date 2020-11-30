@@ -1,5 +1,5 @@
 <template>
-  <section class="tabs" :id="id" >
+  <section :class="`tabs margin-${margin}`" :id="id" >
     <section class="tabs--headline">
       <div v-for="(tab, key) in tabs"
            :key="key"
@@ -15,7 +15,7 @@
         <section :id="tab.id" v-for="(tab, key) in tabs"
                  :key="key"
                  :class="`${ tab.id === selected ? 'active' : ''}`"
-                 :style="{ width: `${windowWidth}px` }"
+                 :style="{ width: `${windowWidth}px`, marginRight: `${margin}px` }"
         >
           <slot :name="`tab-${tab.id}`"></slot>
         </section>
@@ -42,6 +42,10 @@ export default {
     dynamicHeight: {
       type: Boolean,
       default: true
+    },
+    margin: {
+      type: [String, Number],
+      default: ''
     }
   },
   data() {
@@ -77,7 +81,7 @@ export default {
     },
     changeTab(index, id) {
       this.selected = id;
-      this.transform = index * this.windowWidth;
+      this.transform = index * this.windowWidth + (this.margin * index);
       this.height = document.getElementById(id).offsetHeight;
     }
   }

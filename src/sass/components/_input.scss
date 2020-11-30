@@ -193,6 +193,11 @@ $textInputPaddingTopBottom: 16px;
   display: flex;
   font-size: 16px;
   line-height: 1.5;
+  &.form-field-invalid {
+    > span::before {
+      border-color: $form-field-invalid-foreground
+    }
+  }
 }
 
 /* Input */

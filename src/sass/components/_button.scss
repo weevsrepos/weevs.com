@@ -12,6 +12,17 @@ $lg-padding: 16px 24px;
   cursor: pointer;
   line-height: 24px;
 
+  &.show--loader {
+    background: url("/img/loader.svg") no-repeat;
+    background-size: 30px;
+    background-position: center;
+
+    .loading-hide--text {
+      opacity: 0;
+    }
+  }
+
+
   @extend .body-m--medium;
 
   &:disabled {

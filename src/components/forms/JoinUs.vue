@@ -1,5 +1,5 @@
 <template>
-  <Form :validation-schema="schema" @submit="handleSubmit" autocomplete="off">
+  <Form :validation-schema="schema" @submit="handleSubmit" autocomplete="off" ref="form">
     <section class="form--controls">
       <div class="d-flex flex-mobile-column">
         <Input label="Full name"
@@ -61,13 +61,14 @@
       </div>
 
       <div class="d-flex justify-content-between mt-40 flex-mobile-column">
-        <Checkbox class="mr-85 mb-mobile-24">
+        <Checkbox class="mr-85 mb-mobile-24" name="policy" value="1" v-model="formData.policy">
           <p class="caption-s--regular text--privacy">
             I agree to share my information with you and understand it will be used as described in
             <router-link :to="{ name: 'Privacy' }">Privacy Policy</router-link>
           </p>
         </Checkbox>
         <Button text="Send message" size="lg"
+                :loading="loading"
                 class="flex-shrink-0 d-flex justify-content-center self-align-start self-mobile-align-stretch"/>
       </div>
     </section>
@@ -115,7 +116,8 @@ export default {
         message: null,
         country: null,
         expertise: null,
-        linkedin: null
+        linkedin: null,
+        policy: null
       },
       schema: {
         full_name: Yup.string().required().label('Full Name'),
@@ -124,22 +126,36 @@ export default {
         country: Yup.string().required().label("Country"),
         expertise: Yup.string().required().label("Area of expertise"),
         linkedin: Yup.string().required().label("Linkedin"),
-      }
+        policy: Yup.string().required().label("Terms & Policy"),
+      },
+      loading: false
     }
   },
   methods: {
     handleSubmit(values) {
       let form = new FormData();
-      form.append('full_name', values.full_name);
-      form.append('email', values.email);
-      form.append('message', values.message);
-      form.append('country', values.country);
-      form.append('expertise', values.expertise);
-      form.append('linkedin', values.linkedin);
+      Object.keys(values).map((item) => {
+        form.append(item, values[item]);
+      })
+
       this.axios.post("/gsheet-join-us.php", form).then((res) => {
         this.$emit("success");
       }).catch((err) => {
-        alert("Please fill all fields");
+        const res = err.response;
+
+        if(res.status === 422) {
+          const errors = res.data;
+
+          Object.keys(errors).map((i) => {
+            this.$refs.form.setErrors({
+              [i]: errors[i]
+            });
+          })
+        } else {
+          alert("Oops, something wrong with server please try again later.");
+        }
+      }).finally(() => {
+        this.loading = false;
       })
     }
   },

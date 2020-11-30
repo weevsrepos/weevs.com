@@ -6,6 +6,11 @@
   }
 
   .tabs--contact {
+    .tab-contents {
+      margin-left:-15px;
+      padding-left:15px;
+    }
+
     @include mobile {
       .tabs--headline > div {
         margin-right: 32px;
@@ -125,6 +130,7 @@
         position: relative;
         display: inline-block;
         color: $pure-black;
+        white-space: nowrap;
         &:after {
           content: "";
           position: absolute;
