@@ -138,7 +138,7 @@ export default {
         form.append(item, values[item]);
       })
 
-      this.axios.post("/gsheet-join-us.php", form).then((res) => {
+      this.axios.post("/join-us", form).then((res) => {
         this.$emit("success");
       }).catch((err) => {
         const res = err.response;
