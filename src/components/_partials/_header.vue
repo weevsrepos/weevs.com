@@ -49,12 +49,24 @@ export default {
       menuItems: [
         {
           label: 'Plan',
+          href: '/#plan',
+          hrefCallback: () => {
+            this.changeRoute("/#plan")
+          }
         },
         {
           label: 'Build',
+          href: '/#build',
+          hrefCallback: () => {
+            this.changeRoute("/#build")
+          }
         },
         {
-          label: 'Run'
+          label: 'Run',
+          href: '/#run',
+          hrefCallback: () => {
+            this.changeRoute("/#run")
+          }
         }
       ],
       openMobileMenu: false

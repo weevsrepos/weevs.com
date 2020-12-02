@@ -37,8 +37,10 @@
               made of specialists with actual proven
               experience and track record on the ground that help our customers hire people like them.</p>
 
-            <Button text="Get to know us" icon="arrow-right" size="lg" class="mt-32 mt-mobile-40" 
-                    mobile="md"/>
+            <router-link :to="{ name: 'Contact' }">
+              <Button text="Get to know us" icon="arrow-right" size="lg" class="mt-32 mt-mobile-40"
+                      mobile="md"/>
+            </router-link>
           </div>
         </section>
       </section>
@@ -105,7 +107,9 @@
               you - We don’t waste your time with shady
               costing models. We make money the following way</p>
 
-            <Button text="Get to know us" icon="arrow-right" size="lg" class="mt-32 d-mobile-none"/>
+            <router-link :to="{ name: 'Contact' }">
+              <Button text="Get to know us" icon="arrow-right" size="lg" class="mt-32 d-mobile-none"/>
+            </router-link>
           </div>
         </div>
 

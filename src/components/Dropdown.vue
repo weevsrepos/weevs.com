@@ -6,8 +6,18 @@
     </div>
 
     <ul class="dropdown-menu-items" :class="{'opened' : opened}">
-      <li v-for="option in options" :class="`${itemClass}`">
-        {{ option.label }}
+      <li v-for="option in options" :class="`${itemClass} ${option.href ? 'link' : ''}`">
+        <template v-if="option.href">
+          <template v-if="option.hrefCallback">
+            <a href="#" @click.prevent="option.hrefCallback">{{ option.label }}</a>
+          </template>
+          <template v-else>
+            <a :href="option.href">{{ option.label }}</a>
+          </template>
+        </template>
+        <template v-else>
+          {{ option.label }}
+        </template>
       </li>
     </ul>
   </div>

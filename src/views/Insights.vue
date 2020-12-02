@@ -43,7 +43,7 @@
   </section>
 
   <section id="insight-featured--section">
-    <section class="container">
+    <section class="container" id="publications">
       <p class="overline-s--medium text-uppercase mb-16 text-stone-gray mb-mobile-16 letter-spacing-08em">insights</p>
       <h2 class="heading-mobile-s--regular heading-m--regular mb-mobile-40 mb-64">Featured publications</h2>
 
@@ -141,7 +141,7 @@
     </section>
   </section>
 
-  <section class="insight-articles-section">
+  <section class="insight-articles-section" id="case-studies">
     <section class="container">
       <p class="overline-s--medium text-uppercase mb-16 text-stone-gray mb-mobile-16 letter-spacing-08em">insights</p>
       <h2 class="heading-mobile-s--regular heading-m--regular mb-mobile-40 mb-64">Case studies</h2>
@@ -158,7 +158,7 @@
     </section>
   </section>
 
-  <section class="insight-articles-section bg-light-gray">
+  <section class="insight-articles-section bg-light-gray" id="shows">
     <section class="container">
       <p class="overline-s--medium text-uppercase mb-16 text-stone-gray mb-mobile-16 letter-spacing-08em">insights</p>
       <h2 class="heading-mobile-s--regular heading-m--regular mb-mobile-40 mb-64">Shows</h2>
@@ -308,6 +308,9 @@ export default {
       if(category === this.category) this.category = null;
       else this.category = category;
     }
+  },
+  mounted() {
+    if(this.$route.hash) this.$scrollTo(document.querySelector(this.$route.hash))
   }
 }
 </script>

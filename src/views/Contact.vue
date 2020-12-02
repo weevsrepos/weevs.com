@@ -35,7 +35,7 @@
 
           <template v-else>
             <section class="tabs--contact">
-              <Tabs :tabs="tabs" :dynamic-height="false" tab-class="heading-xs--regular" :margin="20">
+              <Tabs :tabs="tabs" :dynamic-height="false" tab-class="heading-xs--regular" :margin="20" :selected-tab="activeTab">
                 <template v-slot:tab-hire>
                   <HireUs @success="successCallback"/>
                 </template>
@@ -94,6 +94,7 @@ export default {
         { id: 'hire', title: 'Hire us' },
         { id: 'join', title: 'Join us' },
       ],
+      activeTab: this.$route.hash ? this.$route.hash.replace("#", "") : 'hire',
     }
   },
   methods: {

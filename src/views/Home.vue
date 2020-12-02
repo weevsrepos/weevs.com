@@ -5,14 +5,16 @@
         We help ASEAN companies to find world  class tech talent no matter where in the  World they are.
       </h1>
 
-      <Button size="lg" mobile="md" icon="arrow-down" text="Get to know us better" class="mt-55 mt-mobile-40" icon-class="down"/>
+      <a href="#" v-scroll-to="'#recruit-section'">
+        <Button size="lg" mobile="md" icon="arrow-down" text="Get to know us better" class="mt-55 mt-mobile-40" icon-class="down"/>
+      </a>
     </section>
   </section>
 
   <section id="recruit-section">
     <section class="container">
       <p class="overline-s--medium text-uppercase mb-32 mb-mobile-16 letter-spacing-08em">We recruit people who</p>
-      <Tabs :tabs="tabs">
+      <Tabs :tabs="tabs" :selected-tab="activeTab" :key="updateKeyIndex">
         <template v-slot:tab-plan>
           <section>
             <div class="d-flex justify-content-between flex-mobile-column">
@@ -28,8 +30,12 @@
                   great team.</h4>
 
                 <div class="d-flex d-mobile-none">
-                  <Button text="Read more details" icon="arrow-right" type="secondary" size="lg"/>
-                  <Button text="Get in touch" icon="arrow-right" class="ml-16" size="lg"/>
+                  <router-link :to="{ name: 'WeAreDifferent' }">
+                    <Button text="Read more details" icon="arrow-right" type="secondary" size="lg"/>
+                  </router-link>
+                  <router-link :to="{ name: 'Contact' }">
+                    <Button text="Get in touch" icon="arrow-right" class="ml-16" size="lg"/>
+                  </router-link>
                 </div>
               </div>
             </div>
@@ -45,7 +51,9 @@
             </div>
 
             <div class="d-flex d-desktop-none mt-mobile-20">
-              <Button text="Read more details" icon="arrow-right" size="lg" mobile="md" />
+              <router-link :to="{ name: 'WeAreDifferent' }">
+                <Button text="Read more details" icon="arrow-right" size="lg" mobile="md" />
+              </router-link>
             </div>
           </section>
         </template>
@@ -63,8 +71,12 @@
                   It will bring real value to your organization.</h4>
 
                 <div class="d-flex d-mobile-none">
-                  <Button text="Read more details" icon="arrow-right" type="secondary" size="lg"/>
-                  <Button text="Get in touch" icon="arrow-right" class="ml-16" size="lg"/>
+                  <router-link :to="{ name: 'WeAreDifferent' }">
+                    <Button text="Read more details" icon="arrow-right" type="secondary" size="lg"/>
+                  </router-link>
+                  <router-link :to="{ name: 'Contact' }">
+                    <Button text="Get in touch" icon="arrow-right" class="ml-16" size="lg"/>
+                  </router-link>
                 </div>
               </div>
             </div>
@@ -79,7 +91,9 @@
             </div>
 
             <div class="d-flex d-desktop-none mt-mobile-20">
-              <Button text="Read more details" icon="arrow-right" size="lg" mobile="md" />
+              <router-link :to="{ name: 'WeAreDifferent' }">
+                <Button text="Read more details" icon="arrow-right" size="lg" mobile="md" />
+              </router-link>
             </div>
           </section>
         </template>
@@ -97,8 +111,12 @@
                   to take the placement commission, we care about successful implementation as much as you do.</h4>
 
                 <div class="d-flex d-mobile-none">
-                  <Button text="Read more details" icon="arrow-right" type="secondary" size="lg"/>
-                  <Button text="Get in touch" icon="arrow-right" class="ml-16" size="lg"/>
+                  <router-link :to="{ name: 'WeAreDifferent' }">
+                    <Button text="Read more details" icon="arrow-right" type="secondary" size="lg"/>
+                  </router-link>
+                  <router-link :to="{ name: 'Contact' }">
+                    <Button text="Get in touch" icon="arrow-right" class="ml-16" size="lg"/>
+                  </router-link>
                 </div>
               </div>
             </div>
@@ -113,7 +131,9 @@
             </div>
 
             <div class="d-flex d-desktop-none mt-mobile-20">
-              <Button text="Read more details" icon="arrow-right" size="lg" mobile="md" />
+              <router-link :to="{ name: 'WeAreDifferent' }">
+                <Button text="Read more details" icon="arrow-right" size="lg" mobile="md" />
+              </router-link>
             </div>
           </section>
         </template>
@@ -137,7 +157,9 @@
               specialists have been permanently contracted, keeping a new long-term improvement plan well executed.</h4>
 
             <div class="d-flex">
-              <Button text="Read case study" icon="arrow-right" type="secondary" size="lg" mobile="md" class="b-none"/>
+              <router-link :to="{ name: 'Insights', hash: '#case-studies'}">
+                <Button text="Read case study" icon="arrow-right" type="secondary" size="lg" mobile="md" class="b-none"/>
+              </router-link>
             </div>
           </div>
         </div>
@@ -177,7 +199,9 @@
           <h4 class="body-mobile-m--regular mb-mobile-0 body-l--regular mb-32 line-height-32 line-height-mobile-24">Dive deeper into our past projects and new learnings. We are openly sharing knowledge.</h4>
 
           <div class="d-flex d-mobile-none">
-            <Button text="Read all insights" icon="arrow-right" size="lg" mobile="md"/>
+            <router-link :to="{ name: 'Insights' }">
+              <Button text="Read all insights" icon="arrow-right" size="lg" mobile="md"/>
+            </router-link>
           </div>
         </div>
       </div>
@@ -379,6 +403,8 @@ export default {
         }
       ],
       controlledSwiper: null,
+      activeTab: 'plan',
+      updateKeyIndex: 0
     }
   },
   methods: {
@@ -392,6 +418,15 @@ export default {
       this.testimonialsCarouselIndex = id;
       this.controlledSwiper.slideTo(id);
     }
-  }
+  },
+  mounted() {
+    if(this.$route.hash && ["#plan", "#build", "#run"].includes(this.$route.hash)) {
+      this.$scrollTo(document.querySelector("#recruit-section"));
+      setTimeout(() => {
+        this.activeTab = this.$route.hash.replace("#", "");
+        this.updateKeyIndex++;
+      }, 100);
+    }
+  },
 }
 </script>

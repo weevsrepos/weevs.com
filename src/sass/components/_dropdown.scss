@@ -27,11 +27,18 @@
     }
 
     li {
+      &.link a {
+        display: block;
+        padding: 8px 16px;
+      }
+
+      &:not(.link) {
+        padding: 8px 16px;
+      }
+
       position: relative;
-      padding: 8px 16px;
       color: $pure-black;
       transition: 0.3s ease;
-
       @extend .caption-m--regular;
 
       &:after {

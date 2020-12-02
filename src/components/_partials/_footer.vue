@@ -4,7 +4,9 @@
       <h2 class="heading-mobile-s--light heading-xl--light line-height-mobile-42">
         Fill in your gap with best specialists <br> in the industry
       </h2>
-      <Button text="Get in touch" icon="arrow-right" type="secondary" class="mt-48 mt-mobile-40 b-none" size="lg"/>
+      <router-link :to="{ name: 'Contact'}">
+        <Button text="Get in touch" icon="arrow-right" type="secondary" class="mt-48 mt-mobile-40 b-none" size="lg"/>
+      </router-link>
     </section>
     <section class="bottom-footer">
       <section class="container">
@@ -40,17 +42,17 @@
               <h3 class="body-mobile-l--medium heading-xs--medium">What we do</h3>
               <ul class="mt-24 mt-mobile-16">
                 <li>
-                  <router-link to="" class="body-m--regular">
+                  <router-link to="/#plan" class="body-m--regular">
                     Plan
                   </router-link>
                 </li>
                 <li class="mt-24 mt-mobile-16">
-                  <router-link to="" class="body-m--regular">
+                  <router-link to="/#build" class="body-m--regular">
                     Build
                   </router-link>
                 </li>
                 <li class="mt-24 mt-mobile-16">
-                  <router-link to="" class="body-m--regular">
+                  <router-link to="/#run" class="body-m--regular">
                     Run
                   </router-link>
                 </li>
@@ -61,22 +63,22 @@
               <h3 class="body-mobile-l--medium heading-xs--medium">Insights</h3>
               <ul class="mt-24 mt-mobile-16">
                 <li>
-                  <router-link to="" class="body-m--regular">
+                  <router-link :to="{ name: 'Insights', hash: '#case-studies'}" class="body-m--regular">
                     Case studies
                   </router-link>
                 </li>
                 <li class="mt-24 mt-mobile-16">
-                  <router-link to="" class="body-m--regular">
+                  <router-link :to="{ name: 'Insights', hash: '#publications'}" class="body-m--regular">
                     Publications
                   </router-link>
                 </li>
                 <li class="mt-24 mt-mobile-16">
-                  <router-link to="" class="body-m--regular">
+                  <router-link :to="{ name: 'Insights', hash: '#shows'}" class="body-m--regular">
                     Shows
                   </router-link>
                 </li>
                 <li class="mt-24 mt-mobile-16">
-                  <router-link to="" class="body-m--regular">
+                  <router-link to="#" class="body-m--regular">
                     Blog
                     <Icon href="external-link" size="12" class="ml-8"/>
                   </router-link>
@@ -88,12 +90,12 @@
               <h3 class="body-mobile-l--medium heading-xs--medium">Company</h3>
               <ul class="mt-24 mt-mobile-16">
                 <li>
-                  <router-link to="" class="body-m--regular">
+                  <router-link :to="{ name: 'WeAreDifferent' }" class="body-m--regular">
                     We are different
                   </router-link>
                 </li>
                 <li class="mt-24 mt-mobile-16">
-                  <router-link :to="{ name: 'Contact' }" class="body-m--regular">
+                  <router-link :to="{ name: 'Contact', hash: '#join'}" class="body-m--regular">
                     Careers
                   </router-link>
                 </li>
