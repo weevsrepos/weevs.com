@@ -67,7 +67,9 @@
             is perfect for aspecific use case. Our job is
             to find them!</p>
 
-          <Button text="Find out more" icon="arrow-right" type="secondary" size="lg" class="mt-32 d-mobile-none b-none"/>
+          <router-link :to="{ name: 'Contact' }">
+            <Button text="Find out more" icon="arrow-right" type="secondary" size="lg" class="mt-32 d-mobile-none b-none"/>
+          </router-link>
         </div>
       </section>
 
@@ -213,7 +215,7 @@
         <div class="find-me mt-32">
           <p class="overline-s--medium mb-16 mb-mobile-8 letter-spacing-08em">Find me on</p>
 
-          <a href="#" class="heading-xs--regular">LinkedIn</a>
+          <a href="https://my.linkedin.com/in/pedrosttau" target="_blank" class="heading-xs--regular">LinkedIn</a>
         </div>
       </section>
     </section>

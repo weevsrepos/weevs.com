@@ -102,7 +102,7 @@
             </h2>
             <ul :class="{'opened' : category === 'publications'}" class="mb-mobile-24">
               <li>
-                <router-link to="#" class="body-m--regular mb-mobile-12 mb-32">Managment</router-link>
+                <router-link to="#" class="body-m--regular mb-mobile-12 mb-32">Management</router-link>
               </li>
               <li>
                 <router-link to="#" class="body-m--regular mb-mobile-12 mb-32">Product</router-link>

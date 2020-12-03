@@ -14,7 +14,7 @@
   <section id="recruit-section">
     <section class="container">
       <p class="overline-s--medium text-uppercase mb-32 mb-mobile-16 letter-spacing-08em">We recruit people who</p>
-      <Tabs :tabs="tabs" :selected-tab="activeTab" :key="updateKeyIndex">
+      <Tabs :tabs="tabs" :selected-tab="activeTab" :key="updateKeyIndex" :margin="5">
         <template v-slot:tab-plan>
           <section>
             <div class="d-flex justify-content-between flex-mobile-column">

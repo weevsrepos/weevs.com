@@ -23,7 +23,7 @@
             <b>"Affiliate"</b> means any entity under the control of Customer where "control" means ownership of or the
             right to control greater than 50% of the voting securities of such entity.
             <br>
-            <b>"AUP"</b> means Weevs's Acceptable Privacy Policy, <a href="#">available here</a>.
+            <b>"AUP"</b> means Weevs's Acceptable Privacy Policy, <router-link :to="{name: 'Privacy'}">available here</router-link>.
             <br>
             <b>"Contractor"</b> means an independent contractor or consultant who is not a competitor of Intercom.
             <br>

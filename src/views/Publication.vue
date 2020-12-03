@@ -247,6 +247,12 @@ export default {
           name: 'Pedro Sttau',
         }
       },
+      share: {
+        img: 'https://staging.weevs.com/img/insight-big-bg.png',
+        url : 'https://staging.weevs.com/publication',
+        title : 'Best Tasting Plant-Based Complete Nutrition on the Market',
+        description : 'Serverless architecture has fast become a hot topic in tech, thanks partly to its promise of drastically reducing your time-to-market. Nonetheless, many IT leaders remain cautious about serverless because of their fears over vendor lock-in. In this a rticle, I’ll explore therealities of what lock-in means in the context of serverless — and propose strategies to minimize your risks.',
+      }
     }
   }
 }
