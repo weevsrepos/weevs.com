@@ -205,7 +205,6 @@ import ArticleCard from "@/components/cards/ArticleCard";
 import Button from "@/components/Button";
 import Testimonials from "@/components/cards/Testimonials";
 import Icon from "@/components/Icon";
-import html2PDF from 'jspdf-html2canvas';
 
 export default {
   components: {Icon, Testimonials, Button, ArticleCard, Badge},
