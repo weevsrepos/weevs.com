@@ -125,7 +125,10 @@ export default {
         message: Yup.string().required().label("Message"),
         country: Yup.string().required().label("Country"),
         expertise: Yup.string().required().label("Area of expertise"),
-        linkedin: Yup.string().required().label("Linkedin"),
+        linkedin: Yup.string().required().matches(
+            /((https?):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/,
+            'The Linkedin is not valid url'
+        ).label("Linkedin"),
         policy: Yup.string().required().label("Terms & Policy"),
       },
       loading: false
@@ -133,6 +136,7 @@ export default {
   },
   methods: {
     handleSubmit(values) {
+      this.loading = true;
       let form = new FormData();
       Object.keys(values).map((item) => {
         form.append(item, values[item]);

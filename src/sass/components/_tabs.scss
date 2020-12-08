@@ -38,6 +38,10 @@
   .tab-contents {
     overflow: hidden;
     margin-top: 70px;
+    transition: height 0.1s ease;
+    &:not(.disabled-animate-height) {
+      transition: height 0.3s ease;
+    }
 
     @include mobile {
       margin-right: -16px;

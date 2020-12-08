@@ -90,8 +90,10 @@
         </div>
       </section>
 
-      <Button text="Find out more" icon="arrow-right" type="secondary" size="lg"
-              class="mt-mobile-40 mt-32 d-mobile-block d-desktop-none" mobile="md"/>
+      <router-link :to="{ name: 'Contact' }">
+        <Button text="Find out more" icon="arrow-right" type="secondary" size="lg"
+                class="mt-mobile-40 mt-32 d-mobile-block d-desktop-none" mobile="md"/>
+      </router-link>
     </section>
   </section>
 

@@ -10,7 +10,7 @@
       </div>
     </section>
 
-    <section class="tab-contents" :style="{ height: dynamicHeight ? `${height}px` : 'unset' }">
+    <section class="tab-contents" :style="{ height: dynamicHeight ? `${height}px` : 'unset' }" :class="{ 'disabled-animate-height': !animateHeight}">
       <section class="tab-content clearfix" :style="{ width : `${fullWidth}px`, transform: `translateX(-${transform}px)`}">
         <section :id="tab.id" v-for="(tab, key) in tabs"
                  :key="key"
@@ -43,6 +43,10 @@ export default {
       type: Boolean,
       default: true
     },
+    animateHeight: {
+      type: Boolean,
+      default: true
+    },
     margin: {
       type: [String, Number],
       default: ''
@@ -60,10 +64,12 @@ export default {
   },
   mounted() {
     window.addEventListener('resize', this.initTabSizes);
+    document.getElementById(this.id).addEventListener('DOMSubtreeModified', this.initTabSizes);
     this.initTabSizes();
   },
   beforeUnmount() {
     window.removeEventListener('resize', this.initTabSizes);
+    document.getElementById(this.id).removeEventListener('DOMSubtreeModified', this.initTabSizes);
   },
   methods: {
     initTabSizes() {
@@ -71,7 +77,7 @@ export default {
         let innerWidth = document.querySelector(`#${this.id}`).offsetWidth
         let paddings = window.innerWidth < 1024 ? -16: 0;
         this.windowWidth = innerWidth - paddings;
-        this.fullWidth = this.tabs.length * window.innerWidth;
+        this.fullWidth = this.tabs.length * window.innerWidth + this.margin;
         setTimeout(() => {
           this.height = document.getElementById(this.selected).offsetHeight;
           let index = this.tabs.findIndex((i) =>  i.id === this.selected);

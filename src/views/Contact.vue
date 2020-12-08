@@ -35,7 +35,7 @@
 
           <template v-else>
             <section class="tabs--contact">
-              <Tabs :tabs="tabs" :dynamic-height="false" tab-class="heading-xs--regular" :margin="20" :selected-tab="activeTab">
+              <Tabs :tabs="tabs" :animate-height="false" :dynamic-height="true" tab-class="heading-xs--regular" :margin="20" :selected-tab="activeTab">
                 <template v-slot:tab-hire>
                   <HireUs @success="successCallback"/>
                 </template>
