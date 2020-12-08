@@ -77,7 +77,7 @@ export default {
         let innerWidth = document.querySelector(`#${this.id}`).offsetWidth
         let paddings = window.innerWidth < 1024 ? -16: 0;
         this.windowWidth = innerWidth - paddings;
-        this.fullWidth = this.tabs.length * window.innerWidth + this.margin;
+        this.fullWidth = this.tabs.length * window.innerWidth + (this.margin * this.tabs.length);
         setTimeout(() => {
           this.height = document.getElementById(this.selected).offsetHeight;
           let index = this.tabs.findIndex((i) =>  i.id === this.selected);
