@@ -10,7 +10,6 @@ const VueScrollTo = require('vue-scrollto');
 window.ClipboardJS = require("clipboard");
 window.toastr = require('toastr');
 window.sharer = require('sharer.js');
-window.html2pdf = require('html2pdf.js');
 
 axios.defaults.baseURL = process.env.VUE_APP_API_URL;
 
