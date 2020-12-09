@@ -166,8 +166,10 @@
 
       </section>
 
-      <Button text="Get to know us" icon="arrow-right" size="lg" class="mt-40 d-mobile-block d-desktop-none"
-              mobile="md"/>
+      <router-link :to="{ name: 'Contact' }">
+        <Button text="Get to know us" icon="arrow-right" size="lg" class="mt-40 d-mobile-block d-desktop-none"
+                mobile="md"/>
+      </router-link>
     </section>
   </section>
 
