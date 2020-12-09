@@ -21,6 +21,7 @@
     opacity: 0;
     display: none;
     transition: opacity 0.3s ease;
+    z-index: 5;
     &.opened {
       opacity: 1;
       display: block;
@@ -58,6 +59,18 @@
 
       &:hover {
         background: $snow-white;
+      }
+    }
+  }
+
+  &.white-bg {
+    .dropdown-menu-items {
+      background: $snow-white;
+
+      li {
+        &:hover {
+          background: $light-gray;
+        }
       }
     }
   }

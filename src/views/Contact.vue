@@ -99,6 +99,7 @@ export default {
   },
   methods: {
     successCallback() {
+      window.scrollTo(0, 0);
       this.thankyou = true;
       setTimeout(() => {
         const box = document.querySelector("#confettiAnimation");

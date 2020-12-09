@@ -212,7 +212,9 @@
       </section>
 
       <div class="d-flex d-desktop-none mt-20">
-        <Button text="Read all insights" icon="arrow-right" size="lg" mobile="md"/>
+        <router-link :to="{ name: 'Insights' }">
+          <Button text="Read all insights" icon="arrow-right" size="lg" mobile="md"/>
+        </router-link>
       </div>
     </section>
   </section>

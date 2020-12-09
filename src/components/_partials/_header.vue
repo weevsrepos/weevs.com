@@ -19,7 +19,12 @@
             </a>
           </li>
           <li class="dropdown-item">
-            <Dropdown label="What we do" :options="menuItems" label-class="body-s--regular body-mobile-l--regular" item-class="body-mobile-m--regular"/>
+            <Dropdown label="What we do"
+                      :options="menuItems"
+                      label-class="body-s--regular body-mobile-l--regular"
+                      item-class="body-mobile-m--regular"
+                      :white-bg="color === 'light-gray'"
+            />
           </li>
           <li>
             <a @click="changeRoute({ name: 'Insights' })" class="body-s--regular body-mobile-l--regular c-pointer">

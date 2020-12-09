@@ -1,5 +1,5 @@
 <template>
-  <div class="dropdown-menu" :class="{'opened' : opened}">
+  <div class="dropdown-menu" :class="{'opened' : opened, 'white-bg' : whiteBg}">
     <div class="label--box d-flex align-center" @click.stop="opened = !opened">
       <p :class="labelClass">{{ label }}</p>
       <Icon href="chevron-down" size="12" class="ml-14" />
@@ -45,6 +45,10 @@ export default {
     options: {
       type: Array,
       required: true
+    },
+    whiteBg: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
