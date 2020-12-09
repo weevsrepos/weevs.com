@@ -66,7 +66,7 @@
             <p>
               Serverless architecture has fast become a hot topic in tech, thanks partly to its promise of drastically
               reducing your time-to-market. Nonetheless, many IT leaders remain cautious about serverless because of their
-              fears over vendor lock-in. In this a rticle, I’ll explore therealities of what lock-in means in the context
+              fears over vendor lock-in. In this article, I’ll explore the realities of what lock-in means in the context
               of
               serverless — and propose strategies to minimize your risks.
             </p>
@@ -129,8 +129,8 @@
 
             <p>
               There are already a number of views on what constitutes serverless. For the purposes of this piece, I'm
-              using it as described here: application designs that incorporate third-party “Backend as a Service” (BaaS)
-              services, and/or that include custom code run in managed, ephemeral containers on a “Functions as a Service”
+              using it as described here: application designs that incorporate third-party “Backend as a Service”
+              (BaaS) services, and/or that include custom code run in managed, ephemeral containers on a “Functions as a Service”
               (FaaS) platform. When thought of in these terms, you can see why lock-in can be a major concern. While
               serverless architectures might reduce your operational cost, complexity, and engineering lead time, it makes
               you more reliant on your BaaS provider.
@@ -276,6 +276,7 @@ export default {
       let el = document.querySelector('#publication--pdf');
 
       html2PDF(el, {
+        margin: 16,
         jsPDF: {
           orientation: 'p',
           unit: 'px',
@@ -289,6 +290,7 @@ export default {
           x: 0,
           y: 0
         },
+        letterRendering: true,
         imageType: 'image/jpeg',
         output: 'weevs.pdf'
       });
