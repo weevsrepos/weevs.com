@@ -54,7 +54,19 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  VueScrollTo.scrollTo(document.getElementsByTagName('body'));
+  VueScrollTo.scrollTo(document.getElementsByTagName('body'),{
+    container: "body",
+    duration: 500,
+    easing: "ease",
+    offset: 0,
+    force: true,
+    cancelable: true,
+    onStart: false,
+    onDone: false,
+    onCancel: false,
+    x: false,
+    y: true
+  });
   return next();
 })
 
