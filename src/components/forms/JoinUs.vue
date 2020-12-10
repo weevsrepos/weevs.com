@@ -126,7 +126,7 @@ export default {
         country: Yup.string().required().label("Country"),
         expertise: Yup.string().required().label("Area of expertise"),
         linkedin: Yup.string().required().matches(
-            /((https?):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/,
+            /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g,
             'The Linkedin is not valid url'
         ).label("Linkedin"),
         policy: Yup.string().required().label("Terms & Policy"),

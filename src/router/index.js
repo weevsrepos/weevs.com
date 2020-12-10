@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Default from "@/layouts/Default";
+const VueScrollTo = require('vue-scrollto');
 
 const routes = [
   {
@@ -53,7 +54,7 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  window.scrollTo(0, 0)
+  VueScrollTo.scrollTo(document.getElementsByTagName('body'));
   return next();
 })
 
