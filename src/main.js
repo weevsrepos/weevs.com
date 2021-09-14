@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import { createGtm } from "vue-gtm";
 import App from './App.vue'
 import './registerServiceWorker'
 import router from './router'
@@ -34,4 +35,11 @@ createApp(App)
     })
     .use(VueAxios, axios)
     .use(router)
+    .use(
+        createGtm({
+            id: process.env.VUE_APP_GTM_ID,
+            enabled: process.env.VUE_APP_GTM_ENABLED,
+            vueRouter: router,
+        })
+    )
     .mount('#app')

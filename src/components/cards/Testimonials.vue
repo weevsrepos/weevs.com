@@ -4,7 +4,7 @@
 
     <div class="author-block d-flex align-center">
       <div class="image">
-        <img :src="item.author.image" :alt="item.author.name" />
+        <img :src="item.author.image" :alt="item.author.name" width="90" height="90"/>
       </div>
       <div class="ml-32 ml-mobile-16">
         <p class="body-m--medium mb-4">{{ item.author.name }}</p>
@@ -33,6 +33,10 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+.image {
+  img {
+    object-fit: cover;
+  }
+}
 </style>

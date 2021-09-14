@@ -2,7 +2,9 @@
   <section id="welcome-section">
     <section class="container">
       <h1 class="heading-mobile-s--light heading-xl--light">
-        We help ASEAN companies to find world  class tech talent no matter where in the  World they are.
+        We are a <span class="heading-mobile-s--medium heading-l--medium">Pro-bono</span> community of <span class="heading-mobile-s--medium heading-l--medium">ASEAN</span> technologists
+        driven by the desire to contribute with knowledge
+        and time to help advance the industry in the region.
       </h1>
 
       <a href="#" v-scroll-to="'#recruit-section'">
@@ -13,21 +15,23 @@
 
   <section id="recruit-section">
     <section class="container">
-      <p class="overline-s--medium text-uppercase mb-32 mb-mobile-16 letter-spacing-08em">We recruit people who</p>
+      <p class="overline-s--medium text-uppercase mb-32 mb-mobile-16 letter-spacing-08em">Areas of expertise</p>
       <Tabs :tabs="tabs" :selected-tab="activeTab" :key="updateKeyIndex" :margin="5">
         <template v-slot:tab-plan>
           <section>
             <div class="d-flex justify-content-between flex-mobile-column">
               <h2 class="flex-1 heading-mobile-xs--regular heading-l--regular mr-32 width-50 line-height-64 line-height-mobile-36">
-                We don't hire humans that we
-                would not like to spend time
-                with ourselves.
+                Agile does not remove the need for planning, it just reduces the effort needed.
               </h2>
 
               <div class="flex-1 width-50 mt-mobile-16">
-                <h4 class="body-mobile-m--regular body-l--regular mb-mobile-0 mb-32 mr-mobile-16 line-height-32 line-height-mobile-24">We are aware that technical aspects are only the tip of the iceberg. Our people are not only highly
-                  qualified but we also are on the same wavelength. Development process is a long run, so you will need a
-                  great team.</h4>
+                <h4 class="body-mobile-m--regular body-l--regular mb-mobile-0 mb-32 mr-mobile-16 line-height-32 line-height-mobile-24">
+                  Planning properly is about understanding the problem very early in the process and having the knowledge and ability to apply different techniques to increase
+                </h4>
+
+                <h4 class="body-mobile-m--regular body-l--regular mb-mobile-0 mb-32 mr-mobile-16 line-height-32 line-height-mobile-24">
+                  Proper planning requires understanding the problem early in the process, and having the knowledge and ability to apply different techniques to increase ...
+                </h4>
 
                 <div class="d-flex d-mobile-none">
                   <router-link :to="{ name: 'WeAreDifferent' }">
@@ -62,13 +66,13 @@
           <section>
             <div class="d-flex justify-content-between flex-mobile-column">
               <h2 class="flex-1 heading-mobile-xs--regular heading-l--regular mr-32 width-50 line-height-64 line-height-mobile-36">
-                Technology spreads like wildfire, but we can master it
+                Engineering without automation is like building a skyscraper with glue.
               </h2>
 
               <div class="flex-1 width-50 mt-mobile-16">
-                <h4 class="body-mobile-m--regular body-l--regular mb-32 mb-mobile-0 mr-mobile-16 line-height-32 line-height-mobile-24">Newest engineering approaches are our priority so we
-                  keep it up to date. Our specialists apply advanced solutions such as AI, Machine Learning and so on.
-                  It will bring real value to your organization.</h4>
+                <h4 class="body-mobile-m--regular body-l--regular mb-32 mb-mobile-0 mr-mobile-16 line-height-32 line-height-mobile-24">
+                  We look at the build process not as an isolated stage, but as an integrated process. It is impossible to devise from strategy, planning all the way to the end product.
+                </h4>
 
                 <div class="d-flex d-mobile-none">
                   <router-link :to="{ name: 'WeAreDifferent' }">
@@ -102,13 +106,13 @@
           <section>
             <div class="d-flex justify-content-between flex-mobile-column">
               <h2 class="flex-1 heading-mobile-xs--regular heading-l--regular mr-32 width-50 line-height-64 line-height-mobile-36">
-                There is no place for consulting in execution. We  are in the business of doing,  not talking.
+                Infrastructure and code can no longer be taught in isolation.
               </h2>
 
               <div class="flex-1 width-50 mt-mobile-16">
-                <h4 class="body-mobile-m--regular body-l--regular mb-32 mb-mobile-0 mr-mobile-16 line-height-32 line-height-mobile-24">Only right execution makes a well prepared strategy
-                  effective. Development is a long term process combined from individual technologies. We are not here
-                  to take the placement commission, we care about successful implementation as much as you do.</h4>
+                <h4 class="body-mobile-m--regular body-l--regular mb-32 mb-mobile-0 mr-mobile-16 line-height-32 line-height-mobile-24">
+                  Not only because of We are aware that technical aspects are only the tip of the iceberg. Our people are not only highly qualified but we also are on the same wavelength. Development process is a long run, so you will need a great team.
+                </h4>
 
                 <div class="d-flex d-mobile-none">
                   <router-link :to="{ name: 'WeAreDifferent' }">
@@ -148,13 +152,16 @@
 
         <div class="d-flex justify-content-between flex-mobile-column">
           <h2 class="flex-1 heading-mobile-s--regular heading-l--regular mr-32 width-50 line-height-64 line-height-mobile-42">
-            Empowering <span class="heading-mobile-s--medium heading-l--medium">Huawei’s</span> internal solutions with technology
+            <span class="heading-mobile-s--medium heading-l--medium">Qerra: </span> Remote working
           </h2>
 
           <div class="flex-1 width-50 mt-mobile-16">
-            <h4 class="body-mobile-m--regular body-l--regular mb-32 line-height-32 line-height-mobile-24">Our cooperation resulted in complete rearrangement of
-              technological infrastructure in the IT department and efficiency increased by almost 15%. 30 of our
-              specialists have been permanently contracted, keeping a new long-term improvement plan well executed.</h4>
+            <h4 class="body-mobile-m--regular body-l--regular mb-32 line-height-32 line-height-mobile-24">
+              We are working on a POC of a SAAS platform that will support the next generation of communication for
+              distributed workforces across the World. We want Qerra to provide a suite of remote engagement tools that
+              will combine video, streaming and annotations in a way that will show a different perspective on how
+              people express themselves in a way that is more native and less abrasive.
+            </h4>
 
             <div class="d-flex">
               <router-link :to="{ name: 'Insights', hash: '#case-studies'}">
@@ -163,25 +170,6 @@
             </div>
           </div>
         </div>
-      </section>
-    </section>
-
-    <section class="container container-stats">
-      <section class="bottom--featured">
-        <section class="items">
-          <div>
-            <h3 class="heading-xxl--regular">15%</h3>
-            <p class="body-l--regular mt-10">Efficiency Growth</p>
-          </div>
-          <div>
-            <h3 class="heading-xxl--regular">$14m</h3>
-            <p class="body-l--regular mt-10">Increased Conversion</p>
-          </div>
-          <div>
-            <h3 class="heading-xxl--regular">30</h3>
-            <p class="body-l--regular mt-10">Specialist Involved</p>
-          </div>
-        </section>
       </section>
     </section>
   </section>
@@ -271,22 +259,22 @@ export default {
             {
               icon: 'tech-strategic',
               title: 'Tech Strategic Steering',
-              description: 'Everyone realizes why a new common language would be desirable one could'
+              description: 'Establish a clear use case driven strategy that is easy to articulate and understand for your Business and Engineering audience.'
             },
             {
               icon: 'agile',
               title: 'Agile and Scrum',
-              description: 'To achieve this, it would be necessary to have uniform grammar, pronunciation and more'
+              description: 'Shift delivery from big bang releases to short iterative cycles that are use case and value driven.'
             },
             {
               icon: 'product-manage',
               title: 'Product Management',
-              description: 'If several languages coalesce, the grammar of the resulting language is more simple and regular'
+              description: 'Begin with the user experience, work your way to the technology, manage user problems all the way from statement to release.'
             },
             {
               icon: 'delivery-manage',
               title: 'Delivery Management',
-              description: 'The new common language will be more simple and regular than the existing'
+              description: 'Break down user cases into epics, stories and tasks that engineers can pick up, understand and deliver in small iterations.'
             }
           ]
         },
@@ -295,32 +283,32 @@ export default {
             {
               icon: 'software-eng',
               title: 'Software Engineering',
-              description: 'Everyone realizes why a new common language would be desirable one could'
+              description: 'Build world class software that scales, welcomes change and is difficult to break using modern stack technologies that are fun to work with..'
             },
             {
               icon: 'solution-arch',
               title: 'Solutions Architecture',
-              description: 'To achieve this, it would be necessary to have uniform grammar, pronunciation and more'
+              description: 'Design your software on a solid foundation that is driven by architecture principles that ensure quality, scalability, performance and stability.'
             },
             {
               icon: 'ai-machine',
               title: 'AI & Machine Learning',
-              description: 'If several languages coalesce, the grammar of the resulting language is more simple and regular'
+              description: 'Gain actionable insights that allow you to build products and services that add value to customers.'
             },
             {
               icon: 'security',
               title: 'Security',
-              description: 'The new common language will be more simple and regular than the existing'
+              description: 'Protect sensitive data on premises or on the public cloud, starting from your engineering practices all the way to infrastructure.'
             },
             {
               icon: 'ui-ux',
               title: 'UX & UI',
-              description: 'The new common language will be more simple and regular than the existing'
+              description: 'Create delightful experiences for customers by defining user journeys and creating interfaces that are use case driven. '
             },
             {
               icon: 'test-automation',
               title: 'Test Automation',
-              description: 'The new common language will be more simple and regular than the existing'
+              description: 'Release frequently without fear of breaking production by increasing your automation coverage and reducing the need for manual regression.'
             }
           ]
         },
@@ -329,7 +317,7 @@ export default {
             {
               icon: 'software-eng',
               title: 'Cloud Architecture',
-              description: 'Everyone realizes why a new common language would be desirable one could'
+              description: 'Take advantage of Cloud native services across multiple clouds, even stretching from your on premises environments to the public cloud.'
             },
             {
               icon: 'devops',
@@ -390,19 +378,12 @@ export default {
           }
         },
         {
-          text: 'To build <span class="heading-mobile-xs--regular heading-l--regular">great technology</span> you need to make sure that it is neither the starting  point or your end goal. <span class="heading-mobile-xs--regular heading-l--regular">Great products are built when teams care about solving problems </span> that they connect with and feel are worth solving. Technology is nothing but an <span class="heading-mobile-xs--regular heading-l--regular">outcome of doing this right.</span>',
+          text: 'We are all called, at least once, to play a role that surpasses us. It is at this moment that we justify the rest of our life, lost in the performance of small roles we play that are unworthy of what we are.”',
           author: {
-            image: 'img/avatar_big.png',
-            name: 'Pedro Sttau',
+            image: 'https://alchetron.com/cdn/lus-de-sttau-monteiro-67979f23-925f-415e-b70c-be9a09b88e0-resize-750.jpeg',
+            name: 'Luís de Sttau',
           }
         },
-        {
-          text: 'To build <span class="heading-mobile-xs--regular heading-l--regular">great technology</span> you need to make sure that it is neither the starting  point or your end goal. <span class="heading-mobile-xs--regular heading-l--regular">Great products are built when teams care about solving problems </span> that they connect with and feel are worth solving. Technology is nothing but an <span class="heading-mobile-xs--regular heading-l--regular">outcome of doing this right.</span>',
-          author: {
-            image: 'img/avatar_big.png',
-            name: 'Pedro Sttau',
-          }
-        }
       ],
       controlledSwiper: null,
       activeTab: 'plan',

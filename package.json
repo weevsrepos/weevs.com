@@ -25,6 +25,7 @@
     "vue": "^3.0.0",
     "vue-axios": "^3.2.0",
     "vue-custom-scrollbar": "^1.4.0",
+    "vue-gtm": "^3.5.0",
     "vue-router": "^4.0.0-0",
     "vue-scrollto": "^2.20.0",
     "vue-svg-sprite": "^1.4.2",

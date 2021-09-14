@@ -91,7 +91,7 @@ export default {
     return {
       thankyou: false,
       tabs: [
-        { id: 'hire', title: 'Hire us' },
+        { id: 'hire', title: 'Say Hi' },
         { id: 'join', title: 'Join us' },
       ],
       activeTab: this.$route.hash ? this.$route.hash.replace("#", "") : 'hire',

@@ -13,29 +13,21 @@
         <section class="d-flex items">
           <div class="flex-1">
             <h2 class="heading-m--light heading-mobile-xs--light line-height-mobile-36">
-              Great engineers hire great engineers to solve problems that they understand for customers and teams that
-              they empathise with.
+              Our company has no permanent employees, it’s not focused on profit, contributors give us their time completely pro-bono out of sheer will to contribute.
             </h2>
           </div>
           <div class="flex-1">
-            <p class="body-mobile-m--regular body-l--regular line-height-mobile-24 line-height-32">We help customers
-              hire people that fulfill actual needs that are
-              defined by use cases and specific gaps that
-              we have helped them identify.
-              <span class="d-inline-mobile d-desktop-none">
-                We are not in the business of “moving peoplearound” for a
-                commission.
-              </span>
+            <p class="body-mobile-m--regular body-l--regular line-height-mobile-24 line-height-32">
+              We provide a venue for highly technical people to contribute and help companies in <span class="body-mobile-m--medium body-l--medium">ASEAN</span> become World
+              Class technology organisations. We focus especially on startups and small businesses that do not have the
+              scale or capital to bring in-house all the expertise they need at a point in time.
             </p>
 
-            <p class="d-mobile-none body-mobile-m--regular body-l--regular line-height-mobile-24 line-height-32">We are
-              not in the business of “moving peoplearound” for a
-              commission.</p>
-
-            <p class="body-mobile-m--regular body-l--regular line-height-mobile-24 line-height-32 mt-32">Weevs does hire
-              recruits of resourcing partners, our team is
-              made of specialists with actual proven
-              experience and track record on the ground that help our customers hire people like them.</p>
+            <p class="body-mobile-m--regular body-l--regular line-height-mobile-24 line-height-32 mt-32">
+              Our ultimate mission is to help advance the standard of engineering and technology in the <span class="body-mobile-m--medium body-l--medium">ASEAN</span> region. We
+              want to help create a community in the technology space that is inclusive and focused on quality and
+              engineering excellence.
+            </p>
 
             <router-link :to="{ name: 'Contact' }">
               <Button text="Get to know us" icon="arrow-right" size="lg" class="mt-32 mt-mobile-40"
@@ -56,16 +48,17 @@
           <h2 class="heading-l--regular heading-mobile-s--regular">An unique methodology: GDR</h2>
         </div>
         <div class="mt-mobile-16">
-          <p class="body-mobile-m--regular line-height-mobile-24 body-l--regular line-height-32">We believe recruiting
-            is nothing but an afterthought of a team that
-            has taken the time to deeply understand
-            a problem statement and use the insights they have gained to match a human resource with very targeted
-            needs.</p>
+          <p class="body-mobile-m--regular line-height-mobile-24 body-l--regular line-height-32">
+            Gap driven resourcing is about looking at capability needs from a problem statement perspective, identifying
+            2 key perspectives: Technical skills, and personal traits. Companies hire highly talented people to improve
+            execution but often forget that teams are not just made of people with certain skills but also a balance of
+            interpersonal skills that need to blend together.
+          </p>
 
-          <p class="body-mobile-m--regular line-height-mobile-24 body-l--regular line-height-32 mt-32">Nobody is a
-            perfect match for every role, but always someone
-            is perfect for aspecific use case. Our job is
-            to find them!</p>
+          <p class="body-mobile-m--regular line-height-mobile-24 body-l--regular line-height-32 mt-32">
+            We help companies work through their use cases and identify the current baseline for both perspectives and
+            we help fill gaps with people that fit the customers needs.
+          </p>
 
           <router-link :to="{ name: 'Contact' }">
             <Button text="Find out more" icon="arrow-right" type="secondary" size="lg" class="mt-32 d-mobile-none b-none"/>
@@ -104,12 +97,13 @@
       <section class="items mt-32 mt-mobile-0">
         <div class="item headline">
           <div>
-            <h2 class="heading-mobile-s--regular heading-l--regular">A nonsense cost model</h2>
+            <h2 class="heading-mobile-s--regular heading-l--regular">Eligible organisations</h2>
           </div>
           <div class="mt-mobile-16">
-            <p class="body-mobile-m--regular body-l--regular line-height-32 line-height-mobile-24">Our job is to help
-              you - We don’t waste your time with shady
-              costing models. We make money the following way</p>
+            <p class="body-mobile-m--regular body-l--regular line-height-32 line-height-mobile-24">
+              We support organisations that circumstantially do not have access to expertise that they need to grow
+              their business.
+            </p>
 
             <router-link :to="{ name: 'Contact' }">
               <Button text="Get to know us" icon="arrow-right" size="lg" class="mt-32 d-mobile-none"/>
@@ -120,14 +114,13 @@
         <div class="item first-list-item mb-160">
           <div>
             <Icon href="computer" width="30" height="24" fill="#000"/>
-            <h3 class="heading-mobile-xs--regular mb-mobile-16 heading-s--regular mt-20">Professional services</h3>
+            <h3 class="heading-mobile-xs--regular mb-mobile-16 heading-s--regular mt-20">Start-ups and SMEs</h3>
           </div>
 
           <div>
             <p class="body-mobile-m--regular line-height-mobile-24 body-l--regular line-height-32">
-              This is when we work with a customer remotely or on premiseson any of the professional services we
-              provide.
-              We charge by engagement on its totality or on a weekly rate basis during 5 working days.
+              Weev’s helps start-ups and SMEs at any stage of growth and investment, solving technical problems on the
+              ground, challenges around strategy, recruitment and culture.
             </p>
           </div>
         </div>
@@ -135,16 +128,13 @@
         <div class="item mb-160">
           <div>
             <Icon href="file" width="30" height="24" fill="#000"/>
-            <h3 class="heading-mobile-xs--regular mb-mobile-16 heading-s--regular mt-20">Contract placement</h3>
+            <h3 class="heading-mobile-xs--regular mb-mobile-16 heading-s--regular mt-20">Non-profit organizations</h3>
           </div>
 
           <div>
             <p class="body-mobile-m--regular line-height-mobile-24 body-l--regular line-height-32">
-              Our contract talent can be placed remotely or on premise basis.
-              All of our contracts have a clause that allows the customer to take on the talent on a
-              permanent basis. Our minimum contract commitment is 3 months, rates vary on the
-              experience and role of the candidate, we bill on a monthly basis and do not charge any
-              on-sign bonus to the customer.
+              We support registered non profit organisations in the ASEAN region.This also includes government lead
+              initiatives that focus on causes that we have selected to support.
             </p>
           </div>
         </div>
@@ -152,14 +142,19 @@
         <div class="item">
           <div>
             <Icon href="permanent-placement" width="30" height="24" fill="#000"/>
-            <h3 class="heading-mobile-xs--regular mb-mobile-16 heading-s--regular mt-20">Permanent placement</h3>
+            <h3 class="heading-mobile-xs--regular mb-mobile-16 heading-s--regular mt-20">Our value system</h3>
           </div>
 
           <div>
             <p class="body-mobile-m--regular line-height-mobile-24 body-l--regular line-height-32">
-              Our problem statement analysis is provided upfront free of charge to the customer. We will charge 20% of
-              the
-              candidate's first-year salary for our placement services.
+              We believe that at the core of everything that we do there needs to be transparency, honesty and good will
+              that will help us deliver great work. Our collaborators believe that doing things the right way is as
+              important as what we do. Being kind, compassionate, thoughtful and respectful to those around us is a
+              fundamental part of our value system.
+            </p>
+            <p class="body-mobile-m--regular line-height-mobile-24 body-l--regular line-height-32">
+              Our contributors hold these values, and to us, values are not negotiable - they stand firm in the face of
+              challenges, bad days, success and failure.
             </p>
           </div>
         </div>
