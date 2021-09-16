@@ -1,0 +1,36 @@
+#admin--dashboard {
+  .admin--sidebar {
+    width: 250px;
+    min-height: 100vh;
+    background: $light-beige;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    padding: 30px 15px;
+
+    .menu--items {
+      margin-top: 30px;
+      li {
+        a {
+          position: relative;
+          color: $pure-black;
+          &.active {
+            &:before {
+              content: "";
+              width: 100%;
+              position: absolute;
+              bottom: -3px;
+              height: 2px;
+              background: $pure-black;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .admin--content {
+    padding: 30px 30px 30px 280px;
+  }
+}

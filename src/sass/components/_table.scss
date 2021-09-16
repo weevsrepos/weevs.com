@@ -1,0 +1,31 @@
+.custom--table {
+  table-layout: fixed;
+  width: 100%;
+  border-spacing: 0;
+  tr, td, th {
+    border: 1px solid #EBEBEB;
+    &:not(:last-child) {
+      border-right: 0;
+    }
+  }
+
+  tr {
+    &:not(:last-child) {
+      th, td {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  th {
+    background: $light-gray;
+    padding: 12px 24px;
+    text-align: left;
+    @extend .heading-xs--medium;
+  }
+
+  td {
+    padding: 24px;
+    @extend .body-l--regular
+  }
+}

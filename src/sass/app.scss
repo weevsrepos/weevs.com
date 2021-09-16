@@ -21,6 +21,7 @@
 @import "components/service_card";
 @import "components/article_card";
 @import "components/publication_card";
+@import "components/table";
 
 /** Partials **/
 @import "_partials/header";
@@ -33,6 +34,8 @@
 @import "pages/hire_join_sections";
 @import "pages/insights";
 @import "pages/publication";
+@import "pages/admin/login";
+@import "pages/admin/dashboard";
 
 
 @import "main";

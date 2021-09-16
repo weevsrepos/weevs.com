@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Default from "@/layouts/Default";
+import AdminDefault from "@/layouts/AdminDefault";
+import AdminDashboard from "@/layouts/AdminDashboard";
 const VueScrollTo = require('vue-scrollto');
 
 const routes = [
@@ -45,6 +47,24 @@ const routes = [
     name: 'Publication',
     component: () => import('../views/Publication.vue'),
     meta: { layout: Default }
+  },
+  {
+    path: '/admin',
+    name: 'Admin',
+    component: () => import('../views/admin/Login.vue'),
+    meta: { layout: AdminDefault }
+  },
+  {
+    path: '/admin/dashboard',
+    name: 'AdminDashboard',
+    component: () => import('../views/admin/dashboard/Index.vue'),
+    meta: { layout: AdminDashboard }
+  },
+  {
+    path: '/admin/publications',
+    name: 'AdminPublications',
+    component: () => import('../views/admin/dashboard/Publications.vue'),
+    meta: { layout: AdminDashboard }
   }
 ]
 
